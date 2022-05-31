@@ -5,6 +5,7 @@
 //MOTION
 // TODO: staggerchildren animate this
 // TODO: On image hover add zoom in effect
+// TODO: add slideshow?
 
 
 const ProjectCard = () => {
