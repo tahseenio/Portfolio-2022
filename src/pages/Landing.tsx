@@ -1,4 +1,5 @@
 // TODO: what should landing page include?
+// TODO: add loading state
 
 // MOTION
 // TODO: add a parallax effect for my name and a background image
