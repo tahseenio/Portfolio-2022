@@ -50,42 +50,31 @@ const Nav = () => {
   // hide nav on scroll
   const [navVisible, setNavVisible] = useState(true);
 
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const { scrollY } = useViewportScroll();
 
-  const navCheckScroll = () => {
-    if (window.scrollY) {
-      if (window.scrollY > lastScrollY) {
-        console.log('going down');
-        setNavVisible(false);
-      } else {
-        console.log('going up');
-        setNavVisible(true);
-      }
-      setLastScrollY(window.scrollY);
+  const updateNavPosition = () => {
+    if (scrollY?.current < scrollY?.prev) {
+      setNavVisible(true);
+    } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
+      setNavVisible(false);
     }
   };
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', navCheckScroll);
-
-      return () => {
-        window.removeEventListener('scroll', navCheckScroll);
-      };
-    }
-  }, [lastScrollY]);
+    return scrollY.onChange(() => updateNavPosition());
+  });
 
   const navAnimation = {
-    type: 'spring',
-    duration: 0.1,
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 1, y: -80 },
   };
 
   return (
     <motion.div
-      layout
-      transition={navAnimation}
+      variants={navAnimation}
+      animate={navVisible ? 'visible' : 'hidden'}
+      transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.3 }}
       className='nav__container'
-      style={{ top: navVisible ? '0px' : '-80px' }}
     >
       <nav>
         <img
