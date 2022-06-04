@@ -4,8 +4,12 @@
 
 const Contact = () => {
   return (
-    <div>Contact</div>
-  )
-}
+    <section className='container'>
+      <div className='row'>
+        <p>Contact</p>
+      </div>
+    </section>
+  );
+};
 
-export default Contact
+export default Contact;

@@ -6,10 +6,10 @@
 import { useEffect, useState } from 'react';
 import { motion, useViewportScroll } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+import { Burger } from '@mantine/core';
 
 import DarkModeSwitch from './ui/DarkModeSwitch';
-import navLogo from '../components/assets/logo.svg';
-import navLogoInverted from '../components/assets/logo_inverted.svg';
+import navLogo from '../assets/logo_inverted.svg';
 
 const Nav = () => {
   const links = ['Home', 'About', 'Projects', 'Resume', 'Contact'];
@@ -34,9 +34,9 @@ const Nav = () => {
 
   // dark mode functions
   const [isOn, setIsOn] = useState(() => {
-    if (localStorage.getItem('theme') === 'dark') {
-      return true;
-    } else return false;
+    if (localStorage.getItem('theme') === 'light') {
+      return false;
+    } else return true;
   });
 
   if (isOn) {
@@ -69,6 +69,9 @@ const Nav = () => {
     hidden: { opacity: 1, y: -80 },
   };
 
+  // burger menu
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+
   return (
     <motion.div
       variants={navAnimation}
@@ -77,20 +80,18 @@ const Nav = () => {
       className='nav__container'
     >
       <nav>
-        <img
-          src={isOn ? navLogoInverted : navLogo}
-          className='nav__logo'
-          alt='nav logo'
-        />
+        <img src={navLogo} className='nav__logo' alt='nav logo' />
         <ul className='nav__links'>
           {links.map((item) => (
             <Link
               to={item !== 'Home' ? `/${item.toLowerCase()}` : '/'}
               key={item}
-              className='nav__link'
+              className={
+                item !== selectedTab ? 'nav__link' : 'nav__link active'
+              }
               onClick={() => setSelectedTab(item)}
             >
-              {item}
+              <p>{item}</p>
               {item === selectedTab ? (
                 <motion.div
                   layoutId='navLinksBackground'
@@ -100,6 +101,11 @@ const Nav = () => {
             </Link>
           ))}
           <DarkModeSwitch setIsOn={setIsOn} isOn={isOn} />
+          <Burger
+            classNames={{ root: 'modal__button' }}
+            opened={isBurgerOpen}
+            onClick={() => setIsBurgerOpen((state) => !state)}
+          />
         </ul>
       </nav>
     </motion.div>

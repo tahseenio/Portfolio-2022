@@ -22,9 +22,9 @@ const DarkModeSwitch = ({ isOn, setIsOn }) => {
         transition={spring}
       >
         {isOn ? (
-          <RiMoonClearFill className='moon--white' size={30} />
+          <RiMoonClearFill className='moon--white' size={15} />
         ) : (
-          <RiSunFill className='sun--yellow' size={30} />
+          <RiSunFill className='sun--yellow' size={15} />
         )}
       </motion.div>
     </div>

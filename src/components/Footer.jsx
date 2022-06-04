@@ -3,8 +3,10 @@
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <footer>
+      <p className='footer__description'>Copyright © 2022 By Tahseen Islam</p>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
