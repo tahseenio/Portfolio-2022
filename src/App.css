@@ -185,6 +185,13 @@ Resume
 
 */
 
+.resume__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .rpv-core__inner-page {
   background-color: transparent;
 }

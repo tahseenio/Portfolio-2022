@@ -2,6 +2,7 @@
 // TODO: get a nav bar design UI
 // TODO: animate my T logo
 // TODO: after a certain point, nav bar gets hidden and on scroll up nav bar is shown
+// TODO: finish burger menu
 
 import { useEffect, useState } from 'react';
 import { motion, useViewportScroll } from 'framer-motion';

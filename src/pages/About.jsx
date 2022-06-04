@@ -1,4 +1,8 @@
-// import AboutBackground from '../assets/about.jpg';
+// TODO: add a profile summary
+// TODO: add links to github, resume, linkedin
+// TODO: add github contrbutions table
+// TODO:
+// TODO: add tech stack
 
 const About = () => {
   return (
