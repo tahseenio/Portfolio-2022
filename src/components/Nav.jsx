@@ -3,8 +3,8 @@
 // TODO: animate my T logo
 // TODO: after a certain point, nav bar gets hidden and on scroll up nav bar is shown
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion, useViewportScroll } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 
 import DarkModeSwitch from './ui/DarkModeSwitch';
@@ -47,8 +47,46 @@ const Nav = () => {
     localStorage.setItem('theme', 'light');
   }
 
+  // hide nav on scroll
+  const [navVisible, setNavVisible] = useState(true);
+
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const navCheckScroll = () => {
+    if (window.scrollY) {
+      if (window.scrollY > lastScrollY) {
+        console.log('going down');
+        setNavVisible(false);
+      } else {
+        console.log('going up');
+        setNavVisible(true);
+      }
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', navCheckScroll);
+
+      return () => {
+        window.removeEventListener('scroll', navCheckScroll);
+      };
+    }
+  }, [lastScrollY]);
+
+  const navAnimation = {
+    type: 'spring',
+    duration: 0.1,
+  };
+
   return (
-    <div className='nav__container'>
+    <motion.div
+      layout
+      transition={navAnimation}
+      className='nav__container'
+      style={{ top: navVisible ? '0px' : '-80px' }}
+    >
       <nav>
         <img
           src={isOn ? navLogoInverted : navLogo}
@@ -75,7 +113,7 @@ const Nav = () => {
           <DarkModeSwitch setIsOn={setIsOn} isOn={isOn} />
         </ul>
       </nav>
-    </div>
+    </motion.div>
   );
 };
 
