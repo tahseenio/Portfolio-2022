@@ -1,4 +1,5 @@
 // TODO: add skeleton loader for resume
+// TODO: style buttons
 
 import { Viewer, Worker } from '@react-pdf-viewer/core';
 

@@ -4,13 +4,14 @@
 // TODO: after a certain point, nav bar gets hidden and on scroll up nav bar is shown
 // TODO: finish burger menu
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { motion, useViewportScroll } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { Burger } from '@mantine/core';
 
 import DarkModeSwitch from './ui/DarkModeSwitch';
 import navLogo from '../assets/logo_inverted.svg';
+import Modal from './Modal';
 
 const Nav = () => {
   const links = ['Home', 'About', 'Projects', 'Resume', 'Contact'];
@@ -72,6 +73,7 @@ const Nav = () => {
 
   // burger menu
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+  const modalButton = useRef(null);
 
   return (
     <motion.div
@@ -81,6 +83,11 @@ const Nav = () => {
       className='nav__container'
     >
       <nav>
+        <Modal
+          setIsBurgerOpen={setIsBurgerOpen}
+          isBurgerOpen={isBurgerOpen}
+          modalButton={modalButton}
+        />
         <img src={navLogo} className='nav__logo' alt='nav logo' />
         <ul className='nav__links'>
           {links.map((item) => (
@@ -103,6 +110,7 @@ const Nav = () => {
           ))}
           <DarkModeSwitch setIsOn={setIsOn} isOn={isOn} />
           <Burger
+            ref={modalButton}
             classNames={{ root: 'modal__button' }}
             opened={isBurgerOpen}
             onClick={() => setIsBurgerOpen((state) => !state)}
