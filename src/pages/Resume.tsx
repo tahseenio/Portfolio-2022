@@ -1,18 +1,22 @@
 // TODO: figure out how to generate resume this based on reading my current pdf.
 
-import { Document, Page } from 'react-pdf';
+import { Viewer, Worker } from '@react-pdf-viewer/core';
 
-const url = 'something';
+import '@react-pdf-viewer/core/lib/styles/index.css';
+
+import myResume from '../assets/Resume_Tahseen_Islam.pdf';
 
 const Resume = () => {
   return (
-    <section className='container'>
+    <div className='container'>
       <div className='row'>
-        <Document file={url}>
-          <Page pageNumber={1} />
-        </Document>
+        <section className='resume__container'>
+          <Worker workerUrl='https://unpkg.com/pdfjs-dist@2.14.305/build/pdf.worker.min.js'>
+            <Viewer fileUrl={myResume} />;
+          </Worker>
+        </section>
       </div>
-    </section>
+    </div>
   );
 };
 
