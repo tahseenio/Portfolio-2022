@@ -52,7 +52,7 @@ const Nav = () => {
   // hide nav on scroll
   const [navVisible, setNavVisible] = useState(true);
 
-  const { scrollY } = useViewportScroll();
+  const { scrollY }: any = useViewportScroll();
 
   const updateNavPosition = () => {
     if (scrollY?.current < scrollY?.prev) {

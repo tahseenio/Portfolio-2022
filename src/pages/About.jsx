@@ -4,6 +4,8 @@
 // TODO:
 // TODO: add tech stack
 
+import AboutBackground from '../assets/about.jpg';
+
 const About = () => {
   return (
     <>

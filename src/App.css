@@ -173,10 +173,25 @@ Home
 
 */
 
-.background-image {
+.home__container {
   min-width: 100vw;
-  max-height: 100vh;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  width: 110%;
+  height: 110%;
   object-fit: cover;
+  z-index: -1;
+}
+
+.home__title {
+  transform: translate(0px, 0px);
 }
 
 /* 
