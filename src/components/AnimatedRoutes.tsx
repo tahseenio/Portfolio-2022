@@ -9,7 +9,7 @@ import Resume from '../pages/Resume';
 const AnimatedRoutes = () => {
   const location = useLocation();
   return (
-    <AnimatePresence initial={true} exitBeforeEnter={true}>
+    <AnimatePresence initial={false} exitBeforeEnter={true}>
       <Routes location={location} key={location.pathname}>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />

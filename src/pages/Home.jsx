@@ -5,7 +5,7 @@
 // TODO: add a parallax effect for my name and a background image
 // TODO: add a scroll effect with a slight bounce effect similar to apples UI
 // TODO: add stagger effecto text
-// ANIMATION SHARED LAYOUT
+// TODO: finalise the handleMouseMove and all motion variants and make it exportable to minimise code repetition
 
 import { motion, useAnimation } from 'framer-motion';
 import HomeBackground from '../assets/home.webp';
@@ -48,7 +48,7 @@ const Home = () => {
           className='background-image--wrapper'
           initial={{ y: '-100vh' }}
           animate={{ y: 0 }}
-          exit={{ y: '-100vh', transition: { duration: 0.3 } }}
+          exit={{ y: '-150vh', transition: { duration: 0.3 } }}
         >
           <motion.img
             className='background-image'

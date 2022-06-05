@@ -1,5 +1,6 @@
 // TODO: add skeleton loader for resume
 // TODO: style buttons
+// TODO: animate the fade in of the buttons and make the transition from page to page smoother.
 
 import { Viewer, Worker } from '@react-pdf-viewer/core';
 
