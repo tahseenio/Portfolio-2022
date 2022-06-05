@@ -7,7 +7,7 @@
 // TODO: add stagger effecto text
 // ANIMATION SHARED LAYOUT
 
-import { animations, motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import HomeBackground from '../assets/home.webp';
 
 const Home = () => {
