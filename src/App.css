@@ -15,6 +15,10 @@ ul {
   list-style-type: none;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   overflow-x: hidden;
   background-color: lightcoral;

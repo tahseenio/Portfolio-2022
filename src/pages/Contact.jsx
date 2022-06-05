@@ -1,6 +1,7 @@
 // TODO:Maybe use react-hook-forms?
 // TODO:What will the contact form include?
 // TODO:Get a UI design
+// Use emailjs
 
 import { useAnimation, motion } from 'framer-motion';
 import HomeBackground from '../assets/home.jpg';
