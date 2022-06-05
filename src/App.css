@@ -7,6 +7,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 li {
   cursor: pointer;
 }
@@ -39,7 +43,7 @@ DARK-MODE
 */
 
 body.dark {
-  background-color: black;
+  background-color: lightcoral;
 }
 
 /* 
@@ -174,6 +178,8 @@ Home
 */
 
 .home__container {
+  overflow: hidden;
+  position: relative;
   min-width: 100vw;
   min-height: 100vh;
 
@@ -182,16 +188,30 @@ Home
   align-items: center;
 }
 
-.background-image {
+.background-image--wrapper {
   position: absolute;
-  width: 110%;
-  height: 110%;
+  top: -100px;
+  left: -100px;
+  right: -100px;
+  bottom: -100px;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+
   z-index: -1;
 }
 
+.home__info--wrapper {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .home__title {
-  transform: translate(0px, 0px);
 }
 
 /* 
