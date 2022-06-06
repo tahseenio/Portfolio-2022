@@ -3,12 +3,12 @@
 import { motion } from 'framer-motion';
 import { RiMoonClearFill, RiSunFill } from 'react-icons/ri';
 
-interface props {
+interface Props {
   isOn: boolean;
   setIsOn: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const DarkModeSwitch = ({ isOn, setIsOn }: props) => {
+const DarkModeSwitch = ({ isOn, setIsOn }: Props) => {
   const spring = {
     type: 'spring',
     stiffness: 700,

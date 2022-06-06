@@ -27,13 +27,41 @@ body {
 .container {
   padding: 0 32px;
   padding-top: 80px;
-  min-height: 300vh;
+  min-height: 100vh;
 }
 
 .row {
   max-width: 1300px;
   width: 100%;
   margin: 0 auto;
+}
+
+/* LOADER */
+
+.loader--wrapper {
+  background-color: #eee;
+  width: 100%;
+  aspect-ratio: 6.375;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: loaderSwipeAnim 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  background: linear-gradient(to right, #eeeeee 10%, #dddddd 50%, #eeeeee 90%);
+}
+@keyframes loaderSwipeAnim {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 /* 
@@ -209,6 +237,32 @@ Home
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.home__title,
+.about__title,
+.projects__title,
+.contact__title,
+.resume__title {
+  font-weight: 700;
+  font-size: 30px;
+  color: #313131;
+}
+
+/* 
+
+About
+
+*/
+
+.gh-image--wrapper {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 6.375;
+}
+
+.gh-chart {
+  width: 100%;
 }
 
 /* 

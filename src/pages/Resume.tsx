@@ -1,5 +1,5 @@
 // TODO: add skeleton loader for resume
-// TODO: style buttons
+// TODO: style download buttons
 // TODO: animate the fade in of the buttons and make the transition from page to page smoother.
 
 import { Viewer, Worker } from '@react-pdf-viewer/core';
@@ -53,7 +53,9 @@ const Resume = () => {
           />
         </motion.figure>
         <motion.div className='parallax__info--wrapper'>
-          <motion.div animate={TextAnimation}>Resume</motion.div>
+          <motion.div className='resume__title' animate={TextAnimation}>
+            Resume
+          </motion.div>
         </motion.div>
       </div>
       <div className='container'>

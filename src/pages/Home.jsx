@@ -1,5 +1,6 @@
 // TODO: what should landing page include?
 // TODO: add loading state
+// TODO: make all images .webp to load faster
 
 // MOTION
 // TODO: add a parallax effect for my name and a background image
@@ -65,10 +66,14 @@ const Home = () => {
           exit='initial'
         >
           <motion.div variants={textVariants} exit={{ opacity: 0, x: 100 }}>
-            <motion.div animate={TextAnimation}>Tahseen Islam</motion.div>
+            <motion.div className='home__title' animate={TextAnimation}>
+              Tahseen Islam
+            </motion.div>
           </motion.div>
           <motion.div variants={textVariants} exit={{ opacity: 0, x: 100 }}>
-            <motion.div animate={TextAnimation}>I am a developer</motion.div>
+            <motion.div className='home__title' animate={TextAnimation}>
+              I am a developer
+            </motion.div>
           </motion.div>
         </motion.div>
       </main>

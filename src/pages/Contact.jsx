@@ -1,7 +1,7 @@
 // TODO:Maybe use react-hook-forms?
 // TODO:What will the contact form include?
 // TODO:Get a UI design
-// Use emailjs
+// TODO: Use emailjs
 
 import { useAnimation, motion } from 'framer-motion';
 import HomeBackground from '../assets/home.jpg';
@@ -44,7 +44,9 @@ const Contact = () => {
           />
         </motion.figure>
         <motion.div className='parallax__info--wrapper'>
-          <motion.div animate={TextAnimation}>Contact</motion.div>
+          <motion.div className='contact__title' animate={TextAnimation}>
+            Contact
+          </motion.div>
         </motion.div>
       </div>
       <div className='container'>

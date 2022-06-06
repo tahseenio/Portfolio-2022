@@ -38,12 +38,14 @@ const Projects = () => {
           />
         </motion.figure>
         <motion.div className='parallax__info--wrapper'>
-          <motion.div animate={TextAnimation}>Projects</motion.div>
+          <motion.div className='projects__title' animate={TextAnimation}>
+            Projects
+          </motion.div>
         </motion.div>
       </div>
       <div className='container'>
         <div className='row'>
-          <h1>Contact stuff here</h1>
+          <h1>project stuff here</h1>
         </div>
       </div>
     </section>
