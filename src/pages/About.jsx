@@ -74,7 +74,7 @@ const About = () => {
         <div className='row'>
           <h1>About stuff here</h1>
           <div className='gh-image--wrapper'>
-            {/* {!loaded ? <SkeletonLoader /> : null} */}
+            {!loaded ? <SkeletonLoader /> : null}
             <img
               className='gh-chart'
               src='http://ghchart.rshah.org/tahseenio'
