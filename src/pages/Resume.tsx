@@ -7,7 +7,7 @@ import { Viewer, Worker } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import { motion } from 'framer-motion';
 import myResume from '../assets/Resume_Tahseen_Islam.pdf';
-import HomeBackground from '../assets/home.webp';
+import HomeBackground from '../assets/home.jpg';
 import { parallaxBGVariants, parallaxTextWrapperVariants } from '../variants';
 import useScroll from '../hooks/useScroll';
 import useParallax from '../hooks/useParallax';

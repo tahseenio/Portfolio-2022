@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import HomeBackground from '../assets/home.jpg';
+import HomeBackground from '../assets/projects.jpg';
 import useParallax from '../hooks/useParallax';
 import useScroll from '../hooks/useScroll';
 import { parallaxBGVariants, parallaxTextWrapperVariants } from '../variants';
