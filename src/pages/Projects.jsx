@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import HomeBackground from '../assets/projects.jpg';
+import ProjectBackground from '../assets/projects.jpg';
 import useParallax from '../hooks/useParallax';
 import useScroll from '../hooks/useScroll';
 import { parallaxBGVariants, parallaxTextWrapperVariants } from '../variants';
@@ -22,7 +22,7 @@ const Projects = () => {
           <motion.img
             className='parallax-background-image'
             style={{ scale: scale }}
-            src={HomeBackground}
+            src={ProjectBackground}
             animate={backgroundAnimation}
             alt=''
           />

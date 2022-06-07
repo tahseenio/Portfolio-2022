@@ -1,30 +1,40 @@
+import { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AnimatedRoutes from './components/AnimatedRoutes';
 
+import Loader from './components/Loader';
 import './App.css';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import { useEffect, useState } from 'react';
 
 import HomeBackground from './assets/home.webp';
-import HomeJPG from './assets/home.jpg';
 import AboutBackground from './assets/about.jpg';
-import Projects from './assets/projects.jpg';
-import Loader from './components/Loader';
+import ProjectBackground from './assets/projects.jpg';
+import ResumeBackground from './assets/home.jpg';
+import ContactBackground from './assets/home.jpg';
 
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    console.log('started');
-    const imagesPreload = [HomeBackground, AboutBackground, HomeJPG, Projects];
+    // console.log('started');
+    const imagesPreload = [
+      HomeBackground,
+      ProjectBackground,
+      AboutBackground,
+      ResumeBackground,
+      ContactBackground,
+    ];
 
     for (const image of imagesPreload) {
-      console.log('started ', image);
+      console.log('started for loop');
       const newImage = new Image();
       newImage.src = image;
+      newImage.onload = () => {
+        return;
+      };
     }
-    console.log('finished');
     setTimeout(() => {
+      console.log('finished');
       setLoading(false);
     }, 500);
   }, []);

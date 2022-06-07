@@ -4,7 +4,7 @@
 // TODO: Use emailjs
 
 import { motion } from 'framer-motion';
-import HomeBackground from '../assets/home.jpg';
+import ContactBackground from '../assets/home.jpg';
 import useParallax from '../hooks/useParallax';
 import useScroll from '../hooks/useScroll';
 import { parallaxBGVariants, parallaxTextWrapperVariants } from '../variants';
@@ -27,7 +27,7 @@ const Contact = () => {
           <motion.img
             className='parallax-background-image'
             style={{ scale: scale }}
-            src={HomeBackground}
+            src={ContactBackground}
             animate={backgroundAnimation}
             alt=''
           />
