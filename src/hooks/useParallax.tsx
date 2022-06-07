@@ -4,7 +4,7 @@ const useParallax = () => {
   const backgroundAnimation = useAnimation();
   const TextAnimation = useAnimation();
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     const { clientX, clientY } = e;
     const moveX = clientX - window.innerWidth / 2;
     const moveY = clientY - window.innerHeight / 2;
