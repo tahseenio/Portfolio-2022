@@ -5,12 +5,12 @@ import './App.css';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
-import { Loader } from '@mantine/core';
 
 import HomeBackground from './assets/home.webp';
 import HomeJPG from './assets/home.jpg';
 import AboutBackground from './assets/about.jpg';
 import Projects from './assets/projects.jpg';
+import Loader from './components/Loader';
 
 function App() {
   const [loading, setLoading] = useState(true);
