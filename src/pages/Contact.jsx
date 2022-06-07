@@ -3,47 +3,42 @@
 // TODO:Get a UI design
 // TODO: Use emailjs
 
-import { useAnimation, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import HomeBackground from '../assets/home.jpg';
+import useParallax from '../hooks/useParallax';
+import useScroll from '../hooks/useScroll';
+import { parallaxBGVariants, parallaxTextWrapperVariants } from '../variants';
 
 const Contact = () => {
-  const backgroundAnimation = useAnimation();
-  const TextAnimation = useAnimation();
+  const { backgroundAnimation, TextAnimation, handleMouseMove } = useParallax();
 
-  const handleMouseMove = (e) => {
-    const { clientX, clientY } = e;
-    const moveX = clientX - window.innerWidth / 2;
-    const moveY = clientY - window.innerHeight / 2;
-    const offsetFactor = 15;
-    const TextOffsetFactor = 100;
-
-    backgroundAnimation.start({
-      x: moveX / offsetFactor,
-      y: moveY / offsetFactor,
-    });
-    TextAnimation.start({
-      x: -moveX / TextOffsetFactor,
-      y: -moveY / TextOffsetFactor,
-    });
-  };
+  const { scale } = useScroll();
 
   return (
     <section onMouseMove={(e) => handleMouseMove(e)}>
       <div className='parallax--wrapper'>
         <motion.figure
           className='parallax-background-image--wrapper'
-          initial={{ y: '-100vh' }}
-          animate={{ y: 0 }}
-          exit={{ y: '-100vh', transition: { duration: 0.3 } }}
+          variants={parallaxBGVariants}
+          initial='initial'
+          animate='animate'
+          exit='initial'
         >
           <motion.img
             className='parallax-background-image'
+            style={{ scale: scale }}
             src={HomeBackground}
             animate={backgroundAnimation}
             alt=''
           />
         </motion.figure>
-        <motion.div className='parallax__info--wrapper'>
+        <motion.div
+          className='parallax__info--wrapper'
+          variants={parallaxTextWrapperVariants}
+          initial='initial'
+          animate='animate'
+          exit='exit'
+        >
           <motion.div className='contact__title' animate={TextAnimation}>
             Contact
           </motion.div>

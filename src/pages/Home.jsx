@@ -8,54 +8,33 @@
 // TODO: add stagger effecto text
 // TODO: finalise the handleMouseMove and all motion variants and make it exportable to minimise code repetition
 
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
+
 import HomeBackground from '../assets/home.webp';
+import useParallax from '../hooks/useParallax';
+import {
+  HomeBackgroundVariants,
+  textVariants,
+  wrapperVariants,
+} from '../variants';
 
 const Home = () => {
-  const backgroundAnimation = useAnimation();
-  const TextAnimation = useAnimation();
-
-  const handleMouseMove = (e) => {
-    const { clientX, clientY } = e;
-    const moveX = clientX - window.innerWidth / 2;
-    const moveY = clientY - window.innerHeight / 2;
-    const offsetFactor = 15;
-    const TextOffsetFactor = 100;
-
-    backgroundAnimation.start({
-      x: moveX / offsetFactor,
-      y: moveY / offsetFactor,
-    });
-    TextAnimation.start({
-      x: -moveX / TextOffsetFactor,
-      y: -moveY / TextOffsetFactor,
-    });
-  };
-
-  const textVariants = {
-    initial: { opacity: 0, x: -100 },
-    animate: { opacity: 1, x: 0 },
-  };
-
-  const wrapperVariants = {
-    initial: { transition: { staggerChildren: 0.1, staggerDirection: -1 } },
-    animate: { transition: { staggerChildren: 0.1, staggerDirection: 1 } },
-  };
-
+  const { backgroundAnimation, TextAnimation, handleMouseMove } = useParallax();
   return (
     <>
       <main className='home__container' onMouseMove={(e) => handleMouseMove(e)}>
         <motion.figure
           className='background-image--wrapper'
-          initial={{ y: '-100vh' }}
-          animate={{ y: 0 }}
-          exit={{ y: '-150vh', transition: { duration: 0.3 } }}
+          variants={HomeBackgroundVariants}
+          initial='initial'
+          animate='animate'
+          exit='exit'
         >
           <motion.img
             className='background-image'
+            alt='background image'
             src={HomeBackground}
             animate={backgroundAnimation}
-            alt=''
           />
         </motion.figure>
         <motion.div
@@ -63,14 +42,14 @@ const Home = () => {
           variants={wrapperVariants}
           initial='initial'
           animate='animate'
-          exit='initial'
+          exit='exit'
         >
-          <motion.div variants={textVariants} exit={{ opacity: 0, x: 100 }}>
+          <motion.div variants={textVariants} exit={{ opacity: 0 }}>
             <motion.div className='home__title' animate={TextAnimation}>
               Tahseen Islam
             </motion.div>
           </motion.div>
-          <motion.div variants={textVariants} exit={{ opacity: 0, x: 100 }}>
+          <motion.div variants={textVariants} exit={{ opacity: 0 }}>
             <motion.div className='home__title' animate={TextAnimation}>
               I am a developer
             </motion.div>

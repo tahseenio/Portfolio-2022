@@ -2,69 +2,55 @@
 // TODO: add links to github, resume, linkedin
 // TODO: add github contrbutions table
 // TODO: add tech stack
+// TODO: make shimmer look better
 // BUG: page scrolls on image load
 
 // MOTION
 // TODO: parallax background zooms in as you scroll down and then fades away
 
-import {
-  useAnimation,
-  motion,
-  useViewportScroll,
-  useTransform,
-} from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 import AboutBackground from '../assets/about.jpg';
 import SkeletonLoader from '../components/ui/SkeletonLoader';
+import useParallax from '../hooks/useParallax';
+import useScroll from '../hooks/useScroll';
+import { parallaxBGVariants, parallaxTextWrapperVariants } from '../variants';
 
 const About = () => {
-  const backgroundAnimation = useAnimation();
-  const TextAnimation = useAnimation();
-
-  const handleMouseMove = (e) => {
-    const { clientX, clientY } = e;
-    const moveX = clientX - window.innerWidth / 2;
-    const moveY = clientY - window.innerHeight / 2;
-    const offsetFactor = 15;
-    const TextOffsetFactor = 100;
-
-    backgroundAnimation.start({
-      x: moveX / offsetFactor,
-      y: moveY / offsetFactor,
-    });
-    TextAnimation.start({
-      x: -moveX / TextOffsetFactor,
-      y: -moveY / TextOffsetFactor,
-    });
-  };
+  const { backgroundAnimation, TextAnimation, handleMouseMove } = useParallax();
 
   // github img shimmer loader
   const [loaded, setLoaded] = useState(false);
 
   // img zoom in on scroll down
-  const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const { scale } = useScroll();
 
   return (
     <section onMouseMove={(e) => handleMouseMove(e)}>
       <div className='parallax--wrapper'>
         <motion.figure
           className='parallax-background-image--wrapper'
-          initial={{ y: '-100vh' }}
-          animate={{ y: 0 }}
-          exit={{ y: '-100vh', transition: { duration: 0.3 } }}
+          variants={parallaxBGVariants}
+          initial='initial'
+          animate='animate'
+          exit='initial'
         >
           <motion.img
-            style={{ scale: scale, opacity: opacity }}
+            style={{ scale: scale }}
             className='parallax-background-image'
             src={AboutBackground}
             animate={backgroundAnimation}
             alt=''
           />
         </motion.figure>
-        <motion.div className='parallax__info--wrapper'>
+        <motion.div
+          className='parallax__info--wrapper'
+          variants={parallaxTextWrapperVariants}
+          initial='initial'
+          animate='animate'
+          exit='exit'
+        >
           <motion.div className='about__title' animate={TextAnimation}>
             About
           </motion.div>
