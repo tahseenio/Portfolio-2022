@@ -15,12 +15,18 @@ import Projects from './assets/projects.jpg';
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
+    console.log('started');
     const imagesPreload = [HomeBackground, AboutBackground, HomeJPG, Projects];
-    imagesPreload.forEach((image) => {
-      const newImage = new Image();
-      newImage.src = image;
-    });
-    setLoading(false);
+
+    for (let i = 0; i < imagesPreload.length; i++) {
+      imagesPreload.forEach((image) => {
+        const newImage = new Image();
+        newImage.src = image;
+      });
+    }
+    setTimeout(() => {
+      setLoading((state) => !state);
+    }, 2000);
   }, []);
 
   return (
