@@ -24,7 +24,9 @@ function App() {
       newImage.src = image;
     }
     console.log('finished');
-    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
   }, []);
 
   return (
