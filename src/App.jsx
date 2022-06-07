@@ -26,7 +26,7 @@ function App() {
     ];
 
     for (const image of imagesPreload) {
-      console.log('started for loop');
+      // console.log('started for loop');
       const newImage = new Image();
       newImage.src = image;
       newImage.onload = () => {
@@ -34,7 +34,7 @@ function App() {
       };
     }
     setTimeout(() => {
-      console.log('finished');
+      // console.log('finished');
       setLoading(false);
     }, 500);
   }, []);

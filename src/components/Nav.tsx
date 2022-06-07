@@ -7,9 +7,8 @@
 import { useEffect, useState, useRef } from 'react';
 import { motion, useViewportScroll } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { Burger } from '@mantine/core';
+import { Burger, Switch } from '@mantine/core';
 
-import DarkModeSwitch from './ui/DarkModeSwitch';
 import navLogo from '../assets/logo_inverted.svg';
 import Modal from './Modal';
 
@@ -108,7 +107,12 @@ const Nav = () => {
               ) : null}
             </Link>
           ))}
-          <DarkModeSwitch setIsOn={setIsOn} isOn={isOn} />
+          <Switch
+            size='md'
+            color={'dark'}
+            checked={isOn}
+            onChange={() => setIsOn((state) => !state)}
+          />
           <Burger
             ref={modalButton}
             classNames={{ root: 'modal__button' }}

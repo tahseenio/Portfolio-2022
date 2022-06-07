@@ -66,7 +66,7 @@ const Modal = ({ setIsBurgerOpen, isBurgerOpen, modalButton }: Props) => {
           animate={{ opacity: 1 }}
           exit={{
             opacity: 0,
-            transition: { delay: 0.4, duration: 0.15 },
+            transition: { delay: 0.1, duration: 0.15 },
           }}
         >
           <motion.aside
@@ -78,7 +78,7 @@ const Modal = ({ setIsBurgerOpen, isBurgerOpen, modalButton }: Props) => {
             }}
             exit={{
               width: 0,
-              transition: { delay: 0.3, duration: 0.15 },
+              transition: { delay: 0.05, duration: 0.15 },
             }}
           >
             <motion.div
