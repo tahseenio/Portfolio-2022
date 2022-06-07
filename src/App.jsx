@@ -18,15 +18,13 @@ function App() {
     console.log('started');
     const imagesPreload = [HomeBackground, AboutBackground, HomeJPG, Projects];
 
-    for (let i = 0; i < imagesPreload.length; i++) {
-      imagesPreload.forEach((image) => {
-        const newImage = new Image();
-        newImage.src = image;
-      });
+    for (const image of imagesPreload) {
+      console.log('started ', image);
+      const newImage = new Image();
+      newImage.src = image;
     }
-    setTimeout(() => {
-      setLoading((state) => !state);
-    }, 2000);
+    console.log('finished');
+    setLoading(false);
   }, []);
 
   return (
