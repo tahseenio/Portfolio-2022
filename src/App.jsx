@@ -8,6 +8,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 
 import HomeBackground from './assets/home.webp';
+import HomeNight from './assets/homeNight.webp';
 import AboutBackground from './assets/about.jpg';
 import ProjectBackground from './assets/projects.jpg';
 import ResumeBackground from './assets/home.jpg';
@@ -19,6 +20,7 @@ function App() {
     // console.log('started');
     const imagesPreload = [
       HomeBackground,
+      HomeNight,
       ProjectBackground,
       AboutBackground,
       ResumeBackground,

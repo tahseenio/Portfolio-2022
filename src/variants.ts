@@ -1,7 +1,7 @@
 // HOME PAGE
 export const textVariants = {
-  initial: { opacity: 0, x: -100 },
-  animate: { opacity: 1, x: 0 },
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
 export const wrapperVariants = {
@@ -10,7 +10,7 @@ export const wrapperVariants = {
     opacity: 1,
     transition: {
       delayChildren: 1,
-      staggerChildren: 0.1,
+      staggerChildren: 0.2,
       staggerDirection: 1,
     },
   },
@@ -21,7 +21,7 @@ export const HomeBackgroundVariants = {
   initial: { y: '-100vh' },
   animate: {
     y: 0,
-    transition: { type: 'spring', bounce: 0.25, duration: 0.4 },
+    transition: { type: 'spring', bounce: 0.25, duration: 0.8 },
   },
   exit: { y: '-150vh' },
 };
@@ -32,7 +32,7 @@ export const parallaxBGVariants = {
   initial: { y: '-100vh' },
   animate: {
     y: 0,
-    transition: { type: 'spring', bounce: 0.25, duration: 0.4 },
+    transition: { type: 'spring', bounce: 0.25, duration: 0.8 },
   },
   exit: { y: '-100vh' },
 };

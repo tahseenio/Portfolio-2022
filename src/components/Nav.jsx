@@ -11,6 +11,7 @@ import { Burger, Switch } from '@mantine/core';
 
 import navLogo from '../assets/logo_inverted.svg';
 import Modal from './Modal';
+import { usePortfolioContext } from '../context/PortfolioContext';
 
 const Nav = () => {
   const links = ['Home', 'About', 'Projects', 'Resume', 'Contact'];
@@ -34,13 +35,9 @@ const Nav = () => {
   const [selectedTab, setSelectedTab] = useState(() => getURL());
 
   // dark mode functions
-  const [isOn, setIsOn] = useState(() => {
-    if (localStorage.getItem('theme') === 'light') {
-      return false;
-    } else return true;
-  });
+  const { isDark, setIsDark } = usePortfolioContext();
 
-  if (isOn) {
+  if (isDark) {
     document.body.classList.add('dark');
     localStorage.setItem('theme', 'dark');
   } else {
@@ -51,7 +48,7 @@ const Nav = () => {
   // hide nav on scroll
   const [navVisible, setNavVisible] = useState(true);
 
-  const { scrollY }: any = useViewportScroll();
+  const { scrollY } = useViewportScroll();
 
   const updateNavPosition = () => {
     if (scrollY?.current < scrollY?.prev) {
@@ -110,8 +107,11 @@ const Nav = () => {
           <Switch
             size='md'
             color={'dark'}
-            checked={isOn}
-            onChange={() => setIsOn((state) => !state)}
+            checked={isDark}
+            style={{ marginLeft: '10px' }}
+            // onLabel='Dark'
+            // offLabel='Light'
+            onChange={() => setIsDark((state) => !state)}
           />
           <Burger
             ref={modalButton}

@@ -11,6 +11,8 @@
 import { motion } from 'framer-motion';
 
 import HomeBackground from '../assets/home.webp';
+import HomeNight from '../assets/homeNight.webp';
+import { usePortfolioContext } from '../context/PortfolioContext';
 import useParallax from '../hooks/useParallax';
 import {
   HomeBackgroundVariants,
@@ -20,6 +22,10 @@ import {
 
 const Home = () => {
   const { backgroundAnimation, TextAnimation, handleMouseMove } = useParallax();
+
+  // dark mode check
+  const { isDark } = usePortfolioContext();
+
   return (
     <>
       <main className='home__container' onMouseMove={(e) => handleMouseMove(e)}>
@@ -33,7 +39,7 @@ const Home = () => {
           <motion.img
             className='background-image'
             alt='background image'
-            src={HomeBackground}
+            src={isDark ? HomeNight : HomeBackground}
             animate={backgroundAnimation}
           />
         </motion.figure>
@@ -50,8 +56,8 @@ const Home = () => {
             </motion.div>
           </motion.div>
           <motion.div variants={textVariants} exit={{ opacity: 0 }}>
-            <motion.div className='home__title' animate={TextAnimation}>
-              I am a developer
+            <motion.div className='home__description' animate={TextAnimation}>
+              Frontend Developer
             </motion.div>
           </motion.div>
         </motion.div>
