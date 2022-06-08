@@ -1,6 +1,7 @@
 // TODO: what should landing page include?
 // TODO: add loading state
 // TODO: make all images .webp to load faster
+// TODO: fix centering of text in middle
 
 // MOTION
 // TODO: add a parallax effect for my name and a background image
