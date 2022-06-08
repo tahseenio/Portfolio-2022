@@ -229,8 +229,8 @@ Home
 .background-image--wrapper {
   position: absolute;
   top: -100px;
-  left: -100px;
-  right: -100px;
+  left: -200px;
+  right: -200px;
   bottom: -100px;
 }
 
@@ -245,9 +245,6 @@ Home
 
 .home__info--wrapper {
   z-index: 100;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .home__title {
@@ -307,8 +304,8 @@ Resume
 .parallax-background-image--wrapper {
   position: absolute;
   top: -100px;
-  left: -100px;
-  right: -100px;
+  left: -200px;
+  right: -200px;
   bottom: -100px;
 }
 
@@ -403,5 +400,8 @@ footer {
   }
   .modal__button {
     display: block;
+  }
+  .home__description {
+    inline-size: min-content;
   }
 }
