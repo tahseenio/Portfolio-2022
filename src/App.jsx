@@ -18,23 +18,23 @@ function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     // console.log('started');
-    const imagesPreload = [
-      HomeBackground,
-      HomeNight,
-      ProjectBackground,
-      AboutBackground,
-      ResumeBackground,
-      ContactBackground,
-    ];
+    // const imagesPreload = [
+    //   HomeBackground,
+    //   HomeNight,
+    //   ProjectBackground,
+    //   AboutBackground,
+    //   ResumeBackground,
+    //   ContactBackground,
+    // ];
 
-    for (const image of imagesPreload) {
-      // console.log('started for loop');
-      const newImage = new Image();
-      newImage.src = image;
-      newImage.onload = () => {
-        return;
-      };
-    }
+    // for (const image of imagesPreload) {
+    //   // console.log('started for loop');
+    //   const newImage = new Image();
+    //   newImage.src = image;
+    //   newImage.onload = () => {
+    //     return;
+    //   };
+    // }
     setTimeout(() => {
       // console.log('finished');
       setLoading(false);
