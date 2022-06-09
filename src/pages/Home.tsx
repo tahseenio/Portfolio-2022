@@ -1,13 +1,6 @@
-// TODO: what should landing page include?
-// TODO: add loading state
-// TODO: make all images .webp to load faster
-// TODO: fix centering of text in middle
-
-// MOTION
-// TODO: add a parallax effect for my name and a background image
+//OTHER PAGES
+// TODO: make all images .webp and optimize images for mobile to load faster
 // TODO: add a scroll effect with a slight bounce effect similar to apples UI
-// TODO: add stagger effecto text
-// TODO: finalise the handleMouseMove and all motion variants and make it exportable to minimise code repetition
 
 import { motion } from 'framer-motion';
 

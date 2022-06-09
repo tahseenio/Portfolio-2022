@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AnimatedRoutes from './components/AnimatedRoutes';
 
-import Loader from './components/Loader';
+import HomeLoader from './components/HomeLoader';
 import './App.css';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -17,34 +17,34 @@ import ContactBackground from './assets/home.jpg';
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
+    const imagesPreload = [
+      HomeBackground,
+      HomeNight,
+      ProjectBackground,
+      AboutBackground,
+      ResumeBackground,
+      ContactBackground,
+    ];
     // console.log('started');
-    // const imagesPreload = [
-    //   HomeBackground,
-    //   HomeNight,
-    //   ProjectBackground,
-    //   AboutBackground,
-    //   ResumeBackground,
-    //   ContactBackground,
-    // ];
 
-    // for (const image of imagesPreload) {
-    //   // console.log('started for loop');
-    //   const newImage = new Image();
-    //   newImage.src = image;
-    //   newImage.onload = () => {
-    //     return;
-    //   };
-    // }
+    for (const image of imagesPreload) {
+      // console.log('started for loop');
+      const newImage = new Image();
+      newImage.src = image;
+      newImage.onload = () => {
+        return;
+      };
+    }
     setTimeout(() => {
       // console.log('finished');
       setLoading(false);
-    }, 500);
+    }, 700);
   }, []);
 
   return (
     <>
       {loading ? (
-        <Loader />
+        <HomeLoader />
       ) : (
         <div className='App'>
           <Router>
