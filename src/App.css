@@ -84,7 +84,7 @@ DARK-MODE
 */
 
 body.dark {
-  /* background-color: lightcoral; */
+  background-color: #555555;
 }
 
 body.dark .app--loader {

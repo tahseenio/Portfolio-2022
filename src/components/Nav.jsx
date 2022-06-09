@@ -115,6 +115,7 @@ const Nav = () => {
           />
           <Burger
             ref={modalButton}
+            color={isDark ? 'white' : 'black'}
             classNames={{ root: 'modal__button' }}
             opened={isBurgerOpen}
             onClick={() => setIsBurgerOpen((state) => !state)}
