@@ -13,17 +13,19 @@ import AboutBackground from './assets/about.jpg';
 import ProjectBackground from './assets/projects.jpg';
 import ResumeBackground from './assets/home.jpg';
 import ContactBackground from './assets/home.jpg';
+import HomeNightMobile from './assets/homeNightMobile.webp';
 
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const imagesPreload = [
-      HomeBackground,
-      HomeNight,
-      ProjectBackground,
-      AboutBackground,
-      ResumeBackground,
-      ContactBackground,
+      // HomeBackground,
+      // HomeNight,
+      // ProjectBackground,
+      // AboutBackground,
+      // ResumeBackground,
+      // ContactBackground,
+      HomeNightMobile,
     ];
     // console.log('started');
 
@@ -35,10 +37,10 @@ function App() {
         return;
       };
     }
-    setTimeout(() => {
-      // console.log('finished');
-      setLoading(false);
-    }, 700);
+    setLoading(false);
+    // setTimeout(() => {
+    //   // console.log('finished');
+    // }, 700);
   }, []);
 
   return (

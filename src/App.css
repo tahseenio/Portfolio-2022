@@ -53,6 +53,7 @@ body {
 
 .loader--wrapper {
   background-color: #eee;
+  border-radius: 8px;
   width: 100%;
   aspect-ratio: 6.375;
   overflow: hidden;
@@ -132,6 +133,7 @@ nav {
 
 .nav__logo {
   height: 60px;
+  width: 65px;
   user-select: none;
 }
 

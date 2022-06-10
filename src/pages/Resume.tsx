@@ -3,14 +3,14 @@
 // TODO: animate the fade in of the buttons and make the transition from page to page smoother.
 
 import { Viewer, Worker } from '@react-pdf-viewer/core';
-
-import '@react-pdf-viewer/core/lib/styles/index.css';
 import { motion } from 'framer-motion';
-import myResume from '../assets/Resume_Tahseen_Islam.pdf';
-import ResumeBackground from '../assets/home.jpg';
-import { parallaxBGVariants, parallaxTextWrapperVariants } from '../variants';
+import '@react-pdf-viewer/core/lib/styles/index.css';
 import useScroll from '../hooks/useScroll';
 import useParallax from '../hooks/useParallax';
+
+import { parallaxBGVariants, parallaxTextWrapperVariants } from '../variants';
+import myResume from '../assets/Resume_Tahseen_Islam.pdf';
+import ResumeBackground from '../assets/home.jpg';
 
 const Resume = () => {
   const resumeVariant = {

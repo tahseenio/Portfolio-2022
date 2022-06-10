@@ -1,11 +1,13 @@
 //OTHER PAGES
-// TODO: make all images .webp and optimize images for mobile to load faster
+// TODO: make all images .webp and optimize images (use different smaller image for mobile) for mobile to load faster
 // TODO: add a scroll effect with a slight bounce effect similar to apples UI
 
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 import HomeBackground from '../assets/home.webp';
 import HomeNight from '../assets/homeNight.webp';
+import HomeNightMobile from '../assets/homeNightMobile.webp';
 import { usePortfolioContext } from '../context/PortfolioContext';
 import useParallax from '../hooks/useParallax';
 import {
@@ -14,11 +16,33 @@ import {
   wrapperVariants,
 } from '../variants';
 
+<link rel='preload' as='image' href={HomeNightMobile}></link>;
+
 const Home = () => {
   const { backgroundAnimation, TextAnimation, handleMouseMove } = useParallax();
 
   // dark mode check
   const { isDark } = usePortfolioContext();
+
+  const [HomeBackgroundImage, setHomeBackgroundImage] = useState('');
+  useEffect(() => {
+    if (window.innerWidth < 500) {
+      console.log('did this');
+      if (isDark) {
+        setHomeBackgroundImage(HomeNightMobile);
+        return;
+      } else {
+        setHomeBackgroundImage(HomeBackground);
+        return;
+      }
+    }
+
+    if (isDark) {
+      setHomeBackgroundImage(HomeNight);
+    } else {
+      setHomeBackgroundImage(HomeBackground);
+    }
+  }, [isDark]);
 
   return (
     <>
@@ -33,7 +57,7 @@ const Home = () => {
           <motion.img
             className='background-image'
             alt='background image'
-            src={isDark ? HomeNight : HomeBackground}
+            src={HomeBackgroundImage}
             animate={backgroundAnimation}
           />
         </motion.figure>
