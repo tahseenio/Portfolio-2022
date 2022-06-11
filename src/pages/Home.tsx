@@ -57,6 +57,7 @@ const Home = () => {
           <motion.img
             className='background-image'
             alt='background image'
+            decoding='async'
             src={HomeBackgroundImage}
             animate={backgroundAnimation}
           />

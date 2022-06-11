@@ -19,28 +19,32 @@ function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const imagesPreload = [
-      // HomeBackground,
-      // HomeNight,
-      // ProjectBackground,
-      // AboutBackground,
-      // ResumeBackground,
-      // ContactBackground,
+      HomeBackground,
+      HomeNight,
+      ProjectBackground,
+      AboutBackground,
+      ResumeBackground,
+      ContactBackground,
       HomeNightMobile,
     ];
-    // console.log('started');
-
-    for (const image of imagesPreload) {
-      // console.log('started for loop');
-      const newImage = new Image();
-      newImage.src = image;
-      newImage.onload = () => {
-        return;
-      };
-    }
-    setLoading(false);
-    // setTimeout(() => {
-    //   // console.log('finished');
-    // }, 700);
+    const fetchImages = () => {
+      // console.log('image fetch started');
+      Promise.all(
+        imagesPreload.map((url) => {
+          const newImage = new Image();
+          newImage.src = url;
+          return new Promise((res) => {
+            newImage.onload = () => {
+              newImage.decode().then(() => res(url));
+            };
+          });
+        })
+      ).then((item) => {
+        setLoading(false);
+        // console.log('DONE', item);
+      });
+    };
+    fetchImages();
   }, []);
 
   return (
