@@ -11,12 +11,12 @@ const LanguageContainer = () => {
     {
       title: 'JavaScript',
       src: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png',
-      textColor: 'white',
+      textColor: 'rgb(245, 222, 25)',
     },
     {
       title: 'TypeScript',
       src: 'https://cdn-icons-png.flaticon.com/512/5968/5968381.png',
-      textColor: 'white',
+      textColor: 'rgb(45, 121, 199)',
     },
     {
       title: 'JavaScript',
@@ -68,8 +68,8 @@ const LanguageContainer = () => {
   };
 
   const itemVariants = {
-    initial: { opacity: 0, x: -100 },
-    animate: { opacity: 1, x: 0 },
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
   };
 
   return (

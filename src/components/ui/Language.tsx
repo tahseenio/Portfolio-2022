@@ -1,6 +1,8 @@
 import { motion, Variants } from 'framer-motion';
 import { useState } from 'react';
 
+// TODO: change variable textColor to backgroundColor and change textColor for best accessibility
+
 interface Props {
   src: string;
   alt: string;
@@ -17,12 +19,16 @@ const Language = ({ src, title, variants, textColor }: Props) => {
       variants={variants}
       onHoverStart={() => setIsHovering(true)}
       onHoverEnd={() => setIsHovering(false)}
+      style={{
+        backgroundColor: isHovering ? textColor : 'white',
+        transition: '700ms',
+      }}
     >
       <motion.img
         initial={{ x: 0 }}
         animate={{ x: isHovering ? 100 : 0 }}
         transition={{
-          delay: isHovering ? 0.2 : 0,
+          delay: isHovering ? 0.15 : 0,
           duration: 0.3,
           type: 'spring',
         }}
@@ -35,11 +41,11 @@ const Language = ({ src, title, variants, textColor }: Props) => {
         initial={{ x: -100 }}
         animate={{ x: isHovering ? 0 : -100 }}
         transition={{
-          delay: isHovering ? 0.2 : 0,
+          delay: isHovering ? 0.15 : 0,
           duration: 0.3,
           type: 'spring',
         }}
-        style={{ color: textColor }}
+        // style={{ color: 'white' }}
       >
         {title}
       </motion.h1>

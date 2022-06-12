@@ -327,12 +327,6 @@ About
   border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   overflow: hidden;
-  background-color: rgb(255, 255, 255);
-  transition: 1000ms;
-}
-
-.language:hover {
-  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .language__title {
