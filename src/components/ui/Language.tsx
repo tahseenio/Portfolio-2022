@@ -21,7 +21,11 @@ const Language = ({ src, title, variants, textColor }: Props) => {
       <motion.img
         initial={{ x: 0 }}
         animate={{ x: isHovering ? 100 : 0 }}
-        transition={{ delay: 0.2, duration: 0.3, type: 'spring' }}
+        transition={{
+          delay: isHovering ? 0.2 : 0,
+          duration: 0.3,
+          type: 'spring',
+        }}
         className='language__image'
         src={src}
         alt={title}
@@ -30,7 +34,11 @@ const Language = ({ src, title, variants, textColor }: Props) => {
         className='language__title'
         initial={{ x: -100 }}
         animate={{ x: isHovering ? 0 : -100 }}
-        transition={{ delay: 0.2, duration: 0.3, type: 'spring' }}
+        transition={{
+          delay: isHovering ? 0.2 : 0,
+          duration: 0.3,
+          type: 'spring',
+        }}
         style={{ color: textColor }}
       >
         {title}
