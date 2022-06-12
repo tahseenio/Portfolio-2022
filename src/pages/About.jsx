@@ -12,6 +12,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 import AboutBackground from '../assets/about.jpg';
+import LanguageContainer from '../components/LanguageContainer';
 import SkeletonLoader from '../components/ui/SkeletonLoader';
 import useParallax from '../hooks/useParallax';
 import useScroll from '../hooks/useScroll';
@@ -68,6 +69,7 @@ const About = () => {
               onLoad={() => setLoaded(true)}
             />
           </div>
+          <LanguageContainer />
         </div>
       </div>
     </section>

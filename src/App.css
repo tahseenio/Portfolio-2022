@@ -302,6 +302,44 @@ About
   width: 100%;
 }
 
+/* language box */
+
+.language__container {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-items: center;
+}
+
+.language__image {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.language {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  transition: 1000ms;
+}
+
+.language:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.language__title {
+  position: absolute;
+  font-size: 16px;
+}
+
 /* 
 
 Resume
