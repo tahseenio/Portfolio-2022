@@ -1,4 +1,5 @@
 // TODO: make modal close before routing to new pages on click
+// TODO: change color of modal
 // TODO: provide margin to left of slider
 
 import { AnimatePresence, motion } from 'framer-motion';

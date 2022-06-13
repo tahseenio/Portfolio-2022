@@ -7,11 +7,12 @@ interface Props {
   src: string;
   alt: string;
   title: string;
+  bgColor: string;
   textColor: string;
   variants: Variants;
 }
 
-const Language = ({ src, title, variants, textColor }: Props) => {
+const Language = ({ src, title, variants, textColor, bgColor }: Props) => {
   const [isHovering, setIsHovering] = useState(false);
   return (
     <motion.div
@@ -20,7 +21,7 @@ const Language = ({ src, title, variants, textColor }: Props) => {
       onHoverStart={() => setIsHovering(true)}
       onHoverEnd={() => setIsHovering(false)}
       style={{
-        backgroundColor: isHovering ? textColor : 'white',
+        backgroundColor: isHovering ? bgColor : 'white',
         transition: '700ms',
       }}
     >
@@ -45,7 +46,7 @@ const Language = ({ src, title, variants, textColor }: Props) => {
           duration: 0.3,
           type: 'spring',
         }}
-        // style={{ color: 'white' }}
+        style={{ color: textColor }}
       >
         {title}
       </motion.h1>
