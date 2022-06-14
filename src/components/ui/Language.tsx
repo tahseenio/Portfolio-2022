@@ -1,15 +1,11 @@
 import { motion, Variants } from 'framer-motion';
 import { useState } from 'react';
-
-// TODO: change variable textColor to backgroundColor and change textColor for best accessibility
-
 interface Props {
   src: string;
-  alt: string;
   title: string;
-  bgColor: string;
-  textColor: string;
   variants: Variants;
+  textColor: string;
+  bgColor: string;
 }
 
 const Language = ({ src, title, variants, textColor, bgColor }: Props) => {

@@ -15,8 +15,15 @@ import NextjsImg from '../assets/languages/nextjs.png';
 import FirebaseImg from '../assets/languages/firebase.png';
 import FramerImg from '../assets/languages/framer.svg';
 
+interface languageProps {
+  title: string;
+  src: string;
+  textColor: string;
+  bgColor: string;
+}
+
 const LanguageContainer = () => {
-  const languages = [
+  const languages: languageProps[] = [
     {
       title: 'JavaScript',
       src: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png',
@@ -96,33 +103,6 @@ const LanguageContainer = () => {
       bgColor: 'black',
     },
   ];
-
-  // .text-color--html {
-  //   color: rgb(240, 101, 41);
-  // }
-  // .text-color--css {
-  //   color: rgb(79, 129, 243);
-  // }
-  // .text-color--js {
-  //   color: rgb(245, 222, 25);
-  // }
-  // .text-color--react {
-  //   color: rgb(124, 197, 217);
-  // }
-  // .text-color--ts {
-  //   color: rgb(45, 121, 199);
-  // }
-
-  // .text-color--jest {
-  //   color: #99424f;
-  // }
-  // .text-color--cypress {
-  //   color: #5c5c5e;
-  // }
-
-  // .text-color--sass {
-  //   color: #f06493;
-  // }
 
   const variants = {
     initial: { opacity: 0 },

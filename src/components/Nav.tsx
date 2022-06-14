@@ -1,8 +1,6 @@
 // TODO: What should the nav bar include?
 // TODO: get a nav bar design UI
-// TODO: animate my T logo
 // TODO: after a certain point, nav bar gets hidden and on scroll up nav bar is shown
-// TODO: finish burger menu
 
 import { useEffect, useState, useRef } from 'react';
 import { motion, useViewportScroll } from 'framer-motion';
@@ -48,7 +46,7 @@ const Nav = () => {
   // hide nav on scroll
   const [navVisible, setNavVisible] = useState(true);
 
-  const { scrollY } = useViewportScroll();
+  const { scrollY }: any = useViewportScroll();
 
   const updateNavPosition = () => {
     if (scrollY?.current < scrollY?.prev) {
