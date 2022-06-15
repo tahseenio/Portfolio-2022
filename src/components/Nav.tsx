@@ -107,8 +107,9 @@ const Nav = () => {
             color={'dark'}
             checked={isDark}
             style={{ marginLeft: '10px' }}
-            // onLabel='Dark'
-            // offLabel='Light'
+            onLabel='🌙'
+            offLabel='☀️'
+            classNames={{ input: 'switchInput' }}
             onChange={() => setIsDark((state) => !state)}
           />
           <Burger

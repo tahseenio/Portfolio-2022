@@ -172,9 +172,14 @@ nav {
   z-index: -1;
 }
 
+.switchInput {
+  font-size: 12px;
+}
+
 /* SWITCH */
 
-.switch {
+/* DEPRECATED BELOW */
+/* .switch {
   width: 60px;
   height: 30px;
   background-color: white;
@@ -214,7 +219,7 @@ nav {
 
 .moon--white {
   color: blue;
-}
+} */
 
 /* 
 
