@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import ProjectBackground from '../assets/projects.jpg';
+import { usePortfolioContext } from '../context/PortfolioContext';
 import useParallax from '../hooks/useParallax';
 import useScroll from '../hooks/useScroll';
 import { parallaxBGVariants, parallaxTextWrapperVariants } from '../variants';
@@ -9,8 +10,14 @@ const Projects = () => {
 
   const { scale } = useScroll();
 
+  const { setSelectedTab, ProjectsRef } = usePortfolioContext();
+
   return (
-    <section onMouseMove={(e) => handleMouseMove(e)}>
+    <section
+      id='projects'
+      onMouseMove={(e) => handleMouseMove(e)}
+      ref={ProjectsRef}
+    >
       <div className='parallax--wrapper'>
         <motion.figure
           className='parallax-background-image--wrapper'
@@ -34,7 +41,11 @@ const Projects = () => {
           animate='animate'
           exit='exit'
         >
-          <motion.div className='projects__title' animate={TextAnimation}>
+          <motion.div
+            className='projects__title'
+            animate={TextAnimation}
+            onViewportEnter={() => setSelectedTab('Projects')}
+          >
             Projects
           </motion.div>
         </motion.div>

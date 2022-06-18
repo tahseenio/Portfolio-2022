@@ -5,6 +5,7 @@
 
 import { motion } from 'framer-motion';
 import ContactBackground from '../assets/home.jpg';
+import { usePortfolioContext } from '../context/PortfolioContext';
 import useParallax from '../hooks/useParallax';
 import useScroll from '../hooks/useScroll';
 import { parallaxBGVariants, parallaxTextWrapperVariants } from '../variants';
@@ -14,8 +15,14 @@ const Contact = () => {
 
   const { scale } = useScroll();
 
+  const { setSelectedTab, ContactRef } = usePortfolioContext();
+
   return (
-    <section onMouseMove={(e) => handleMouseMove(e)}>
+    <section
+      onMouseMove={(e) => handleMouseMove(e)}
+      id='contact'
+      ref={ContactRef}
+    >
       <div className='parallax--wrapper'>
         <motion.figure
           className='parallax-background-image--wrapper'
@@ -39,7 +46,11 @@ const Contact = () => {
           animate='animate'
           exit='exit'
         >
-          <motion.div className='contact__title' animate={TextAnimation}>
+          <motion.div
+            className='contact__title'
+            animate={TextAnimation}
+            onViewportEnter={() => setSelectedTab('Contact')}
+          >
             Contact
           </motion.div>
         </motion.div>

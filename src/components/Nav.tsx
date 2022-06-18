@@ -4,7 +4,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { motion, useViewportScroll } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Burger, Switch } from '@mantine/core';
 
 import navLogo from '../assets/logo_inverted.svg';
@@ -12,25 +12,19 @@ import Modal from './Modal';
 import { usePortfolioContext } from '../context/PortfolioContext';
 
 const Nav = () => {
-  const links = ['Home', 'About', 'Projects', 'Resume', 'Contact'];
+  const { HomeRef, AboutRef, ProjectsRef, ResumeRef, ContactRef } =
+    usePortfolioContext();
+
+  const links = [
+    { title: 'Home', reference: HomeRef, id: '1' },
+    { title: 'About', reference: AboutRef, id: '2' },
+    { title: 'Projects', reference: ProjectsRef, id: '3' },
+    { title: 'Resume', reference: ResumeRef, id: '4' },
+    { title: 'Contact', reference: ContactRef, id: '5' },
+  ];
   const location = useLocation();
 
-  const getURL = () => {
-    let pathname = location.pathname;
-    if (pathname === '/') {
-      return 'Home';
-    } else if (pathname === '/about') {
-      return 'About';
-    } else if (pathname === '/projects') {
-      return 'Projects';
-    } else if (pathname === '/resume') {
-      return 'Resume';
-    } else if (pathname === '/contact') {
-      return 'Contact';
-    }
-  };
-
-  const [selectedTab, setSelectedTab] = useState(() => getURL());
+  const { selectedTab, setSelectedTab } = usePortfolioContext();
 
   // dark mode functions
   const { isDark, setIsDark } = usePortfolioContext();
@@ -84,23 +78,23 @@ const Nav = () => {
         />
         <img src={navLogo} className='nav__logo' alt='nav logo' />
         <ul className='nav__links'>
-          {links.map((item) => (
-            <Link
-              to={item !== 'Home' ? `/${item.toLowerCase()}` : '/'}
-              key={item}
-              className={
-                item !== selectedTab ? 'nav__link' : 'nav__link active'
-              }
-              onClick={() => setSelectedTab(item)}
+          {links.map(({ title, id, reference }) => (
+            <li
+              key={id}
+              className={`nav__link ${title === selectedTab ? 'active' : null}`}
+              onClick={() => {
+                // setSelectedTab(title);
+                reference?.current!.scrollIntoView();
+              }}
             >
-              <p>{item}</p>
-              {item === selectedTab ? (
+              <p>{title}</p>
+              {title === selectedTab ? (
                 <motion.div
                   layoutId='navLinksBackground'
                   className='selected'
                 ></motion.div>
               ) : null}
-            </Link>
+            </li>
           ))}
           <Switch
             size='md'

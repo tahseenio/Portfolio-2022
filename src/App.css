@@ -291,6 +291,14 @@ Home
   color: #111;
 }
 
+.secret {
+  position: absolute;
+  height: 3px;
+  width: 3px;
+  top: 80px;
+  left: 0;
+}
+
 /* 
 
 About

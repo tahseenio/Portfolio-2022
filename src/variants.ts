@@ -18,12 +18,12 @@ export const wrapperVariants = {
 };
 
 export const HomeBackgroundVariants = {
-  initial: { y: '-100vh' },
+  initial: { opacity: 0 },
   animate: {
-    y: 0,
+    opacity: 1,
     transition: { type: 'spring', bounce: 0.25, duration: 0.8 },
   },
-  exit: { y: '-150vh' },
+  exit: {},
 };
 
 // ALL PAGES excluding HOME

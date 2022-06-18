@@ -9,11 +9,12 @@
 // TODO: parallax background zooms in as you scroll down and then fades away
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import AboutBackground from '../assets/about.jpg';
 import LanguageContainer from '../components/LanguageContainer';
 import SkeletonLoader from '../components/ui/SkeletonLoader';
+import { usePortfolioContext } from '../context/PortfolioContext';
 import useParallax from '../hooks/useParallax';
 import useScroll from '../hooks/useScroll';
 import { parallaxBGVariants, parallaxTextWrapperVariants } from '../variants';
@@ -27,8 +28,10 @@ const About = () => {
   // img zoom in on scroll down
   const { scale } = useScroll();
 
+  const { setSelectedTab, AboutRef } = usePortfolioContext();
+
   return (
-    <section onMouseMove={(e) => handleMouseMove(e)}>
+    <section id='about' ref={AboutRef} onMouseMove={(e) => handleMouseMove(e)}>
       <div className='parallax--wrapper'>
         <motion.figure
           className='parallax-background-image--wrapper'
@@ -52,7 +55,11 @@ const About = () => {
           animate='animate'
           exit='exit'
         >
-          <motion.div className='about__title' animate={TextAnimation}>
+          <motion.div
+            className='about__title'
+            animate={TextAnimation}
+            onViewportEnter={() => setSelectedTab('About')}
+          >
             About
           </motion.div>
         </motion.div>

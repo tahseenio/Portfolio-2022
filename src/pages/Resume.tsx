@@ -11,6 +11,7 @@ import useParallax from '../hooks/useParallax';
 import { parallaxBGVariants, parallaxTextWrapperVariants } from '../variants';
 import myResume from '../assets/Resume_Tahseen_Islam.pdf';
 import ResumeBackground from '../assets/home.jpg';
+import { usePortfolioContext } from '../context/PortfolioContext';
 
 const Resume = () => {
   const resumeVariant = {
@@ -23,8 +24,14 @@ const Resume = () => {
 
   const { scale } = useScroll();
 
+  const { setSelectedTab, ResumeRef } = usePortfolioContext();
+
   return (
-    <section onMouseMove={(e) => handleMouseMove(e)}>
+    <section
+      onMouseMove={(e) => handleMouseMove(e)}
+      id='resume'
+      ref={ResumeRef}
+    >
       <div className='parallax--wrapper'>
         <motion.figure
           className='parallax-background-image--wrapper'
@@ -48,7 +55,11 @@ const Resume = () => {
           animate='animate'
           exit='exit'
         >
-          <motion.div className='resume__title' animate={TextAnimation}>
+          <motion.div
+            className='resume__title'
+            animate={TextAnimation}
+            onViewportEnter={() => setSelectedTab('Resume')}
+          >
             Resume
           </motion.div>
         </motion.div>

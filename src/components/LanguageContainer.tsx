@@ -123,6 +123,7 @@ const LanguageContainer = () => {
     >
       {languages.map(({ title, src, textColor, bgColor }) => (
         <Language
+          key={title}
           variants={itemVariants}
           title={title}
           src={src}

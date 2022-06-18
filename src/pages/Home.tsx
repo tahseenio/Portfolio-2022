@@ -3,7 +3,7 @@
 // TODO: add a scroll effect with a slight bounce effect similar to apples UI
 
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import HomeBackground from '../assets/home.webp';
 import HomeNight from '../assets/homeNight.webp';
@@ -15,14 +15,16 @@ import {
   textVariants,
   wrapperVariants,
 } from '../variants';
-
-<link rel='preload' as='image' href={HomeNightMobile}></link>;
+import About from './About';
+import Contact from './Contact';
+import Projects from './Projects';
+import Resume from './Resume';
 
 const Home = () => {
   const { backgroundAnimation, TextAnimation, handleMouseMove } = useParallax();
 
   // dark mode check
-  const { isDark } = usePortfolioContext();
+  const { isDark, setSelectedTab, HomeRef } = usePortfolioContext();
 
   const [HomeBackgroundImage, setHomeBackgroundImage] = useState('');
   useEffect(() => {
@@ -46,7 +48,17 @@ const Home = () => {
 
   return (
     <>
-      <main className='home__container' onMouseMove={(e) => handleMouseMove(e)}>
+      <main
+        className='home__container'
+        onMouseMove={(e) => handleMouseMove(e)}
+        ref={HomeRef}
+      >
+        <motion.div
+          className='secret'
+          onViewportEnter={() => setSelectedTab('Home')}
+        >
+          {' '}
+        </motion.div>
         <motion.figure
           className='background-image--wrapper'
           variants={HomeBackgroundVariants}
@@ -81,6 +93,10 @@ const Home = () => {
           </motion.div>
         </motion.div>
       </main>
+      <About />
+      <Projects />
+      <Resume />
+      <Contact />
     </>
   );
 };
