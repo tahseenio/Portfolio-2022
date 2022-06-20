@@ -22,17 +22,16 @@ html {
 
 body {
   overflow-x: hidden;
-  background-color: rgb(229, 236, 236);
+  background-color: rgb(255, 255, 255);
 }
 
 .container {
   padding: 0 32px;
-  padding-top: 80px;
   min-height: 100vh;
 }
 
 .row {
-  max-width: 1500px;
+  max-width: 1900px;
   width: 100%;
   margin: 0 auto;
 }
@@ -85,7 +84,7 @@ DARK-MODE
 */
 
 body.dark {
-  background-color: #555555;
+  background-color: #565656;
 }
 
 body.dark .app--loader {
@@ -122,7 +121,7 @@ NAV
 nav {
   width: 100%;
   margin: 0 auto;
-  max-width: 1500px;
+  max-width: 1900px;
 
   height: 80px;
   display: flex;
@@ -175,51 +174,6 @@ nav {
 .switchInput {
   font-size: 12px;
 }
-
-/* SWITCH */
-
-/* DEPRECATED BELOW */
-/* .switch {
-  width: 60px;
-  height: 30px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  border-radius: 50px;
-  padding: 5px;
-  cursor: pointer;
-  border: 1px solid black;
-  margin-left: 8px;
-}
-
-.switch[data-ison='true'] {
-  justify-content: flex-end;
-  background-color: black;
-}
-
-.handle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  background-color: black;
-  border-radius: 40px;
-  background-position: center;
-}
-
-.handle[data-ison='true'] {
-  background-color: white;
-}
-
-.sun--yellow {
-  color: yellow;
-}
-
-.moon--white {
-  color: blue;
-} */
 
 /* 
 
@@ -282,7 +236,6 @@ Home
   color: #111;
 }
 
-.about__title,
 .projects__title,
 .contact__title,
 .resume__title {
@@ -305,23 +258,33 @@ About
 
 */
 
-.gh-image--wrapper {
-  overflow: hidden;
-  width: 100%;
-  aspect-ratio: 6.375;
+.about__title {
+  font-size: 100px;
+  font-weight: 500;
+  margin: 200px 0;
 }
 
-.gh-chart {
-  width: 100%;
+.about__para {
+  font-size: 2rem;
+  line-height: 2;
+}
+
+.about__title--tech {
+  font-size: 60px;
+  font-weight: 500;
+  margin: 150px;
+  white-space: nowrap;
 }
 
 /* language box */
 
 .language__container {
+  padding: 0 64px;
   display: grid;
-  gap: 8px;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
+  margin-bottom: 100px;
 }
 
 .language__image {

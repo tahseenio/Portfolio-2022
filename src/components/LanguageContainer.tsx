@@ -106,12 +106,12 @@ const LanguageContainer = () => {
 
   const variants = {
     initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { staggerChildren: 0.2 } },
+    animate: { opacity: 1, transition: { staggerChildren: 0.08 } },
   };
 
   const itemVariants = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
+    initial: { opacity: 0, scale: 0, x: 100 },
+    animate: { opacity: 1, scale: 1, x: 0 },
   };
 
   return (
@@ -119,7 +119,8 @@ const LanguageContainer = () => {
       className='language__container'
       variants={variants}
       initial='initial'
-      animate='animate'
+      whileInView='animate'
+      viewport={{ once: true }}
     >
       {languages.map(({ title, src, textColor, bgColor }) => (
         <Language

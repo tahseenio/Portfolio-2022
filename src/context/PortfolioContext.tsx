@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useRef } from 'react';
+import { createContext, useContext, useState, useRef, useEffect } from 'react';
 
 export interface PortfolioContextProps {
   isDark: boolean;
@@ -22,9 +22,9 @@ export interface ProviderProps {
 
 export const PortfolioContextProvider = ({ children }: ProviderProps) => {
   const [isDark, setIsDark] = useState(() => {
-    if (localStorage.getItem('theme') === 'light') {
-      return false;
-    } else return true;
+    if (localStorage.getItem('theme') === 'dark') {
+      return true;
+    } else return false;
   });
 
   const [selectedTab, setSelectedTab] = useState('');
