@@ -36,7 +36,6 @@ const About = () => {
 
   // const xMovement = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
-  // github img shimmer loader
   const [loaded, setLoaded] = useState(false);
 
   // img zoom in on scroll down
