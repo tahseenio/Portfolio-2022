@@ -41,17 +41,17 @@ const Nav = () => {
 
   const { scrollY }: any = useViewportScroll();
 
-  // const updateNavPosition = () => {
-  //   if (scrollY?.current < scrollY?.prev) {
-  //     setNavVisible(true);
-  //   } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
-  //     setNavVisible(false);
-  //   }
-  // };
+  const updateNavPosition = () => {
+    if (scrollY?.current < scrollY?.prev) {
+      setNavVisible(true);
+    } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
+      setNavVisible(false);
+    }
+  };
 
-  // useEffect(() => {
-  //   return scrollY.onChange(() => updateNavPosition());
-  // });
+  useEffect(() => {
+    return scrollY.onChange(() => updateNavPosition());
+  });
 
   const navAnimation = {
     visible: { opacity: 1, y: 0 },
