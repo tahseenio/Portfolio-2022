@@ -94,9 +94,9 @@ const Home = () => {
         </motion.div>
       </main>
       <About />
-      <Projects />
+      {/* <Projects /> */}
       <Resume />
-      <Contact />
+      {/* <Contact /> */}
     </>
   );
 };

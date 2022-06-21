@@ -74,7 +74,7 @@ const About = () => {
           variants={container}
           initial='hidden'
           whileInView='visible'
-          onViewportEnter={() => setSelectedTab('About')}
+          viewport={{ amount: 0.8, once: true }}
         >
           {title.split('').map((letter, index) => (
             <motion.span
@@ -88,7 +88,10 @@ const About = () => {
             </motion.span>
           ))}
         </motion.h1>
-        <p className='about__para'>
+        <motion.p
+          className='about__para'
+          onViewportEnter={() => setSelectedTab('About')}
+        >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
           placeat autem veritatis labore? Voluptate quo unde modi maxime quod
           sapiente sit eius asperiores sed velit itaque architecto inventore
@@ -101,7 +104,7 @@ const About = () => {
           veritatis amet voluptatibus. Corrupti error, possimus dolore tenetur
           animi laborum quaerat! Fuga dignissimos blanditiis error molestias
           modi natus ea, aliquid at.
-        </p>
+        </motion.p>
         <motion.h1
           className='about__title--tech'
           initial={{}}
@@ -114,22 +117,6 @@ const About = () => {
           Stack - Tech Stack - Tech Stack - Tech Stack - Tech Stack - Tech Stack
           - Tech Stack - Tech Stack - Tech Stack
         </motion.h1>
-        {/* <motion.div
-            style={{
-              position: 'absolute',
-              top: '50%',
-              transform: `translateY(-50%)`,
-              left: `-${+yRange}%`,
-            }}
-          >
-            Tech Stack - Tech Stack - Tech Stack - Tech Stack - Tech Stack -
-            Tech Stack - Tech Stack - Tech Stack - Tech Stack - Tech Stack -
-            Tech Stack - Tech Stack - Tech Stack - Tech Stack - Tech Stack -
-            Tech Stack - Tech Stack - Tech Stack - Tech Stack - Tech Stack -
-            Tech Stack - Tech Stack - Tech Stack - Tech Stack - Tech Stack -
-            Tech Stack - Tech Stack - Tech Stack - Tech Stack - Tech Stack
-          </motion.div> */}
-
         <LanguageContainer />
       </div>
     </section>

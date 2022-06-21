@@ -16,6 +16,7 @@ const Language = ({ src, title, variants, textColor, bgColor }: Props) => {
       variants={variants}
       onHoverStart={() => setIsHovering(true)}
       onHoverEnd={() => setIsHovering(false)}
+      onTap={() => setIsHovering((state) => !state)}
       style={{
         backgroundColor: isHovering ? bgColor : 'white',
         transition: '700ms',

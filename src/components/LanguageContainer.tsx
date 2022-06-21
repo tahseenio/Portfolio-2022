@@ -25,16 +25,22 @@ interface languageProps {
 const LanguageContainer = () => {
   const languages: languageProps[] = [
     {
-      title: 'JavaScript',
-      src: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png',
-      textColor: '',
-      bgColor: '#FFDF00',
+      title: 'React',
+      src: ReactImg,
+      textColor: 'white',
+      bgColor: '#61DAFB',
     },
     {
       title: 'TypeScript',
       src: TypeScriptImg,
       textColor: 'white',
       bgColor: '#1677C7',
+    },
+    {
+      title: 'JavaScript',
+      src: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png',
+      textColor: '',
+      bgColor: '#FFDF00',
     },
     {
       title: 'HTML',
@@ -49,16 +55,10 @@ const LanguageContainer = () => {
       bgColor: '#2195F2',
     },
     {
-      title: 'React',
-      src: ReactImg,
+      title: 'Sass',
+      src: 'https://cdn-icons-png.flaticon.com/512/5968/5968358.png',
       textColor: 'white',
-      bgColor: '#61DAFB',
-    },
-    {
-      title: 'Next.js',
-      src: NextjsImg,
-      textColor: 'white',
-      bgColor: 'black',
+      bgColor: '#CC6699',
     },
     {
       title: 'Git',
@@ -67,22 +67,22 @@ const LanguageContainer = () => {
       bgColor: '#DE4C36',
     },
     {
-      title: 'Jest',
-      src: JestImg,
-      textColor: 'white',
-      bgColor: '#99424F',
-    },
-    {
       title: 'Cypress',
       src: CypressImg,
       textColor: 'white',
       bgColor: '#5c5c5e',
     },
     {
-      title: 'Sass',
-      src: 'https://cdn-icons-png.flaticon.com/512/5968/5968358.png',
+      title: 'Jest',
+      src: JestImg,
       textColor: 'white',
-      bgColor: '#CC6699',
+      bgColor: '#99424F',
+    },
+    {
+      title: 'Next.js',
+      src: NextjsImg,
+      textColor: 'white',
+      bgColor: 'black',
     },
     {
       title: 'Firebase',
@@ -91,14 +91,14 @@ const LanguageContainer = () => {
       bgColor: '#FFCB2C',
     },
     {
-      title: 'Figma',
-      src: 'https://cdn-icons-png.flaticon.com/512/5968/5968705.png',
+      title: 'Framer',
+      src: FramerImg,
       textColor: 'white',
       bgColor: 'black',
     },
     {
-      title: 'Framer',
-      src: FramerImg,
+      title: 'Figma',
+      src: 'https://cdn-icons-png.flaticon.com/512/5968/5968705.png',
       textColor: 'white',
       bgColor: 'black',
     },
@@ -120,7 +120,7 @@ const LanguageContainer = () => {
       variants={variants}
       initial='initial'
       whileInView='animate'
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       {languages.map(({ title, src, textColor, bgColor }) => (
         <Language

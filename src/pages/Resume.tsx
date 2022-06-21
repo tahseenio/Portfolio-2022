@@ -5,89 +5,76 @@
 import { Viewer, Worker } from '@react-pdf-viewer/core';
 import { motion } from 'framer-motion';
 import '@react-pdf-viewer/core/lib/styles/index.css';
-import useScroll from '../hooks/useScroll';
-import useParallax from '../hooks/useParallax';
 
-import { parallaxBGVariants, parallaxTextWrapperVariants } from '../variants';
+import { ImArrowRight2 } from 'react-icons/im';
 import myResume from '../assets/Resume_Tahseen_Islam.pdf';
-import ResumeBackground from '../assets/home.jpg';
 import { usePortfolioContext } from '../context/PortfolioContext';
 
 const Resume = () => {
-  const resumeVariant = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { delay: 0.4 } },
-    exit: { opacity: 0 },
-  };
-
-  const { backgroundAnimation, TextAnimation, handleMouseMove } = useParallax();
-
-  const { scale } = useScroll();
-
   const { setSelectedTab, ResumeRef } = usePortfolioContext();
 
+  const title = 'Resume';
+
+  const container = {
+    visible: {
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const item = {
+    hidden: {
+      opacity: 0,
+      y: 100,
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 },
+    },
+  };
+
   return (
-    <section
-      onMouseMove={(e) => handleMouseMove(e)}
-      id='resume'
-      ref={ResumeRef}
-    >
-      <div className='parallax--wrapper'>
-        <motion.figure
-          className='parallax-background-image--wrapper'
-          variants={parallaxBGVariants}
-          initial='initial'
-          animate='animate'
-          exit='initial'
-        >
-          <motion.img
-            className='parallax-background-image'
-            style={{ scale: scale }}
-            src={ResumeBackground}
-            animate={backgroundAnimation}
-            alt=''
-          />
-        </motion.figure>
-        <motion.div
-          className='parallax__info--wrapper'
-          variants={parallaxTextWrapperVariants}
-          initial='initial'
-          animate='animate'
-          exit='exit'
-        >
-          <motion.div
+    <section className='container' ref={ResumeRef}>
+      <div className='row'>
+        <div className='resume__container'>
+          <motion.h1
             className='resume__title'
-            animate={TextAnimation}
+            variants={container}
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ amount: 0.8, once: true }}
+          >
+            {title.split('').map((letter, index) => (
+              <motion.span
+                key={index}
+                variants={item}
+                style={{
+                  display: 'inline-block',
+                }}
+              >
+                {letter}
+              </motion.span>
+            ))}
+          </motion.h1>
+          <motion.a
+            className='pdfDownloadBtn'
             onViewportEnter={() => setSelectedTab('Resume')}
+            href={myResume}
+            download
           >
-            Resume
-          </motion.div>
-        </motion.div>
-      </div>
-      <div className='container'>
-        <div className='row'>
-          <motion.section
-            variants={resumeVariant}
-            initial={'initial'}
-            animate={'animate'}
-            exit={'exit'}
-            className='resume__container'
-          >
-            <a href={myResume} download>
-              Download Resume
-            </a>
+            Download Resume <ImArrowRight2 className='downloadBtn-arrow' />
+          </motion.a>
+          <section className='pdf--wrapper'>
             <Worker workerUrl='https://unpkg.com/pdfjs-dist@2.14.305/build/pdf.worker.min.js'>
-              <Viewer
-                fileUrl={myResume}
-                // renderLoader={(percentages) => (
-                //   <ProgressBar progress={Math.round(percentages)} />
-                // )}
-              />
+              <Viewer fileUrl={myResume} />
             </Worker>
-            <a href={myResume} download>
-              Download Resume
-            </a>
-          </motion.section>
+          </section>
+          <a className='pdfDownloadBtn' href={myResume} download>
+            Download Resume <ImArrowRight2 className='downloadBtn-arrow' />
+          </a>
         </div>
       </div>
     </section>

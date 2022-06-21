@@ -26,7 +26,7 @@ body {
 }
 
 .container {
-  margin: 100px 32px;
+  margin: 0 32px;
   min-height: 100vh;
 }
 
@@ -261,7 +261,7 @@ About
 .about__title {
   font-size: 100px;
   font-weight: 500;
-  padding-top: 150px;
+  padding-top: 200px;
   padding-bottom: 250px;
 }
 
@@ -316,15 +316,59 @@ Resume
 
 */
 
-.parallax--wrapper {
-  overflow: hidden;
-  position: relative;
-  min-height: 40vh;
-  min-width: 100vw;
-
+.resume__container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.resume__title {
+  font-size: 100px;
+  font-weight: 500;
+  padding-top: 200px;
+  padding-bottom: 250px;
+}
+
+.pdf--wrapper {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.pdfDownloadBtn {
+  text-decoration: none;
+  color: black;
+  font-size: 1.7rem;
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition-duration: 0.3s;
+
+  display: inline-flex;
+  align-items: center;
+  margin: 8px;
+}
+
+.downloadBtn-arrow {
+  color: black;
+  margin-left: 8px;
+  transition-duration: 0.3s;
+}
+
+.pdfDownloadBtn:hover {
+  color: white;
+  background-color: #33b9de;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.2);
+}
+
+.pdfDownloadBtn:active {
+  filter: brightness(0.9);
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+}
+
+.pdfDownloadBtn:hover .downloadBtn-arrow {
+  color: white;
+  transform: rotate(90deg);
 }
 
 .parallax-background-image--wrapper {
@@ -345,13 +389,6 @@ Resume
 
 .parallax__info--wrapper {
   z-index: 100;
-}
-
-.resume__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .resume__title {
