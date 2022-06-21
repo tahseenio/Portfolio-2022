@@ -120,7 +120,7 @@ const LanguageContainer = () => {
       variants={variants}
       initial='initial'
       whileInView='animate'
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       {languages.map(({ title, src, textColor, bgColor }) => (
         <Language

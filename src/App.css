@@ -36,6 +36,41 @@ body {
   margin: 0 auto;
 }
 
+.floater {
+  color: #0a66c2;
+  background-color: white;
+  font-size: 1.5rem;
+  padding: 15px;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 300ms padding;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  animation: move-up-down 2s ease-in-out infinite alternate;
+  /* animation-delay: 4s; */
+}
+
+@keyframes move-up-down {
+  0% {
+    transform: translateY(calc(-50%)) translateX(-50%);
+  }
+  100% {
+    transform: translateY(calc(-50% - 20px)) translateX(-50%);
+  }
+}
+
+.floater-bg {
+  background-color: rgb(123, 223, 121);
+}
+
+.floater:hover {
+  padding: 35px;
+}
+
 .app--loader {
   position: absolute;
   /* background-color: white; */

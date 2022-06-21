@@ -3,11 +3,14 @@
 // TODO: add a scroll effect with a slight bounce effect similar to apples UI
 
 import { motion } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { FaLinkedin } from 'react-icons/fa';
+import { BsGithub, BsFileEarmarkPdf } from 'react-icons/bs';
 
 import HomeBackground from '../assets/home.webp';
 import HomeNight from '../assets/homeNight.webp';
 import HomeNightMobile from '../assets/homeNightMobile.webp';
+import Floater from '../components/Floater';
 import { usePortfolioContext } from '../context/PortfolioContext';
 import useParallax from '../hooks/useParallax';
 import {
@@ -24,7 +27,7 @@ const Home = () => {
   const { backgroundAnimation, TextAnimation, handleMouseMove } = useParallax();
 
   // dark mode check
-  const { isDark, setSelectedTab, HomeRef } = usePortfolioContext();
+  const { isDark, setSelectedTab, HomeRef, ResumeRef } = usePortfolioContext();
 
   const [HomeBackgroundImage, setHomeBackgroundImage] = useState('');
   useEffect(() => {
@@ -53,6 +56,34 @@ const Home = () => {
         onMouseMove={(e) => handleMouseMove(e)}
         ref={HomeRef}
       >
+        <Floater
+          icon={<BsGithub />}
+          link={'https://github.com/tahseenio/'}
+          left={'20%'}
+          top={'20%'}
+          delay={2}
+          color={'black'}
+          animationDelay={'2.2s'}
+        />
+        <Floater
+          icon={<FaLinkedin />}
+          link={'https://www.linkedin.com/in/tahseen1/'}
+          left={'-20%'}
+          delay={2.2}
+          top={'25%'}
+          animationDelay={'2.5s'}
+        />
+        <Floater
+          icon={<BsFileEarmarkPdf />}
+          left={'10%'}
+          top={'-20%'}
+          color={'black'}
+          delay={2.4}
+          animationDelay={'3s'}
+          onClick={() => {
+            ResumeRef?.current!.scrollIntoView();
+          }}
+        />
         <motion.div
           className='secret'
           onViewportEnter={() => setSelectedTab('Home')}
