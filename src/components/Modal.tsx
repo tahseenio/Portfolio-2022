@@ -5,6 +5,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { usePortfolioContext } from '../context/PortfolioContext';
 
 interface Props {
   isBurgerOpen: boolean;
@@ -13,12 +14,15 @@ interface Props {
 }
 
 const Modal = ({ setIsBurgerOpen, isBurgerOpen, modalButton }: Props) => {
+  const { HomeRef, AboutRef, ProjectsRef, ResumeRef, ContactRef } =
+    usePortfolioContext();
+
   const links = [
-    { title: 'Home', to: '/', id: '1' },
-    { title: 'About', to: '/about', id: '2' },
-    { title: 'Projects', to: '/projects', id: '3' },
-    { title: 'Resume', to: '/resume', id: '4' },
-    { title: 'Contact', to: '/contact', id: '5' },
+    { title: 'Home', reference: HomeRef, id: '1' },
+    { title: 'About', reference: AboutRef, id: '2' },
+    { title: 'Projects', reference: ProjectsRef, id: '3' },
+    { title: 'Resume', reference: ResumeRef, id: '4' },
+    { title: 'Contact', reference: ContactRef, id: '5' },
   ];
 
   const sideVariants = {
@@ -90,18 +94,19 @@ const Modal = ({ setIsBurgerOpen, isBurgerOpen, modalButton }: Props) => {
               animate='open'
               exit='closed'
             >
-              {links.map(({ title, to, id }) => (
+              {links.map(({ title, reference, id }) => (
                 <motion.div
                   key={id}
                   className='modal__link'
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   variants={itemVariants}
-                  onClick={() => setIsBurgerOpen((state) => !state)}
+                  onClick={() => {
+                    setIsBurgerOpen((state) => !state);
+                    reference?.current!.scrollIntoView();
+                  }}
                 >
-                  <Link to={to} className='modal__link'>
-                    {title}
-                  </Link>
+                  <a className='modal__link'>{title}</a>
                 </motion.div>
               ))}
             </motion.div>

@@ -43,7 +43,7 @@ body {
   padding: 15px;
   border-radius: 100%;
   position: absolute;
-  z-index: 1000;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,6 +169,27 @@ nav {
   height: 60px;
   width: 65px;
   user-select: none;
+}
+
+.nav__links--left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__link--left {
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1.7rem;
+  transition: transform 300ms;
+}
+
+.nav__link--left:hover {
+  transform: scale(1.2);
+}
+
+.nav__link--left:active {
+  transform: scale(0.8);
 }
 
 .nav__links {
@@ -455,7 +476,9 @@ Modal
   bottom: 0;
   width: 300px;
   height: 100vh;
-  background-color: lightblue;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -468,6 +491,7 @@ Modal
 }
 
 .modal__link {
+  cursor: pointer;
   text-decoration: none;
   margin-top: 32px;
   color: white;
@@ -492,7 +516,7 @@ footer {
   color: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .nav__link {
     display: none;
   }
