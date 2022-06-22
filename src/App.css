@@ -505,15 +505,69 @@ Footer
 */
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: black;
+  padding: 36px 72px;
+}
+
+.footer--top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.footer__links {
+  color: white;
+}
+
+.footer__link {
+  margin: 12px;
+}
+
+.footer__link--anchor {
+  color: white;
+  text-decoration: none;
 }
 
 .footer__description {
-  padding: 2.5rem 0;
+  text-align: center;
+  padding-top: 2.5rem;
   color: white;
+}
+
+.footer__logo {
+  width: 100%;
+  height: 100%;
+}
+
+.footer__logo--popper {
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  color: white;
+  font-weight: 500;
+  opacity: 0;
+  transition: all 350ms ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__figure {
+  margin-top: 12px;
+  cursor: pointer;
+  width: 75px;
+  height: 60px;
+  position: relative;
+  transition: transform 300ms ease;
+}
+
+.footer__figure:hover {
+  transform: scale(1.1);
+}
+
+.footer__figure:hover .footer__logo--popper {
+  transform: translateX(16px);
+  opacity: 1;
 }
 
 @media (max-width: 900px) {
