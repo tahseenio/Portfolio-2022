@@ -292,9 +292,11 @@ Home
   color: #111;
 }
 
+.about__title,
 .projects__title,
 .contact__title,
 .resume__title {
+  padding: 200px 0;
   font-weight: 500;
   font-size: 100px;
   color: #111;
@@ -313,13 +315,6 @@ Home
 About
 
 */
-
-.about__title {
-  font-size: 100px;
-  font-weight: 500;
-  padding-top: 200px;
-  padding-bottom: 250px;
-}
 
 .about__para {
   font-size: 2rem;
@@ -379,15 +374,9 @@ Resume
   flex-direction: column;
 }
 
-.resume__title {
-  font-size: 100px;
-  font-weight: 500;
-  padding-top: 200px;
-  padding-bottom: 250px;
-}
-
 .pdf--wrapper {
   width: 100%;
+  aspect-ratio: 0.863;
   margin: 0 auto;
   max-width: 1300px;
 }
@@ -500,6 +489,20 @@ Modal
 
 /* 
 
+Contact
+
+*/
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 
+
 Footer
 
 */
@@ -513,6 +516,9 @@ footer {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .footer__links {
