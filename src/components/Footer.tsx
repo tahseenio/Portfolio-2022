@@ -30,6 +30,9 @@ const Footer = () => {
     tap: { scale: 0.9 },
   };
 
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
     <footer>
       <div className='footer--top'>
@@ -61,24 +64,20 @@ const Footer = () => {
         <ul className='footer__links'>
           {socialLinks.map(({ title, link }, index) => (
             <motion.li
+              key={index}
               className='footer__link'
               variants={linkVariants}
               whileHover='hover'
               whileTap='tap'
             >
-              <a
-                key={index}
-                className='footer__link--anchor'
-                href={link}
-                target='_blank'
-              >
+              <a className='footer__link--anchor' href={link} target='_blank'>
                 {title}
               </a>
             </motion.li>
           ))}
         </ul>
       </div>
-      <p className='footer__description'>Copyright © 2022 By Tahseen Islam</p>
+      <p className='footer__description'>Copyright © {year} By Tahseen Islam</p>
     </footer>
   );
 };
