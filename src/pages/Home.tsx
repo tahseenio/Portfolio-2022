@@ -51,7 +51,6 @@ const Home = () => {
 
   return (
     <>
-      <Contact />
       <main
         className='home__container'
         onMouseMove={(e) => handleMouseMove(e)}
@@ -128,6 +127,7 @@ const Home = () => {
       <About />
       {/* <Projects /> */}
       <Resume />
+      <Contact />
     </>
   );
 };

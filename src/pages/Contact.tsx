@@ -5,13 +5,17 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { AiOutlineMail } from 'react-icons/ai';
+import { BsPerson } from 'react-icons/bs';
+import { FiMessageSquare } from 'react-icons/fi';
 
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { usePortfolioContext } from '../context/PortfolioContext';
 
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import Toast from '../components/Toast';
 
 const Contact = () => {
   const { setSelectedTab, ContactRef } = usePortfolioContext();
@@ -70,31 +74,44 @@ const Contact = () => {
 
   const form = useRef<any>();
 
-  const onContactSubmit = (data: any) => {
+  const [notification, setNotifications] = useState<any>(null);
+
+  const onContactSubmit = () => {
     setEmailSending(true);
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then(() => {
-        EmailMessage.current.innerHTML = 'Sent Email';
+        handleToast('success', 3000);
+        reset();
       })
       .catch(() => {
-        EmailMessage.current.innerHTML = 'Error try again later...';
+        handleToast('fail', 2000);
       })
       .finally(() => {
         setEmailSending(false);
-        setTimeout(() => {
-          EmailMessage.current.innerHTML = '';
-        }, 2500);
       });
-    reset();
+  };
+
+  const handleToast = (text: string, timeout: number) => {
+    if (text === 'success') {
+      setNotifications(
+        <Toast text={'Successfully sent!'} bgColor={'#B6F8C4'} />
+      );
+    } else if (text === 'fail') {
+      setNotifications(<Toast text={'Failed to send!'} bgColor={'#FFB7B7'} />);
+    }
+    setTimeout(() => {
+      setNotifications(null);
+    }, timeout);
   };
 
   return (
     <section className='container' ref={ContactRef}>
       <div className='row'>
-        <div className='resume__container'>
+        <div className='contact__container'>
+          <AnimatePresence>{notification}</AnimatePresence>
           <motion.h1
-            className='resume__title'
+            className='contact__title'
             variants={container}
             initial='hidden'
             whileInView='visible'
@@ -112,39 +129,68 @@ const Contact = () => {
               </motion.span>
             ))}
           </motion.h1>
+          <motion.p
+            onViewportEnter={() => setSelectedTab('Contact')}
+            className={'contact__para--description'}
+          >
+            Reach me at{' '}
+            <a href='mailto:tahseenislam@outlook.com.au'>
+              tahseenislam@outlook.com.au
+            </a>{' '}
+            or fill out the form below and I will get back to you!
+          </motion.p>
           <form
             className='contact-form'
             ref={form}
             onSubmit={handleSubmit(onContactSubmit)}
           >
-            <motion.p onViewportEnter={() => setSelectedTab('Contact')}>
-              Reach me at{' '}
-              <a href='mailto:tahseenislam@outlook.com.au'>
-                tahseenislam@outlook.com.au
-              </a>{' '}
-              or fill out the form below and I will get back to you!
-            </motion.p>
             <p ref={EmailMessage}> </p>
-            <input
-              {...register('user_name')}
-              name='user_name'
-              placeholder='Name'
-            />
-            {errors.user_name && errors.user_name.message}
-            <input
-              {...register('user_email')}
-              name='user_email'
-              placeholder='Email'
-            />
-            {errors.user_email && errors.user_email.message}
-            <textarea
-              {...register('message')}
-              name='message'
-              placeholder='Message'
-            />
-            {errors.message && errors.message.message}
-            <input type='submit' />
-            {EmailSending && <span>Sending...</span>}
+            <p className='contact__label'>Your Name</p>
+            <div className='contact-input--wrapper'>
+              <input
+                className='contact__input'
+                {...register('user_name')}
+                name='user_name'
+                placeholder='Your Name'
+              />
+              <BsPerson className='contact__icon' />
+            </div>
+            <p className='contact__error-message'>
+              {errors.user_name && errors.user_name.message}
+            </p>
+            <p className='contact__label'>Email</p>
+            <div className='contact-input--wrapper'>
+              <input
+                className='contact__input'
+                {...register('user_email')}
+                name='user_email'
+                placeholder='Email'
+              />
+              <AiOutlineMail className='contact__icon' />
+            </div>
+            <p className='contact__error-message'>
+              {errors.user_email && errors.user_email.message}
+            </p>
+            <p className='contact__label'>Message</p>
+            <div className='contact-input--wrapper'>
+              <textarea
+                className='contact__textarea'
+                {...register('message')}
+                name='message'
+                placeholder='Message'
+              />
+              <FiMessageSquare className='contact__icon contact__icon--textarea' />
+            </div>
+            <p className='contact__error-message'>
+              {errors.message && errors.message.message}
+            </p>
+            <button type='submit' className='submitBtn'>
+              {EmailSending ? (
+                <span className='chaotic-orbit'></span>
+              ) : (
+                'Submit'
+              )}
+            </button>
           </form>
         </div>
       </div>
