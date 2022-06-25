@@ -9,18 +9,12 @@ import Footer from './components/Footer';
 
 import HomeBackground from './assets/home.webp';
 import HomeNight from './assets/homeNight.webp';
-import ProjectBackground from './assets/projects.jpg';
 import HomeNightMobile from './assets/homeNightMobile.webp';
 
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const imagesPreload = [
-      HomeBackground,
-      HomeNight,
-      ProjectBackground,
-      HomeNightMobile,
-    ];
+    const imagesPreload = [HomeBackground, HomeNight, HomeNightMobile];
     const fetchImages = () => {
       // console.log('image fetch started');
       Promise.all(

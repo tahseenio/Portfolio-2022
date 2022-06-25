@@ -1,40 +1,16 @@
-// TODO: add skeleton loader for resume
-// TODO: style download buttons
-// TODO: animate the fade in of the buttons and make the transition from page to page smoother.
-
 import { Viewer, Worker } from '@react-pdf-viewer/core';
 import { motion } from 'framer-motion';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 
-import { ImArrowRight2 } from 'react-icons/im';
-import myResume from '../assets/Resume_Tahseen_Islam.pdf';
 import { usePortfolioContext } from '../context/PortfolioContext';
+import { container, item } from '../variants';
+import myResume from '../assets/Resume_Tahseen_Islam.pdf';
+import { ImArrowRight2 } from 'react-icons/im';
 
 const Resume = () => {
   const { setSelectedTab, ResumeRef } = usePortfolioContext();
 
   const title = 'Resume';
-
-  const container = {
-    visible: {
-      transition: {
-        staggerChildren: 0.08,
-      },
-    },
-  };
-
-  const item = {
-    hidden: {
-      opacity: 0,
-      y: 100,
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 },
-    },
-  };
 
   return (
     <section className='container' ref={ResumeRef}>

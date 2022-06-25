@@ -1,10 +1,6 @@
-// TODO: make modal close before routing to new pages on click
-// TODO: change color of modal
-// TODO: provide margin to left of slider
-
-import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
+
 import { usePortfolioContext } from '../context/PortfolioContext';
 
 interface Props {
@@ -106,7 +102,7 @@ const Modal = ({ setIsBurgerOpen, isBurgerOpen, modalButton }: Props) => {
                     reference?.current!.scrollIntoView();
                   }}
                 >
-                  <a className='modal__link'>{title}</a>
+                  <span className='modal__link'>{title}</span>
                 </motion.div>
               ))}
             </motion.div>

@@ -1,7 +1,3 @@
-// TODO: What should the nav bar include?
-// TODO: get a nav bar design UI
-// TODO: after a certain point, nav bar gets hidden and on scroll up nav bar is shown
-
 import { useEffect, useState, useRef } from 'react';
 import { motion, useViewportScroll } from 'framer-motion';
 import { Burger, Switch } from '@mantine/core';
@@ -14,8 +10,16 @@ import { FaLinkedin } from 'react-icons/fa';
 import { BsGithub } from 'react-icons/bs';
 
 const Nav = () => {
-  const { HomeRef, AboutRef, ProjectsRef, ResumeRef, ContactRef } =
-    usePortfolioContext();
+  const {
+    HomeRef,
+    AboutRef,
+    ProjectsRef,
+    ResumeRef,
+    ContactRef,
+    selectedTab,
+    isDark,
+    setIsDark,
+  } = usePortfolioContext();
 
   const links = [
     { title: 'Home', reference: HomeRef, id: '1' },
@@ -25,11 +29,7 @@ const Nav = () => {
     { title: 'Contact', reference: ContactRef, id: '5' },
   ];
 
-  const { selectedTab, setSelectedTab } = usePortfolioContext();
-
   // dark mode functions
-  const { isDark, setIsDark } = usePortfolioContext();
-
   if (isDark) {
     document.body.classList.add('dark');
     localStorage.setItem('theme', 'dark');
@@ -79,13 +79,21 @@ const Nav = () => {
         />
         <div className='nav__links--left'>
           <img src={navLogo} className='nav__logo' alt='nav logo' />
-          <a href='https://www.linkedin.com/in/tahseen1/' target='_blank'>
+          <a
+            href='https://www.linkedin.com/in/tahseen1/'
+            target='_blank'
+            rel='noreferrer'
+          >
             <FaLinkedin
               className='nav__link--left'
               style={{ color: '#0a66c2' }}
             />
           </a>
-          <a href='https://github.com/tahseenio/' target='_blank'>
+          <a
+            href='https://github.com/tahseenio/'
+            target='_blank'
+            rel='noreferrer'
+          >
             <BsGithub className='nav__link--left' style={{ color: 'black' }} />
           </a>
         </div>

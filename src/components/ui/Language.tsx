@@ -1,5 +1,5 @@
-import { motion, Variants } from 'framer-motion';
 import { useState } from 'react';
+import { motion, Variants } from 'framer-motion';
 interface Props {
   src: string;
   title: string;

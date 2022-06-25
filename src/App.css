@@ -576,8 +576,8 @@ Contact
   justify-content: center;
   align-items: center;
   gap: 8px;
-  padding: 40px;
-  max-width: 450px;
+  padding: 80px;
+  max-width: 550px;
   width: 100%;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 20px;
@@ -673,7 +673,7 @@ Contact
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 20px;
+  top: 20px;
   right: 20px;
   z-index: 1000;
   background-color: white;

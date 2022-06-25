@@ -1,4 +1,5 @@
 import { Loader } from '@mantine/core';
+
 import { usePortfolioContext } from '../context/PortfolioContext';
 
 const HomeLoader = () => {

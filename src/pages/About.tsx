@@ -1,12 +1,4 @@
-// TODO: add a profile summary
-// TODO: add links to github, resume, linkedin
-// TODO: add github contrbutions table
-// TODO: add tech stack
-// TODO: make shimmer look better
-// BUG: page scrolls on image load
-
-// MOTION
-// TODO: parallax background zooms in as you scroll down and then fades away
+// TODO: add profile description
 
 import {
   motion,
@@ -14,19 +6,13 @@ import {
   useTransform,
   useViewportScroll,
 } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import AboutBackground from '../assets/about.jpg';
-import LanguageContainer from '../components/LanguageContainer';
-import SkeletonLoader from '../components/ui/SkeletonLoader';
 import { usePortfolioContext } from '../context/PortfolioContext';
-import useParallax from '../hooks/useParallax';
-import useScroll from '../hooks/useScroll';
-import { parallaxBGVariants, parallaxTextWrapperVariants } from '../variants';
+import LanguageContainer from '../components/LanguageContainer';
+import { container, item } from '../variants';
 
 const About = () => {
-  const { backgroundAnimation, TextAnimation, handleMouseMove } = useParallax();
-
   const { scrollYProgress } = useViewportScroll();
   const yRange = useTransform(scrollYProgress, [0, 1], [0, -1600]);
   const yRangeSpring = useSpring(yRange, { stiffness: 400, damping: 90 });
@@ -34,35 +20,7 @@ const About = () => {
 
   useEffect(() => yRangeSpring.onChange((v) => setXInt(v)), [yRangeSpring]);
 
-  // const xMovement = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
-  const [loaded, setLoaded] = useState(false);
-
-  // img zoom in on scroll down
-  // const { scale } = useScroll();
-
   const { setSelectedTab, AboutRef } = usePortfolioContext();
-
-  const container = {
-    visible: {
-      transition: {
-        staggerChildren: 0.08,
-      },
-    },
-  };
-
-  const item = {
-    hidden: {
-      opacity: 0,
-      y: 100,
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 },
-    },
-  };
 
   const title = 'About';
 

@@ -1,12 +1,8 @@
-// TODO: what will footer include?
-// TODO: get an idea for Footer UI
-
 import { motion } from 'framer-motion';
-
 import { AiOutlineArrowUp } from 'react-icons/ai';
 
-import footerLogo from '../assets/logo_inverted.svg';
 import { usePortfolioContext } from '../context/PortfolioContext';
+import footerLogo from '../assets/logo_inverted.svg';
 
 const Footer = () => {
   const { HomeRef, AboutRef, ProjectsRef, ResumeRef, ContactRef } =
@@ -70,7 +66,12 @@ const Footer = () => {
               whileHover='hover'
               whileTap='tap'
             >
-              <a className='footer__link--anchor' href={link} target='_blank'>
+              <a
+                className='footer__link--anchor'
+                href={link}
+                target='_blank'
+                rel='noreferrer'
+              >
                 {title}
               </a>
             </motion.li>

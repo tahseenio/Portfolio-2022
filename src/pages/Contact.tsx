@@ -1,47 +1,21 @@
-// TODO:Maybe use react-hook-forms?
-// TODO:What will the contact form include?
-// TODO:Get a UI design
-// TODO: Use emailjs
-
-import React, { useEffect, useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import { AiOutlineMail } from 'react-icons/ai';
-import { BsPerson } from 'react-icons/bs';
-import { FiMessageSquare } from 'react-icons/fi';
-
+import { useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { usePortfolioContext } from '../context/PortfolioContext';
-
+import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+
+import { usePortfolioContext } from '../context/PortfolioContext';
 import Toast from '../components/Toast';
+import { AiOutlineMail } from 'react-icons/ai';
+import { BsPerson } from 'react-icons/bs';
+import { FiMessageSquare } from 'react-icons/fi';
+import { container, item } from '../variants';
 
 const Contact = () => {
   const { setSelectedTab, ContactRef } = usePortfolioContext();
 
   const title = 'Contact';
-
-  const container = {
-    visible: {
-      transition: {
-        staggerChildren: 0.08,
-      },
-    },
-  };
-
-  const item = {
-    hidden: {
-      opacity: 0,
-      y: 100,
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 },
-    },
-  };
 
   const PUBLIC_KEY = 'user_YUqGOfbhTjX61mJSdOviw';
   const SERVICE_ID = 'service_5a1g3gy';

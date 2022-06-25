@@ -1,11 +1,6 @@
 import { motion } from 'framer-motion';
 
 import Language from './ui/Language';
-
-// TODO: add all languages
-
-// TODO: whileInViewport start animation
-
 import TypeScriptImg from '../assets/languages/typescript.jpg';
 import ReactImg from '../assets/languages/react.jpg';
 import JestImg from '../assets/languages/jest.png';

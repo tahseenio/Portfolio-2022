@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useRef, useEffect } from 'react';
+import { createContext, useContext, useState, useRef } from 'react';
 
 export interface PortfolioContextProps {
   isDark: boolean;
@@ -38,10 +38,10 @@ export const PortfolioContextProvider = ({ children }: ProviderProps) => {
   return (
     <PortfolioContext.Provider
       value={{
-        isDark,
         setIsDark,
         selectedTab,
         setSelectedTab,
+        isDark,
         HomeRef,
         AboutRef,
         ProjectsRef,

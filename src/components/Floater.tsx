@@ -1,8 +1,8 @@
-import React from 'react';
+import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
 interface Props {
-  icon: React.ReactNode;
+  icon: ReactNode;
   left: string;
   top: string;
   color?: string;

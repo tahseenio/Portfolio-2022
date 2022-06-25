@@ -26,19 +26,24 @@ export const HomeBackgroundVariants = {
   exit: {},
 };
 
-// ALL PAGES excluding HOME
-
-export const parallaxBGVariants = {
-  initial: { y: '-100vh' },
-  animate: {
-    y: 0,
-    transition: { type: 'spring', bounce: 0.25, duration: 0.8 },
+// Letter staggerChildren
+export const container = {
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
+    },
   },
-  exit: { y: '-100vh' },
 };
 
-export const parallaxTextWrapperVariants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { delay: 0.4 } },
-  exit: { opacity: 0, transition: { duration: 0.2 } },
+export const item = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+    transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 },
+  },
 };
