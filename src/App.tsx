@@ -9,10 +9,7 @@ import Footer from './components/Footer';
 
 import HomeBackground from './assets/home.webp';
 import HomeNight from './assets/homeNight.webp';
-import AboutBackground from './assets/about.jpg';
 import ProjectBackground from './assets/projects.jpg';
-import ResumeBackground from './assets/home.jpg';
-import ContactBackground from './assets/home.jpg';
 import HomeNightMobile from './assets/homeNightMobile.webp';
 
 function App() {
@@ -22,9 +19,6 @@ function App() {
       HomeBackground,
       HomeNight,
       ProjectBackground,
-      AboutBackground,
-      ResumeBackground,
-      ContactBackground,
       HomeNightMobile,
     ];
     const fetchImages = () => {

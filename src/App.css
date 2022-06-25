@@ -295,10 +295,12 @@ Home
 .about__title,
 .projects__title,
 .resume__title {
-  padding: 200px 0;
+  padding-top: 200px;
+  margin-bottom: 200px;
   font-weight: 500;
   font-size: 100px;
   color: #111;
+  overflow: hidden;
 }
 
 .secret {
@@ -358,6 +360,60 @@ About
 .language__title {
   position: absolute;
   font-size: 16px;
+}
+
+/* 
+
+Projects
+
+*/
+
+.projects {
+  position: relative;
+  width: 100%;
+  display: grid;
+  row-gap: 100px;
+}
+
+.project {
+  border-radius: 12px;
+  overflow: hidden;
+  display: grid;
+  width: 100%;
+  order: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.project:hover .project__img {
+  transform: scale(1.07) !important;
+}
+
+.project__img--wrapper {
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+}
+
+.project__img {
+  transition: transform 300ms ease-in-out;
+  width: 100%;
+}
+
+.project__info {
+  grid-area: info;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.project--viewport-trigger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 3px;
+  width: 3px;
 }
 
 /* 
@@ -505,11 +561,10 @@ Contact
   font-weight: 500;
   font-size: 100px;
   color: #111;
+  overflow: hidden;
 }
 
 .contact__para--description {
-  z-index: 100;
-  background-color: white;
   margin-bottom: 100px;
   max-width: 460px;
   line-height: 1.5;

@@ -106,7 +106,7 @@ const LanguageContainer = () => {
 
   const variants = {
     initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { staggerChildren: 0.08 } },
+    animate: { opacity: 1, transition: { staggerChildren: 0.02 } },
   };
 
   const itemVariants = {
