@@ -1,46 +1,16 @@
-// TODO: add a profile summary
-// TODO: add links to github, resume, linkedin
-// TODO: add github contrbutions table
-// TODO: add tech stack
-// TODO: make shimmer look better
-// BUG: page scrolls on image load
+import { motion } from 'framer-motion';
 
-// MOTION
-// TODO: parallax background zooms in as you scroll down and then fades away
-
-import {
-  motion,
-  useSpring,
-  useTransform,
-  useViewportScroll,
-} from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
-
-import LanguageContainer from '../components/LanguageContainer';
 import Project from '../components/Project';
-import SkeletonLoader from '../components/ui/SkeletonLoader';
 import { usePortfolioContext } from '../context/PortfolioContext';
-import useParallax from '../hooks/useParallax';
-import useScroll from '../hooks/useScroll';
-import { parallaxBGVariants, parallaxTextWrapperVariants } from '../variants';
 
-import AboutBackground from '../assets/notes_mockup.png';
+import Notes from '../assets/notes_mockup.png';
+import Discord from '../assets/discord_mockup.png';
+import Library from '../assets/library_mockup.png';
+import Mosque from '../assets/Mosque_mockup.png';
+import TMDB from '../assets/TMDB_mockup.png';
+import Treact from '../assets/treact_mockup.png';
 
 const Projects = () => {
-  const { scrollYProgress } = useViewportScroll();
-  const yRange = useTransform(scrollYProgress, [0, 1], [0, -1600]);
-  const yRangeSpring = useSpring(yRange, { stiffness: 400, damping: 90 });
-  const [XInt, setXInt] = useState(0);
-
-  useEffect(() => yRangeSpring.onChange((v) => setXInt(v)), [yRangeSpring]);
-
-  // const xMovement = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
-  const [loaded, setLoaded] = useState(false);
-
-  // img zoom in on scroll down
-  // const { scale } = useScroll();
-
   const { setSelectedTab, ProjectsRef } = usePortfolioContext();
 
   const container = {
@@ -65,6 +35,97 @@ const Projects = () => {
   };
 
   const title = 'Projects';
+
+  const projects = [
+    {
+      image: Notes,
+      name: 'Notes',
+      description: 'lorem ipsum',
+      liveLink: 'http://notes-react-nine.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/notes-react',
+      config: {
+        reverseColumnLayout: false,
+        bgColor: '#EBEBEB',
+      },
+    },
+    {
+      image: Discord,
+      name: 'Discord',
+      description: 'lorem ipsum',
+      liveLink: 'https://discord-clone-self-ten.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/discord-clone',
+      config: {
+        reverseColumnLayout: true,
+        bgColor: '#404EED',
+      },
+    },
+    {
+      image: Library,
+      name: 'Library',
+      description: 'lorem ipsum',
+      liveLink: 'https://book-store-react-eta.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/book-store-react',
+      config: {
+        reverseColumnLayout: false,
+        bgColor: '#D8EBF0',
+      },
+    },
+    {
+      image: Mosque,
+      name: 'Mosque',
+      description: 'lorem ipsum',
+      liveLink: 'https://madinamasjidwakefield.netlify.app/',
+      sourceLink: 'https://github.com/Faizzy7867/Madina-Masjid-website',
+      config: {
+        reverseColumnLayout: true,
+        bgColor: '#0B6737',
+      },
+    },
+    {
+      image: TMDB,
+      name: 'Movie Search',
+      description: 'lorem ipsum',
+      liveLink: 'https://movie-search-react-one.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/movie-search-react',
+      config: {
+        reverseColumnLayout: false,
+        bgColor: '#01B4E4',
+      },
+    },
+    {
+      image: Treact,
+      name: 'Treact Clone',
+      description: 'lorem ipsum',
+      liveLink: 'https://treact-clone.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/treact-clone',
+      config: {
+        reverseColumnLayout: true,
+        bgColor: '#691CFF',
+      },
+    },
+    {
+      image: Treact,
+      name: 'LoginSignup',
+      description: 'lorem ipsum',
+      liveLink: 'http://login-signup-sable.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/login-signup',
+      config: {
+        reverseColumnLayout: false,
+        bgColor: '#1D2A32',
+      },
+    },
+    {
+      image: Treact,
+      name: 'DECO1400 Project',
+      description: 'lorem ipsum',
+      liveLink: 'http://deco-1400-project.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/DECO1400-project',
+      config: {
+        reverseColumnLayout: true,
+        bgColor: '#rgb(229,76,97)',
+      },
+    },
+  ];
 
   return (
     <section className='container' ref={ProjectsRef}>
@@ -93,19 +154,18 @@ const Projects = () => {
             className='project--viewport-trigger'
             onViewportEnter={() => setSelectedTab('Projects')}
           ></motion.div>
-          <Project image={AboutBackground} bgColor={'lightblue'} />
-          <Project
-            image={AboutBackground}
-            reverseColumnLayout={true}
-            bgColor={'lightblue'}
-          />
-          <Project image={AboutBackground} bgColor={'lightblue'} />
-          <Project
-            image={AboutBackground}
-            reverseColumnLayout={true}
-            bgColor={'lightblue'}
-          />
-          <Project image={AboutBackground} bgColor={'lightblue'} />
+          {projects.map((item, id) => (
+            <Project
+              key={id}
+              image={item.image}
+              title={item.name}
+              description={item.description}
+              liveLink={item.liveLink}
+              sourceLink={item.sourceLink}
+              reverseColumnLayout={item.config.reverseColumnLayout}
+              bgColor={item.config.bgColor}
+            />
+          ))}
         </div>
       </div>
     </section>

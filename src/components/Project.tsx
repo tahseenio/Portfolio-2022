@@ -5,9 +5,21 @@ interface Props {
   reverseColumnLayout?: boolean;
   image: string;
   bgColor: string;
+  title: string;
+  description: string;
+  liveLink: string;
+  sourceLink: string;
 }
 
-const Project = ({ reverseColumnLayout, image, bgColor }: Props) => {
+const Project = ({
+  reverseColumnLayout,
+  image,
+  bgColor,
+  title,
+  description,
+  liveLink,
+  sourceLink,
+}: Props) => {
   const [gridColumns, setGridColumns] = useState<string>('0.7fr 0.3fr');
   const [gridArea, setGridArea] = useState<string>("'image info'");
   useEffect(() => {
@@ -15,7 +27,7 @@ const Project = ({ reverseColumnLayout, image, bgColor }: Props) => {
       setGridColumns('0.3fr 0.7fr');
       setGridArea("'info image'");
     }
-  }, []);
+  }, [reverseColumnLayout]);
 
   const projectVariants = {
     hidden: { opacity: 0 },
@@ -49,20 +61,20 @@ const Project = ({ reverseColumnLayout, image, bgColor }: Props) => {
       viewport={{ once: true, amount: 0.5 }}
     >
       <motion.figure className='project__img--wrapper' variants={imageVariants}>
-        <img src={image} className='project__img' alt='image' />
+        <img src={image} className='project__img' alt={`${title}`} />
       </motion.figure>
       <motion.div
         className='project__info'
         variants={projectDescription}
         style={{ backgroundColor: bgColor }}
       >
-        <h1>Project Name</h1>
-        <p>Project Description</p>
+        <h1>{title}</h1>
+        <p>{description}</p>
         <div></div>
-        <a href='https://github.com/tahseenio/portfolio-2022' target='_blank'>
+        <a href={liveLink} target='_blank' rel='noreferrer'>
           Live View
         </a>
-        <a href='http://portfolio-2022-rose.vercel.app/' target='_blank'>
+        <a href={sourceLink} target='_blank' rel='noreferrer'>
           Source Code
         </a>
       </motion.div>
