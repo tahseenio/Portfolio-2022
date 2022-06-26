@@ -25,6 +25,7 @@ const Projects = () => {
       description: 'lorem ipsum',
       liveLink: 'http://notes-react-nine.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/notes-react',
+      languages: ['React', 'TypeScript'],
       config: {
         reverseColumnLayout: false,
         bgColor: '#EBEBEB',
@@ -36,6 +37,7 @@ const Projects = () => {
       description: 'lorem ipsum',
       liveLink: 'https://discord-clone-self-ten.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/discord-clone',
+      languages: ['React', 'TypeScript'],
       config: {
         reverseColumnLayout: true,
         bgColor: '#404EED',
@@ -47,6 +49,7 @@ const Projects = () => {
       description: 'lorem ipsum',
       liveLink: 'https://book-store-react-eta.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/book-store-react',
+      languages: ['React', 'TypeScript'],
       config: {
         reverseColumnLayout: false,
         bgColor: '#D8EBF0',
@@ -58,6 +61,7 @@ const Projects = () => {
       description: 'lorem ipsum',
       liveLink: 'https://madinamasjidwakefield.netlify.app/',
       sourceLink: 'https://github.com/Faizzy7867/Madina-Masjid-website',
+      languages: ['HTML', 'CSS', 'JS'],
       config: {
         reverseColumnLayout: true,
         bgColor: '#0B6737',
@@ -69,9 +73,10 @@ const Projects = () => {
       description: 'lorem ipsum',
       liveLink: 'https://movie-search-react-one.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/movie-search-react',
+      languages: ['React', 'TypeScript'],
       config: {
         reverseColumnLayout: false,
-        bgColor: '#01B4E4',
+        bgColor: '#0D253F',
       },
     },
     {
@@ -80,6 +85,7 @@ const Projects = () => {
       description: 'lorem ipsum',
       liveLink: 'https://treact-clone.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/treact-clone',
+      languages: ['HTML', 'CSS'],
       config: {
         reverseColumnLayout: true,
         bgColor: '#691CFF',
@@ -91,6 +97,7 @@ const Projects = () => {
       description: 'lorem ipsum',
       liveLink: 'http://login-signup-sable.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/login-signup',
+      languages: ['React', 'TypeScript'],
       config: {
         reverseColumnLayout: false,
         bgColor: '#1D2A32',
@@ -102,9 +109,10 @@ const Projects = () => {
       description: 'lorem ipsum',
       liveLink: 'http://deco-1400-project.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/DECO1400-project',
+      languages: ['HTML', 'CSS', 'JS'],
       config: {
         reverseColumnLayout: true,
-        bgColor: '#rgb(229,76,97)',
+        bgColor: '#E54C61',
       },
     },
   ];
@@ -146,6 +154,7 @@ const Projects = () => {
               sourceLink={item.sourceLink}
               reverseColumnLayout={item.config.reverseColumnLayout}
               bgColor={item.config.bgColor}
+              languages={item.languages}
             />
           ))}
         </div>

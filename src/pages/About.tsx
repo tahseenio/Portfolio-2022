@@ -56,12 +56,7 @@ const About = () => {
           nesciunt officiis, repudiandae, expedita minus quidem veniam officia
           repellendus deserunt. Deleniti labore harum suscipit hic temporibus
           rerum repellendus iure enim minima, explicabo quos blanditiis aperiam
-          aliquid consequatur laudantium dicta. Sit nesciunt provident ipsum
-          nihil consectetur laborum beatae nisi eius obcaecati unde rerum culpa
-          alias ipsam corrupti aliquid, deserunt esse excepturi, dolores
-          veritatis amet voluptatibus. Corrupti error, possimus dolore tenetur
-          animi laborum quaerat! Fuga dignissimos blanditiis error molestias
-          modi natus ea, aliquid at.
+          aliquid consequatur laudantium dicta.
         </motion.p>
         <motion.h1
           className='about__title--tech'

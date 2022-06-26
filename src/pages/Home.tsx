@@ -1,3 +1,5 @@
+// TODO: change tab name and logo image
+
 import About from './About';
 import Contact from './Contact';
 import Landing from './Landing';
