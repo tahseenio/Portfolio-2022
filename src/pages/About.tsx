@@ -51,13 +51,11 @@ const About = () => {
           className='about__para'
           onViewportEnter={() => setSelectedTab('About')}
         >
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
-          placeat autem veritatis labore? Voluptate quo unde modi maxime quod
-          sapiente sit eius asperiores sed velit itaque architecto inventore
-          nesciunt officiis, repudiandae, expedita minus quidem veniam officia
-          repellendus deserunt. Deleniti labore harum suscipit hic temporibus
-          rerum repellendus iure enim minima, explicabo quos blanditiis aperiam
-          aliquid consequatur laudantium dicta.
+          I am an enthusiastic frontend developer experienced in creating web
+          applications that have great aesthetics and an amazing user
+          experience. I am experienced with React and TypeScript and am always
+          keen on learning new concepts or trying out new technologies. Whenever
+          I am free I like to contribute to open-source projects.
         </motion.p>
         <motion.h1
           className='about__title--tech'

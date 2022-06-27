@@ -25,7 +25,7 @@ const Projects = () => {
       description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
       liveLink: 'https://movie-search-react-one.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/movie-search-react',
-      languages: ['React', 'TypeScript'],
+      languages: ['React', 'TypeScript', 'Cypress'],
       config: {
         bgColor: '#0D253F',
         txtColor: 'white',
@@ -81,7 +81,7 @@ const Projects = () => {
     },
     {
       image: LoginSignup,
-      name: 'Login Signup',
+      name: 'Login Signup (WIP)',
       description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
       liveLink: 'http://login-signup-sable.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/login-signup',
