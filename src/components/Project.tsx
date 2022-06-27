@@ -27,10 +27,11 @@ const Project = ({
     visible: { opacity: 1 },
   };
   const projectDescription = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, x: -100 },
     visible: {
       opacity: 1,
-      transition: { duration: 0.6, ease: 'linear' },
+      x: 0,
+      transition: { duration: 0.6 },
     },
   };
 
