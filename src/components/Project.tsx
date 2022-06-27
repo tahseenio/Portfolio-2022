@@ -27,16 +27,15 @@ const Project = ({
     visible: { opacity: 1 },
   };
   const projectDescription = {
-    hidden: { opacity: 0, height: '10%' },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      height: '100%',
-      transition: { duration: 0.6, ease: 'easeOut' },
+      transition: { duration: 0.6, ease: 'linear' },
     },
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, x: -100 },
+    hidden: { opacity: 0, x: 100 },
     visible: {
       opacity: 1,
       x: 0,
@@ -99,16 +98,19 @@ const Project = ({
         ) : null}
       </AnimatePresence>
 
-      <motion.figure className='project__img--wrapper' variants={imageVariants}>
-        <img src={image} className='project__img' alt={`${title}`} />
-      </motion.figure>
       <motion.div
         className='project__info'
         variants={projectDescription}
         style={{ backgroundColor: bgColor, color: txtColor }}
       >
-        <h1 style={{ color: txtColor }}>{title}</h1>
-        <p style={{ color: txtColor }}>{description}</p>
+        <div>
+          <h1 style={{ color: txtColor }} className='project__title'>
+            {title}
+          </h1>
+          <p style={{ color: txtColor }} className='project__para'>
+            {description}
+          </p>
+        </div>
         <div className='project-buttons--wrapper'>
           <motion.a
             className='projectsBtn'
@@ -132,6 +134,9 @@ const Project = ({
           </motion.a>
         </div>
       </motion.div>
+      <motion.figure className='project__img--wrapper' variants={imageVariants}>
+        <img src={image} className='project__img' alt={`${title}`} />
+      </motion.figure>
     </motion.div>
   );
 };

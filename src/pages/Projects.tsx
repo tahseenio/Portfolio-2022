@@ -10,6 +10,8 @@ import Library from '../assets/library_mockup.png';
 import Mosque from '../assets/Mosque_mockup.png';
 import TMDB from '../assets/TMDB_mockup.png';
 import Treact from '../assets/treact_mockup.png';
+import LoginSignup from '../assets/login_signup_mockup.png';
+import FoodCart from '../assets/food_cart_mockup.png';
 
 const Projects = () => {
   const { setSelectedTab, ProjectsRef } = usePortfolioContext();
@@ -17,6 +19,18 @@ const Projects = () => {
   const title = 'Projects';
 
   const projects = [
+    {
+      image: TMDB,
+      name: 'Movie Search',
+      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      liveLink: 'https://movie-search-react-one.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/movie-search-react',
+      languages: ['React', 'TypeScript'],
+      config: {
+        bgColor: '#0D253F',
+        txtColor: 'white',
+      },
+    },
     {
       image: Notes,
       name: 'Notes',
@@ -26,6 +40,18 @@ const Projects = () => {
       languages: ['React', 'TypeScript'],
       config: {
         bgColor: '#EBEBEB',
+        txtColor: 'black',
+      },
+    },
+    {
+      image: Library,
+      name: 'Library',
+      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      liveLink: 'https://book-store-react-eta.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/book-store-react',
+      languages: ['React', 'TypeScript'],
+      config: {
+        bgColor: '#D8EBF0',
         txtColor: 'black',
       },
     },
@@ -42,18 +68,6 @@ const Projects = () => {
       },
     },
     {
-      image: Library,
-      name: 'Library',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-      liveLink: 'https://book-store-react-eta.vercel.app/',
-      sourceLink: 'https://github.com/tahseenio/book-store-react',
-      languages: ['React', 'TypeScript'],
-      config: {
-        bgColor: '#D8EBF0',
-        txtColor: 'black',
-      },
-    },
-    {
       image: Mosque,
       name: 'Mosque',
       description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
@@ -66,14 +80,26 @@ const Projects = () => {
       },
     },
     {
-      image: TMDB,
-      name: 'Movie Search',
+      image: LoginSignup,
+      name: 'Login Signup',
       description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-      liveLink: 'https://movie-search-react-one.vercel.app/',
-      sourceLink: 'https://github.com/tahseenio/movie-search-react',
-      languages: ['React', 'TypeScript'],
+      liveLink: 'http://login-signup-sable.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/login-signup',
+      languages: ['React', 'Firebase'],
       config: {
-        bgColor: '#0D253F',
+        bgColor: '#1D2A32',
+        txtColor: 'white',
+      },
+    },
+    {
+      image: FoodCart,
+      name: 'Food Cart',
+      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      liveLink: 'http://deco-1400-project.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/DECO1400-project',
+      languages: ['HTML', 'CSS', 'JS'],
+      config: {
+        bgColor: '#E54C61',
         txtColor: 'white',
       },
     },
@@ -87,30 +113,6 @@ const Projects = () => {
       config: {
         bgColor: '#691CFF',
         txtColor: 'white',
-      },
-    },
-    {
-      image: Treact,
-      name: 'LoginSignup',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-      liveLink: 'http://login-signup-sable.vercel.app/',
-      sourceLink: 'https://github.com/tahseenio/login-signup',
-      languages: ['React', 'TypeScript'],
-      config: {
-        bgColor: '#1D2A32',
-        txtColor: 'white',
-      },
-    },
-    {
-      image: Treact,
-      name: 'DECO1400 Project',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-      liveLink: 'http://deco-1400-project.vercel.app/',
-      sourceLink: 'https://github.com/tahseenio/DECO1400-project',
-      languages: ['HTML', 'CSS', 'JS'],
-      config: {
-        bgColor: '#E54C61',
-        txtColor: 'black',
       },
     },
   ];
