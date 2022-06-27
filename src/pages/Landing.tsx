@@ -68,7 +68,7 @@ const Landing = () => {
         icon={<BsGithub />}
         link={'https://github.com/tahseenio/'}
         left={'20%'}
-        top={'20%'}
+        top={'25%'}
         delay={2}
         color={'black'}
         animationDelay={'2.2s'}
@@ -78,7 +78,7 @@ const Landing = () => {
         link={'https://www.linkedin.com/in/tahseen1/'}
         left={'-20%'}
         delay={2.2}
-        top={'25%'}
+        top={'30%'}
         animationDelay={'2.5s'}
       />
       <Floater

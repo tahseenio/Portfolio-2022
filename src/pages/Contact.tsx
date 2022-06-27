@@ -108,7 +108,10 @@ const Contact = () => {
             className={'contact__para--description'}
           >
             Reach me at{' '}
-            <a href='mailto:tahseenislam@outlook.com.au'>
+            <a
+              className='contact__email'
+              href='mailto:tahseenislam@outlook.com.au'
+            >
               tahseenislam@outlook.com.au
             </a>{' '}
             or fill out the form below and I will get back to you!

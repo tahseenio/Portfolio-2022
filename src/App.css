@@ -27,7 +27,6 @@ body {
 
 .container {
   margin: 0 32px;
-  min-height: 100vh;
 }
 
 .row {
@@ -51,7 +50,6 @@ body {
   transition: 300ms padding;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   animation: move-up-down 2s ease-in-out infinite alternate;
-  /* animation-delay: 4s; */
 }
 
 @keyframes move-up-down {
@@ -119,7 +117,7 @@ DARK-MODE
 */
 
 body.dark {
-  background-color: #565656;
+  background-color: #202023;
 }
 
 body.dark .app--loader {
@@ -127,7 +125,17 @@ body.dark .app--loader {
 }
 
 body.dark .home__title,
-body.dark .home__description {
+body.dark .projects__title,
+body.dark .resume__title,
+body.dark .home__description,
+body.dark .about__para,
+body.dark .about__title--tech,
+body.dark .about__title,
+body.dark .pdfDownloadBtn,
+body.dark .contact__title,
+body.dark .contact__para--description,
+body.dark .contact__email,
+body.dark .downloadBtn-arrow {
   color: white;
 }
 
@@ -303,6 +311,10 @@ Home
   overflow: hidden;
 }
 
+.projects__title {
+  text-align: center;
+}
+
 .secret {
   position: absolute;
   height: 3px;
@@ -336,7 +348,6 @@ About
   gap: 50px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
-  margin-bottom: 100px;
 }
 
 .language__image {
@@ -391,12 +402,15 @@ Projects
   overflow: hidden;
   font-size: 0;
   line-height: 0;
-  width: 70%;
+  width: 75%;
 }
 
 .project__img {
   transition: transform 300ms ease-in-out;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .project__languages--wrapper {
@@ -611,6 +625,7 @@ Contact
 }
 
 .contact-form {
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -765,8 +780,9 @@ footer {
 }
 
 .footer__logo {
-  width: 100%;
-  height: 100%;
+  height: 60px;
+  width: 65px;
+  margin-right: 5px;
 }
 
 .footer__logo--popper {
@@ -948,5 +964,38 @@ MEDIA QUERIES
   .home__description {
     inline-size: min-content;
     font-size: 60px;
+  }
+  .project {
+    flex-direction: column-reverse;
+  }
+  .project__img--wrapper {
+    height: 500px;
+  }
+  .project__img--wrapper,
+  .project__info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .about__title {
+    font-size: 94px;
+  }
+  .about__para {
+    font-size: 1.4rem;
+  }
+  .about__title--tech {
+    font-size: 40px;
+  }
+  .projects__title,
+  .resume__title,
+  .contact__title {
+    font-size: 72px;
+  }
+  .contact__para--description {
+    text-align: center;
+  }
+  .contact-form {
+    padding: 40px;
   }
 }

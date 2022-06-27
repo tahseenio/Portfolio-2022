@@ -1,5 +1,3 @@
-// TODO: add profile description
-
 import {
   motion,
   useSpring,
@@ -18,7 +16,10 @@ const About = () => {
   const yRangeSpring = useSpring(yRange, { stiffness: 400, damping: 90 });
   const [XInt, setXInt] = useState(0);
 
-  useEffect(() => yRangeSpring.onChange((v) => setXInt(v)), [yRangeSpring]);
+  useEffect(
+    () => yRangeSpring.onChange((v) => setXInt(v * 1.2)),
+    [yRangeSpring]
+  );
 
   const { setSelectedTab, AboutRef } = usePortfolioContext();
 
@@ -62,13 +63,13 @@ const About = () => {
           className='about__title--tech'
           initial={{}}
           animate={{
-            x: XInt - 1000,
+            x: XInt - 1200,
             transition: { duration: 0.05, ease: 'linear' },
           }}
         >
           Tech Stack - Tech Stack - Tech Stack - Tech Stack - Tech Stack - Tech
           Stack - Tech Stack - Tech Stack - Tech Stack - Tech Stack - Tech Stack
-          - Tech Stack - Tech Stack - Tech Stack
+          - Tech Stack - Tech Stack - Tech Stack - Tech Stack - Tech Stack
         </motion.h1>
         <LanguageContainer />
       </div>

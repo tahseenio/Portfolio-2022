@@ -41,7 +41,7 @@ const Resume = () => {
             href={myResume}
             download
           >
-            Download Resume <ImArrowRight2 className='downloadBtn-arrow' />
+            Download <ImArrowRight2 className='downloadBtn-arrow' />
           </motion.a>
           <section className='pdf--wrapper'>
             <Worker workerUrl='https://unpkg.com/pdfjs-dist@2.14.305/build/pdf.worker.min.js'>
@@ -49,7 +49,7 @@ const Resume = () => {
             </Worker>
           </section>
           <a className='pdfDownloadBtn' href={myResume} download>
-            Download Resume <ImArrowRight2 className='downloadBtn-arrow' />
+            Download <ImArrowRight2 className='downloadBtn-arrow' />
           </a>
         </div>
       </div>

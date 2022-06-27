@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 interface Props {
-  flexReverse: boolean;
   image: string;
   bgColor: string;
+  txtColor: string;
   title: string;
   description: string;
   liveLink: string;
@@ -13,7 +13,6 @@ interface Props {
 }
 
 const Project = ({
-  flexReverse,
   image,
   bgColor,
   title,
@@ -21,6 +20,7 @@ const Project = ({
   liveLink,
   sourceLink,
   languages,
+  txtColor,
 }: Props) => {
   const projectVariants = {
     hidden: { opacity: 0 },
@@ -36,7 +36,7 @@ const Project = ({
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, x: flexReverse ? 100 : -100 },
+    hidden: { opacity: 0, x: -100 },
     visible: {
       opacity: 1,
       x: 0,
@@ -70,11 +70,10 @@ const Project = ({
   return (
     <motion.div
       className='project'
-      style={{ flexDirection: flexReverse ? 'row-reverse' : 'row' }}
       variants={projectVariants}
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.8 }}
       onHoverStart={() => setIsHovering(true)}
       onHoverEnd={() => setIsHovering(false)}
     >
@@ -86,7 +85,6 @@ const Project = ({
             animate='visible'
             exit='hidden'
             className='project__languages--wrapper'
-            style={{ justifyContent: flexReverse ? 'flex-end' : '' }}
           >
             {languages.map((item, id) => (
               <motion.p
@@ -107,10 +105,10 @@ const Project = ({
       <motion.div
         className='project__info'
         variants={projectDescription}
-        style={{ backgroundColor: bgColor }}
+        style={{ backgroundColor: bgColor, color: txtColor }}
       >
-        <h1>{title}</h1>
-        <p>{description}</p>
+        <h1 style={{ color: txtColor }}>{title}</h1>
+        <p style={{ color: txtColor }}>{description}</p>
         <div className='project-buttons--wrapper'>
           <motion.a
             className='projectsBtn'

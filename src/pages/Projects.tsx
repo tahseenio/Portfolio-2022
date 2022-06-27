@@ -1,5 +1,3 @@
-// TODO: on hover show languages used to create project
-
 import { motion } from 'framer-motion';
 
 import Project from '../components/Project';
@@ -22,97 +20,97 @@ const Projects = () => {
     {
       image: Notes,
       name: 'Notes',
-      description: 'lorem ipsum',
+      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
       liveLink: 'http://notes-react-nine.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/notes-react',
       languages: ['React', 'TypeScript'],
       config: {
-        flexReverse: false,
         bgColor: '#EBEBEB',
+        txtColor: 'black',
       },
     },
     {
       image: Discord,
       name: 'Discord',
-      description: 'lorem ipsum',
+      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
       liveLink: 'https://discord-clone-self-ten.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/discord-clone',
       languages: ['React', 'TypeScript'],
       config: {
-        flexReverse: true,
         bgColor: '#404EED',
+        txtColor: 'white',
       },
     },
     {
       image: Library,
       name: 'Library',
-      description: 'lorem ipsum',
+      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
       liveLink: 'https://book-store-react-eta.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/book-store-react',
       languages: ['React', 'TypeScript'],
       config: {
-        flexReverse: false,
         bgColor: '#D8EBF0',
+        txtColor: 'black',
       },
     },
     {
       image: Mosque,
       name: 'Mosque',
-      description: 'lorem ipsum',
+      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
       liveLink: 'https://madinamasjidwakefield.netlify.app/',
       sourceLink: 'https://github.com/Faizzy7867/Madina-Masjid-website',
       languages: ['HTML', 'CSS', 'JS'],
       config: {
-        flexReverse: true,
         bgColor: '#0B6737',
+        txtColor: 'white',
       },
     },
     {
       image: TMDB,
       name: 'Movie Search',
-      description: 'lorem ipsum',
+      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
       liveLink: 'https://movie-search-react-one.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/movie-search-react',
       languages: ['React', 'TypeScript'],
       config: {
-        flexReverse: false,
         bgColor: '#0D253F',
+        txtColor: 'white',
       },
     },
     {
       image: Treact,
       name: 'Treact Clone',
-      description: 'lorem ipsum',
+      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
       liveLink: 'https://treact-clone.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/treact-clone',
       languages: ['HTML', 'CSS'],
       config: {
-        flexReverse: true,
         bgColor: '#691CFF',
+        txtColor: 'white',
       },
     },
     {
       image: Treact,
       name: 'LoginSignup',
-      description: 'lorem ipsum',
+      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
       liveLink: 'http://login-signup-sable.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/login-signup',
       languages: ['React', 'TypeScript'],
       config: {
-        flexReverse: false,
         bgColor: '#1D2A32',
+        txtColor: 'white',
       },
     },
     {
       image: Treact,
       name: 'DECO1400 Project',
-      description: 'lorem ipsum',
+      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
       liveLink: 'http://deco-1400-project.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/DECO1400-project',
       languages: ['HTML', 'CSS', 'JS'],
       config: {
-        flexReverse: true,
         bgColor: '#E54C61',
+        txtColor: 'black',
       },
     },
   ];
@@ -125,7 +123,7 @@ const Projects = () => {
           variants={container}
           initial='hidden'
           whileInView='visible'
-          viewport={{ amount: 0.8, once: true }}
+          viewport={{ amount: 0.65, once: true }}
         >
           {title.split('').map((letter, index) => (
             <motion.span
@@ -152,8 +150,8 @@ const Projects = () => {
               description={item.description}
               liveLink={item.liveLink}
               sourceLink={item.sourceLink}
-              flexReverse={item.config.flexReverse}
               bgColor={item.config.bgColor}
+              txtColor={item.config.txtColor}
               languages={item.languages}
             />
           ))}
