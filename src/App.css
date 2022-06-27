@@ -379,9 +379,8 @@ Projects
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  display: grid;
   width: 100%;
-  order: 0;
+  display: flex;
 }
 
 .project:hover .project__img {
@@ -392,6 +391,7 @@ Projects
   overflow: hidden;
   font-size: 0;
   line-height: 0;
+  width: 70%;
 }
 
 .project__img {
@@ -422,12 +422,12 @@ Projects
 }
 
 .project__info {
-  grid-area: info;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
   padding: 16px;
+  width: 30%;
 }
 
 .project--viewport-trigger {

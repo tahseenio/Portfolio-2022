@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 interface Props {
-  reverseColumnLayout: boolean;
+  flexReverse: boolean;
   image: string;
   bgColor: string;
   title: string;
@@ -13,7 +13,7 @@ interface Props {
 }
 
 const Project = ({
-  reverseColumnLayout,
+  flexReverse,
   image,
   bgColor,
   title,
@@ -22,15 +22,6 @@ const Project = ({
   sourceLink,
   languages,
 }: Props) => {
-  const [gridColumns, setGridColumns] = useState<string>('0.7fr 0.3fr');
-  const [gridArea, setGridArea] = useState<string>("'image info'");
-  useEffect(() => {
-    if (reverseColumnLayout) {
-      setGridColumns('0.3fr 0.7fr');
-      setGridArea("'info image'");
-    }
-  }, [reverseColumnLayout]);
-
   const projectVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
@@ -45,7 +36,7 @@ const Project = ({
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, x: reverseColumnLayout ? 100 : -100 },
+    hidden: { opacity: 0, x: flexReverse ? 100 : -100 },
     visible: {
       opacity: 1,
       x: 0,
@@ -79,7 +70,7 @@ const Project = ({
   return (
     <motion.div
       className='project'
-      style={{ gridTemplateColumns: gridColumns, gridTemplateAreas: gridArea }}
+      style={{ flexDirection: flexReverse ? 'row-reverse' : 'row' }}
       variants={projectVariants}
       initial='hidden'
       whileInView='visible'
@@ -95,7 +86,7 @@ const Project = ({
             animate='visible'
             exit='hidden'
             className='project__languages--wrapper'
-            style={{ justifyContent: reverseColumnLayout ? 'flex-end' : '' }}
+            style={{ justifyContent: flexReverse ? 'flex-end' : '' }}
           >
             {languages.map((item, id) => (
               <motion.p

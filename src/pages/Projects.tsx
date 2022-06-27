@@ -27,7 +27,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/tahseenio/notes-react',
       languages: ['React', 'TypeScript'],
       config: {
-        reverseColumnLayout: false,
+        flexReverse: false,
         bgColor: '#EBEBEB',
       },
     },
@@ -39,7 +39,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/tahseenio/discord-clone',
       languages: ['React', 'TypeScript'],
       config: {
-        reverseColumnLayout: true,
+        flexReverse: true,
         bgColor: '#404EED',
       },
     },
@@ -51,7 +51,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/tahseenio/book-store-react',
       languages: ['React', 'TypeScript'],
       config: {
-        reverseColumnLayout: false,
+        flexReverse: false,
         bgColor: '#D8EBF0',
       },
     },
@@ -63,7 +63,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/Faizzy7867/Madina-Masjid-website',
       languages: ['HTML', 'CSS', 'JS'],
       config: {
-        reverseColumnLayout: true,
+        flexReverse: true,
         bgColor: '#0B6737',
       },
     },
@@ -75,7 +75,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/tahseenio/movie-search-react',
       languages: ['React', 'TypeScript'],
       config: {
-        reverseColumnLayout: false,
+        flexReverse: false,
         bgColor: '#0D253F',
       },
     },
@@ -87,7 +87,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/tahseenio/treact-clone',
       languages: ['HTML', 'CSS'],
       config: {
-        reverseColumnLayout: true,
+        flexReverse: true,
         bgColor: '#691CFF',
       },
     },
@@ -99,7 +99,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/tahseenio/login-signup',
       languages: ['React', 'TypeScript'],
       config: {
-        reverseColumnLayout: false,
+        flexReverse: false,
         bgColor: '#1D2A32',
       },
     },
@@ -111,7 +111,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/tahseenio/DECO1400-project',
       languages: ['HTML', 'CSS', 'JS'],
       config: {
-        reverseColumnLayout: true,
+        flexReverse: true,
         bgColor: '#E54C61',
       },
     },
@@ -152,7 +152,7 @@ const Projects = () => {
               description={item.description}
               liveLink={item.liveLink}
               sourceLink={item.sourceLink}
-              reverseColumnLayout={item.config.reverseColumnLayout}
+              flexReverse={item.config.flexReverse}
               bgColor={item.config.bgColor}
               languages={item.languages}
             />
