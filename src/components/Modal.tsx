@@ -59,6 +59,20 @@ const Modal = ({ setIsBurgerOpen, isBurgerOpen, modalButton }: Props) => {
     return () => document.removeEventListener('click', clickHandler);
   });
 
+  useEffect(() => {
+    if (isBurgerOpen) {
+      // document.body.style.overflow = 'hidden';
+      // document.body.style.paddingRight = '15px';
+      // document.documentElement.style.overflow = 'hidden';
+    }
+    return () => {
+      // document.body.style.overflow = 'unset';
+      // document.body.style.paddingRight = '0px';
+      // document.documentElement.style.overflow = 'unset';
+    };
+    // TODO: insert body scroll lock here
+  }, [isBurgerOpen]);
+
   return (
     <AnimatePresence>
       {isBurgerOpen && (

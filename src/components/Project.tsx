@@ -67,13 +67,15 @@ const Project = ({
     exit: { opacity: 0, y: 50 },
   };
 
+  const smallScreen = window.innerWidth;
+
   return (
     <motion.div
       className='project'
       variants={projectVariants}
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: true, amount: 500 > smallScreen ? 0.1 : 0.8 }}
       onHoverStart={() => setIsHovering(true)}
       onHoverEnd={() => setIsHovering(false)}
     >
