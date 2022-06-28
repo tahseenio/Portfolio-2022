@@ -79,7 +79,7 @@ const Project = ({
       onHoverStart={() => setIsHovering(true)}
       onHoverEnd={() => setIsHovering(false)}
     >
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {isHovering ? (
           <motion.div
             variants={staggerLanguages}
@@ -99,7 +99,7 @@ const Project = ({
             ))}
           </motion.div>
         ) : null}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       <motion.div
         className='project__info'
@@ -138,6 +138,27 @@ const Project = ({
         </div>
       </motion.div>
       <motion.figure className='project__img--wrapper' variants={imageVariants}>
+        <AnimatePresence>
+          {isHovering ? (
+            <motion.div
+              variants={staggerLanguages}
+              initial='hidden'
+              animate='visible'
+              exit='hidden'
+              className='project__languages--wrapper'
+            >
+              {languages.map((item, id) => (
+                <motion.p
+                  key={id}
+                  variants={language}
+                  className='project__language'
+                >
+                  {item}
+                </motion.p>
+              ))}
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
         <img src={image} className='project__img' alt={`${title}`} />
       </motion.figure>
     </motion.div>
