@@ -489,6 +489,7 @@ Projects
 }
 
 .project__para {
+  white-space: pre-line;
   text-align: justify;
   line-height: 1.75;
   margin: 24px 0;
@@ -508,6 +509,7 @@ Resume
 }
 
 .pdf--wrapper {
+  /* background-color: white; */
   width: 100%;
   aspect-ratio: 0.863;
   margin: 0 auto;

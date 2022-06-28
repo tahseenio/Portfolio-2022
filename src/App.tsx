@@ -28,8 +28,10 @@ function App() {
           });
         })
       ).then((item) => {
-        setLoading(false);
-        // console.log('DONE', item);
+        setTimeout(() => {
+          setLoading(false);
+          // console.log('DONE', item);
+        }, 500);
       });
     };
     fetchImages();

@@ -22,7 +22,7 @@ const Projects = () => {
     {
       image: TMDB,
       name: 'Movie Search',
-      description: `Created a movie search website, using ReactJS, HTML5, CSS3 and JavaScript, that fetches from “The Movie Database” API to find movies requested by the user.`,
+      description: `Search for any movie with the ability to filter by popular, trending or top rated movies if you are not sure what movies are good to watch. Consumes the TMDB API using Axios and loads all movie information with skeleton loading. End to end testing completed with Cypress to ensure web app is functional.`,
       liveLink: 'https://movie-search-react-one.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/movie-search-react',
       languages: ['React', 'TypeScript', 'Cypress'],
@@ -33,20 +33,35 @@ const Projects = () => {
     },
     {
       image: Notes,
-      name: 'Notes',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      name: 'Notes App',
+      description: `A simple notes app where you can create, edit, and delete notes. In this project I learned TypeScript and the basics of Redux Toolkit as a global state management. Framer motion was used to create smooth animations of notes shifting and being deleted.`,
       liveLink: 'http://notes-react-nine.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/notes-react',
-      languages: ['React', 'TypeScript'],
+      languages: ['React', 'TypeScript', 'Framer Motion', 'Redux Toolkit'],
       config: {
         bgColor: '#EBEBEB',
         txtColor: 'black',
       },
     },
     {
+      image: LoginSignup,
+      name: 'Login Signup',
+      description: `A sleek login and signup system where users are able to create a new account or log in with a previous email or using a google account. The form was created using react-hook-forms and yup was used to handle error handling and input validation. All animations were created using Framer Motion such as exit animations to different pages. Context API along with Firebase and Firestore was used for user authentication and user date storage.
+      
+      Demo email: demo@demo.com 
+      Demo password: demo1234`,
+      liveLink: 'http://login-signup-sable.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/login-signup',
+      languages: ['React', 'Firebase', 'Framer Motion', 'Context API'],
+      config: {
+        bgColor: '#1D2A32',
+        txtColor: 'white',
+      },
+    },
+    {
       image: Library,
-      name: 'Library',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      name: 'Book Store',
+      description: `A book store where you can find popular discounted books and purchase them. Features skeleton loading for a better user experience, use of React router and useParams to create dynamic pages which show detailed descriptions of any book.`,
       liveLink: 'https://book-store-react-eta.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/book-store-react',
       languages: ['React', 'TypeScript'],
@@ -57,8 +72,8 @@ const Projects = () => {
     },
     {
       image: Discord,
-      name: 'Discord',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      name: 'Discord Clone',
+      description: `A partial clone of the official Discord's landing page and downloads page. Learned to create responsive CSS grid layouts from this project and create reusable React components for efficient and consistent code. `,
       liveLink: 'https://discord-clone-self-ten.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/discord-clone',
       languages: ['React', 'TypeScript'],
@@ -69,8 +84,8 @@ const Projects = () => {
     },
     {
       image: Mosque,
-      name: 'Mosque',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      name: 'Wakefield Mosque',
+      description: `A religious website created for the Muslim community in Wakefield, UK. Built with two other web developers in less than a few weeks. I was tasked with creating the daily prayer timetable and monthly timetable page which consisted of creating a JSON of all prayer times throughout the year and displaying is using the map method. The current day is highlighted and is determined during the mapping process.`,
       liveLink: 'https://madinamasjidwakefield.netlify.app/',
       sourceLink: 'https://github.com/Faizzy7867/Madina-Masjid-website',
       languages: ['HTML', 'CSS', 'JS'],
@@ -80,21 +95,9 @@ const Projects = () => {
       },
     },
     {
-      image: LoginSignup,
-      name: 'Login Signup (WIP)',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-      liveLink: 'http://login-signup-sable.vercel.app/',
-      sourceLink: 'https://github.com/tahseenio/login-signup',
-      languages: ['React', 'Firebase'],
-      config: {
-        bgColor: '#1D2A32',
-        txtColor: 'white',
-      },
-    },
-    {
       image: FoodCart,
       name: 'Food Cart',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      description: `Find unique food carts all throughout Brisbane such as Korean, African, Turkish cuisines and many more! Consumes data from the Brisbane City Council API and displayed in a user-friendly UI design. Utilises crucial Javascript methods such as map and filter to search and filter food items and utilises localStorage to provide detailed information of any food cart.`,
       liveLink: 'http://deco-1400-project.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/DECO1400-project',
       languages: ['HTML', 'CSS', 'JS'],
@@ -106,7 +109,7 @@ const Projects = () => {
     {
       image: Treact,
       name: 'Treact Clone',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      description: `A Treact template clone created following best practices such as using semantic HTML and CSS BEM (Block Element Modifier). Important key concepts for CSS were learned during the creation of the website such as flexbox, positioning elements, CSS selectors, pseudo-classes and pseudo-elements.  Swift animations on scroll are created using the AOS library. Responsiveness was ensured using media queries.`,
       liveLink: 'https://treact-clone.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/treact-clone',
       languages: ['HTML', 'CSS'],
