@@ -22,7 +22,7 @@ const Projects = () => {
     {
       image: TMDB,
       name: 'Movie Search',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      description: `Created a movie search website, using ReactJS, HTML5, CSS3 and JavaScript, that fetches from “The Movie Database” API to find movies requested by the user.`,
       liveLink: 'https://movie-search-react-one.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/movie-search-react',
       languages: ['React', 'TypeScript', 'Cypress'],

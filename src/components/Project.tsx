@@ -4,12 +4,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 interface Props {
   image: string;
   bgColor: string;
-  txtColor: string;
   title: string;
   description: string;
   liveLink: string;
   sourceLink: string;
   languages: string[];
+  txtColor: string;
 }
 
 const Project = ({
