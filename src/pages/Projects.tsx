@@ -37,7 +37,7 @@ const Projects = () => {
       description: `A simple notes app where you can create, edit, and delete notes. In this project I learned TypeScript and Context API as a global state management. Framer motion was used to create smooth animations of notes shifting and being deleted.`,
       liveLink: 'http://notes-react-nine.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/notes-react',
-      languages: ['React', 'TypeScript', 'Framer Motion', 'Redux Toolkit'],
+      languages: ['React', 'TypeScript', 'Framer Motion'],
       config: {
         bgColor: '#EBEBEB',
         txtColor: 'black',
