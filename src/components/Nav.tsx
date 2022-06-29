@@ -6,9 +6,6 @@ import navLogo from '../assets/logo_inverted.svg';
 import Modal from './Modal';
 import { usePortfolioContext } from '../context/PortfolioContext';
 
-import { FaLinkedin } from 'react-icons/fa';
-import { BsGithub } from 'react-icons/bs';
-
 const Nav = () => {
   const {
     HomeRef,
@@ -77,26 +74,7 @@ const Nav = () => {
           isBurgerOpen={isBurgerOpen}
           modalButton={modalButton}
         />
-        <div className='nav__links--left'>
-          <img src={navLogo} className='nav__logo' alt='nav logo' />
-          <a
-            href='https://www.linkedin.com/in/tahseen1/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <FaLinkedin
-              className='nav__link--left'
-              style={{ color: '#0a66c2' }}
-            />
-          </a>
-          <a
-            href='https://github.com/tahseenio/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <BsGithub className='nav__link--left' style={{ color: 'black' }} />
-          </a>
-        </div>
+        <img src={navLogo} className='nav__logo' alt='nav logo' />
         <ul className='nav__links'>
           {links.map(({ title, id, reference }) => (
             <li

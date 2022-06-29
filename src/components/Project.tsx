@@ -75,7 +75,7 @@ const Project = ({
       variants={projectVariants}
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: true, amount: 500 > smallScreen ? 0.1 : 0.8 }}
+      viewport={{ once: true, amount: 500 > smallScreen ? 0.1 : 0.7 }}
       onHoverStart={() => setIsHovering(true)}
       onHoverEnd={() => setIsHovering(false)}
     >

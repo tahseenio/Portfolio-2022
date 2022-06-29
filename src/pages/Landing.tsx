@@ -41,14 +41,15 @@ const Landing = () => {
   const [HomeBackgroundImage, setHomeBackgroundImage] = useState('');
   useEffect(() => {
     if (window.innerWidth < 500) {
-      console.log('did this');
-      if (isDark) {
-        setHomeBackgroundImage(HomeNightMobile);
-        return;
-      } else {
-        setHomeBackgroundImage(HomeBackground);
-        return;
-      }
+      // TODO: cleanup this section
+      // console.log('did this');
+      // if (isDark) {
+      //   setHomeBackgroundImage(HomeNightMobile);
+      //   return;
+      // } else {
+      //   setHomeBackgroundImage(HomeBackground);
+      //   return;
+      // }
     }
 
     if (isDark) {

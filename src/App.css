@@ -179,12 +179,6 @@ nav {
   user-select: none;
 }
 
-.nav__links--left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .nav__link--left {
   cursor: pointer;
   margin-left: 10px;
@@ -352,9 +346,11 @@ About
 /* language box */
 
 .language__container {
+  max-width: 1000px;
+  margin: 0 auto;
   display: grid;
-  gap: 50px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   justify-items: center;
 }
 
@@ -600,7 +596,7 @@ Modal
   bottom: 0;
   width: 300px;
   height: 100vh;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
 
   display: flex;
@@ -987,6 +983,9 @@ MEDIA QUERIES
 }
 
 @media (max-width: 900px) {
+  .language__container {
+    gap: 50px;
+  }
   .nav__link {
     display: none;
   }
@@ -1014,20 +1013,30 @@ MEDIA QUERIES
 }
 
 @media (max-width: 500px) {
-  .about__title {
-    font-size: 94px;
-  }
   .about__para {
     font-size: 1.4rem;
   }
   .about__title--tech {
     font-size: 40px;
   }
+
+  .about__title,
   .projects__title,
   .resume__title,
   .contact__title {
-    font-size: 72px;
+    font-size: 60px;
   }
+
+  .about__title,
+  .projects__title,
+  .resume__title {
+    margin-bottom: 40px;
+  }
+
+  .project__title {
+    font-size: 34px;
+  }
+
   .contact__para--description {
     text-align: center;
   }
