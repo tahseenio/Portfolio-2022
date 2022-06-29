@@ -24,3 +24,4 @@
 ## Future optimizations
 - Correct my types in some components as they are currently set to the 'any' type. This was due to being unable to figure out the correct type when using certain hooks such as the useRef hook.
 - Figure out how to make the current section tab in the navbar animate smoothly when rapidly scrolling (for example scrolling from the contact section to the top of the screen will cause erratic movement of the selected tab)
+- Enable scroll body lock when the modal is open
