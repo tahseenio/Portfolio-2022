@@ -122,12 +122,28 @@ const Landing = () => {
         exit='exit'
       >
         <motion.div variants={textVariants} exit={{ opacity: 0 }}>
-          <motion.div className='home__title' animate={TextAnimation}>
+          <motion.div
+            className='home__title'
+            animate={TextAnimation}
+            style={{
+              textShadow: isDark
+                ? '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000'
+                : undefined,
+            }}
+          >
             Tahseen Islam
           </motion.div>
         </motion.div>
         <motion.div variants={textVariants} exit={{ opacity: 0 }}>
-          <motion.div className='home__description' animate={TextAnimation}>
+          <motion.div
+            className='home__description'
+            animate={TextAnimation}
+            style={{
+              textShadow: isDark
+                ? '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000'
+                : undefined,
+            }}
+          >
             Frontend Developer
           </motion.div>
         </motion.div>
