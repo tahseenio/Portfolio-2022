@@ -387,7 +387,6 @@ Projects
   position: relative;
   width: 100%;
   display: grid;
-  row-gap: 100px;
   gap: 50px;
   grid-template-columns: 1fr 1fr;
 }
