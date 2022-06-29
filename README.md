@@ -17,7 +17,7 @@
 - react-pdf-viewer to show resume in browser
 - react-icons for icons
 
-## Lessons Learned:
+## Lessons Learned
 - I solidifed my knowledge in being able to create efficient reusable components in TypeScript. 
 - I learned more advanced animations in Framer Motion which I am now able to use in future projects.
 
