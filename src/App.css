@@ -388,6 +388,8 @@ Projects
   width: 100%;
   display: grid;
   row-gap: 100px;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .project {
@@ -406,7 +408,7 @@ Projects
   overflow: hidden;
   font-size: 0;
   line-height: 0;
-  width: 75%;
+  width: 50%;
 }
 
 .project__img {
@@ -446,7 +448,7 @@ Projects
   flex-direction: column;
   justify-content: space-between;
   padding: 40px;
-  width: 30%;
+  width: 50%;
 }
 
 .project--viewport-trigger {
@@ -975,6 +977,20 @@ footer {
 MEDIA QUERIES 
 
 */
+
+@media (max-width: 1700px) {
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 0px;
+    row-gap: 100px;
+  }
+  .project__info {
+    width: 30%;
+  }
+  .project__img--wrapper {
+    width: 70%;
+  }
+}
 
 @media (max-width: 1400px) {
   .project-buttons--wrapper {

@@ -52,7 +52,7 @@ const Projects = () => {
       Demo password: demo1234`,
       liveLink: 'http://login-signup-sable.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/login-signup',
-      languages: ['React', 'Firebase', 'Framer Motion', 'Context API'],
+      languages: ['React', 'Firebase', 'Framer Motion'],
       config: {
         bgColor: '#1D2A32',
         txtColor: 'white',
