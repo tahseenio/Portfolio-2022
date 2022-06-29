@@ -25,3 +25,4 @@
 - Correct my types in some components as they are currently set to the 'any' type. This was due to being unable to figure out the correct type when using certain hooks such as the useRef hook.
 - Figure out how to make the current section tab in the navbar animate smoothly when rapidly scrolling (for example scrolling from the contact section to the top of the screen will cause erratic movement of the selected tab)
 - Enable scroll body lock when the modal is open
+- Add smaller background images when on mobile so the user does not have to load a massive image for a small screen. The logic has been implemented but there were some issues with creating the small images with the correct aspect ratio.
