@@ -20,6 +20,7 @@
 ## Lessons Learned
 - I solidifed my knowledge in being able to create efficient reusable components in TypeScript. 
 - I learned more advanced animations in Framer Motion which I am now able to use in future projects.
+- I have tried to use CSS grid for the projects so I can understand grid layouts more thoroughly and can use it instead of having to rely solely on flexbox
 
 ## Future optimizations
 - Correct my types in some components as they are currently set to the 'any' type. This was due to being unable to figure out the correct type when using certain hooks such as the useRef hook.
