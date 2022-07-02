@@ -1,3 +1,5 @@
+// BUG: Sometimes when you click the nav link it doesnt go to correct section
+
 import { useEffect, useState, useRef } from 'react';
 import { motion, useViewportScroll } from 'framer-motion';
 import { Burger, Switch } from '@mantine/core';
