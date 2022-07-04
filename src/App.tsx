@@ -1,5 +1,3 @@
-// TODO: Get rid of all any types
-
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AnimatedRoutes from './components/AnimatedRoutes';

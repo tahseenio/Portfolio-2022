@@ -44,16 +44,16 @@ const Contact = () => {
 
   const [EmailSending, setEmailSending] = useState<boolean>(false);
 
-  const EmailMessage = useRef<any>(null);
+  const EmailMessage = useRef<HTMLParagraphElement | null>(null);
 
-  const form = useRef<any>();
+  const form = useRef<HTMLFormElement | null>(null);
 
-  const [notification, setNotifications] = useState<any>(null);
+  const [notification, setNotifications] = useState<null | JSX.Element>(null);
 
   const onContactSubmit = () => {
     setEmailSending(true);
     emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current!, PUBLIC_KEY)
       .then(() => {
         handleToast('success', 3000);
         reset();
