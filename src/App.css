@@ -367,6 +367,7 @@ Projects
   overflow: hidden;
   width: 100%;
   display: flex;
+  min-height: 619px;
 }
 
 .project:hover .project__img {

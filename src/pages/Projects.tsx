@@ -60,6 +60,18 @@ const Projects = () => {
       },
     },
     {
+      image: VRChat,
+      name: 'VRChat Notes Extension',
+      description: `This extension allows users to take notes of new friends they have made in VRChat on the official VRChat website. It utilizes Chrome's Manifest v3 to inject a responsive HTML Element that re-renders if you switch to a different users profile.`,
+      liveLink: '',
+      sourceLink: 'https://github.com/tahseenio/vrchat-notes-chrome-extension',
+      languages: ['JavaScript'],
+      config: {
+        bgColor: '#0E1013',
+        txtColor: 'white',
+      },
+    },
+    {
       image: Library,
       name: 'Book Store',
       description: `A book store where you can find popular discounted books and purchase them. Features skeleton loading for a better user experience, use of React router and useParams to create dynamic pages which show detailed descriptions of any book.`,
@@ -89,7 +101,7 @@ const Projects = () => {
       description: `A religious website created for the Muslim community in Wakefield, UK. Built with two other web developers in less than a few weeks. I was tasked with creating the daily prayer timetable and monthly timetable page which consisted of creating a JSON of all prayer times throughout the year and displaying is using the map method. The current day is highlighted and is determined during the mapping process.`,
       liveLink: 'https://madinamasjidwakefield.netlify.app/',
       sourceLink: 'https://github.com/Faizzy7867/Madina-Masjid-website',
-      languages: ['HTML', 'CSS', 'JS'],
+      languages: ['HTML', 'CSS', 'JavaScript'],
       config: {
         bgColor: '#0B6737',
         txtColor: 'white',
@@ -101,21 +113,9 @@ const Projects = () => {
       description: `Find unique food carts all throughout Brisbane such as Korean, African, Turkish cuisines and many more! Consumes data from the Brisbane City Council API and displayed in a user-friendly UI design. Utilises crucial Javascript methods such as map and filter to search and filter food items and utilises localStorage to provide detailed information of any food cart.`,
       liveLink: 'http://deco-1400-project.vercel.app/',
       sourceLink: 'https://github.com/tahseenio/DECO1400-project',
-      languages: ['HTML', 'CSS', 'JS'],
+      languages: ['HTML', 'CSS', 'JavaScript'],
       config: {
         bgColor: '#E54C61',
-        txtColor: 'white',
-      },
-    },
-    {
-      image: VRChat,
-      name: 'VRChat Notes Extension',
-      description: `This extension allows users to take notes of new friends they have made in VRChat on the official VRChat website. It utilizes Chrome's Manifest v3 to inject a responsive HTML Element that re-renders if you switch to a different users profile.`,
-      liveLink: '',
-      sourceLink: 'https://github.com/tahseenio/vrchat-notes-chrome-extension',
-      languages: ['JavaScript'],
-      config: {
-        bgColor: '#0E1013',
         txtColor: 'white',
       },
     },

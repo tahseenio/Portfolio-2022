@@ -79,28 +79,6 @@ const Project = ({
       onHoverStart={() => setIsHovering(true)}
       onHoverEnd={() => setIsHovering(false)}
     >
-      {/* <AnimatePresence>
-        {isHovering ? (
-          <motion.div
-            variants={staggerLanguages}
-            initial='hidden'
-            animate='visible'
-            exit='hidden'
-            className='project__languages--wrapper'
-          >
-            {languages.map((item, id) => (
-              <motion.p
-                key={id}
-                variants={language}
-                className='project__language'
-              >
-                {item}
-              </motion.p>
-            ))}
-          </motion.div>
-        ) : null}
-      </AnimatePresence> */}
-
       <motion.div
         className='project__info'
         variants={projectDescription}
