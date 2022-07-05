@@ -664,6 +664,7 @@ Contact
 }
 
 .contact__error-message {
+  margin-bottom: 4px;
   width: 100%;
   font-size: 0.9rem;
   color: red;
