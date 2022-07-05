@@ -115,16 +115,19 @@ const Project = ({
           </p>
         </div>
         <div className='project-buttons--wrapper'>
-          <motion.a
-            className='projectsBtn'
-            href={liveLink}
-            target='_blank'
-            rel='noreferrer'
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Live View
-          </motion.a>
+          {liveLink !== '' ? (
+            <motion.a
+              className='projectsBtn'
+              href={liveLink}
+              target='_blank'
+              rel='noreferrer'
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Live View
+            </motion.a>
+          ) : null}
+
           <motion.a
             className='projectsBtn projectsBtn--black'
             href={sourceLink}

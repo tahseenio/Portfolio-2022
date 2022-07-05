@@ -12,6 +12,7 @@ import TMDB from '../assets/TMDB_mockup.png';
 import Treact from '../assets/treact_mockup.png';
 import LoginSignup from '../assets/login_signup_mockup.png';
 import FoodCart from '../assets/food_cart_mockup.png';
+import VRChat from '../assets/vrchat_mockup.png';
 
 const Projects = () => {
   const { setSelectedTab, ProjectsRef } = usePortfolioContext();
@@ -103,6 +104,18 @@ const Projects = () => {
       languages: ['HTML', 'CSS', 'JS'],
       config: {
         bgColor: '#E54C61',
+        txtColor: 'white',
+      },
+    },
+    {
+      image: VRChat,
+      name: 'VRChat Notes Extension',
+      description: `This extension allows users to take notes of new friends they have made in VRChat on the official VRChat website. It utilizes Chrome's Manifest v3 to inject a responsive HTML Element that re-renders if you switch to a different users profile.`,
+      liveLink: '',
+      sourceLink: 'https://github.com/tahseenio/vrchat-notes-chrome-extension',
+      languages: ['JavaScript'],
+      config: {
+        bgColor: '#0E1013',
         txtColor: 'white',
       },
     },
