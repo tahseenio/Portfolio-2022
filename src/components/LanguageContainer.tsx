@@ -9,6 +9,7 @@ import CypressImg from '../assets/languages/cypress.png';
 import NextjsImg from '../assets/languages/nextjs.png';
 import FirebaseImg from '../assets/languages/firebase.png';
 import FramerImg from '../assets/languages/framer.svg';
+import ExpressImg from '../assets/languages/express.png';
 
 interface languageProps {
   title: string;
@@ -50,6 +51,12 @@ const LanguageContainer = () => {
       bgColor: '#2195F2',
     },
     {
+      title: 'Framer',
+      src: FramerImg,
+      textColor: 'white',
+      bgColor: 'black',
+    },
+    {
       title: 'Sass',
       src: 'https://cdn-icons-png.flaticon.com/512/5968/5968358.png',
       textColor: 'white',
@@ -86,10 +93,16 @@ const LanguageContainer = () => {
       bgColor: '#FFCB2C',
     },
     {
-      title: 'Framer',
-      src: FramerImg,
+      title: 'Node.js',
+      src: 'https://img.icons8.com/color/344/nodejs.png',
       textColor: 'white',
-      bgColor: 'black',
+      bgColor: '#4CAF50',
+    },
+    {
+      title: 'Express.js',
+      src: ExpressImg,
+      textColor: 'white',
+      bgColor: '#323232',
     },
     {
       title: 'Figma',
