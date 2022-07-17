@@ -680,7 +680,8 @@ Contact
   position: relative;
 }
 
-.contact__input:focus + .contact__icon {
+.contact__input:focus + .contact__icon,
+.contact__textarea:focus + .contact__icon {
   color: rgb(51, 185, 222);
 }
 

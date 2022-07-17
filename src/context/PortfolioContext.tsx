@@ -21,13 +21,13 @@ export interface ProviderProps {
 }
 
 export const PortfolioContextProvider = ({ children }: ProviderProps) => {
-  const [isDark, setIsDark] = useState(() => {
+  const [isDark, setIsDark] = useState<boolean>(() => {
     if (localStorage.getItem('theme') === 'dark') {
       return true;
     } else return false;
   });
 
-  const [selectedTab, setSelectedTab] = useState('');
+  const [selectedTab, setSelectedTab] = useState<string>('');
 
   const HomeRef = useRef<HTMLElement | null>(null);
   const AboutRef = useRef<HTMLElement | null>(null);
