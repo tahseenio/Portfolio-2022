@@ -6,33 +6,26 @@ interface Props {
   left: string;
   top: string;
   color?: string;
-  link?: string;
   delay: number;
-  onClick?: () => void;
+  onClick: () => void;
   animationDelay: string;
-  name: string;
 }
 
-const Floater = ({
+const FloaterPDF = ({
   icon,
   left,
   top,
   color,
-  link,
   delay,
   onClick,
-  name,
   animationDelay,
 }: Props) => {
   return (
-    <motion.a
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: delay } }}
-      aria-label={name}
       onClick={onClick}
-      href={link}
       className='floater'
-      target='_blank'
       style={{
         color: color,
         transform: 'translate(-50%, -50%)',
@@ -42,8 +35,8 @@ const Floater = ({
       }}
     >
       {icon}
-    </motion.a>
+    </motion.div>
   );
 };
 
-export default Floater;
+export default FloaterPDF;

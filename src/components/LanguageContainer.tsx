@@ -10,6 +10,11 @@ import NextjsImg from '../assets/languages/nextjs.png';
 import FirebaseImg from '../assets/languages/firebase.png';
 import FramerImg from '../assets/languages/framer.svg';
 import ExpressImg from '../assets/languages/express.png';
+import NodeImg from '../assets/languages/nodejs.png';
+import JSImg from '../assets/languages/JS.png';
+import HTMLImg from '../assets/languages/HTML.png';
+import CSSImg from '../assets/languages/CSS.png';
+import SassImg from '../assets/languages/Sass.png';
 
 interface languageProps {
   title: string;
@@ -34,19 +39,19 @@ const LanguageContainer = () => {
     },
     {
       title: 'JavaScript',
-      src: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png',
+      src: JSImg,
       textColor: '',
       bgColor: '#FFDF00',
     },
     {
       title: 'HTML',
-      src: 'https://cdn-icons-png.flaticon.com/512/174/174854.png',
+      src: HTMLImg,
       textColor: 'white',
       bgColor: '#FC490B',
     },
     {
       title: 'CSS',
-      src: 'https://cdn-icons-png.flaticon.com/512/732/732190.png',
+      src: CSSImg,
       textColor: 'white',
       bgColor: '#2195F2',
     },
@@ -58,7 +63,7 @@ const LanguageContainer = () => {
     },
     {
       title: 'Sass',
-      src: 'https://cdn-icons-png.flaticon.com/512/5968/5968358.png',
+      src: SassImg,
       textColor: 'white',
       bgColor: '#CC6699',
     },
@@ -94,7 +99,7 @@ const LanguageContainer = () => {
     },
     {
       title: 'Node.js',
-      src: 'https://img.icons8.com/color/344/nodejs.png',
+      src: NodeImg,
       textColor: 'white',
       bgColor: '#4CAF50',
     },

@@ -4,6 +4,7 @@ import { FaLinkedin } from 'react-icons/fa';
 import { BsGithub, BsFileEarmarkPdf } from 'react-icons/bs';
 
 import Floater from '../components/Floater';
+import FloaterPDF from '../components/FloaterPDF';
 import HomeBackground from '../assets/home.webp';
 import HomeNight from '../assets/homeNight.webp';
 import HomeNightMobile from '../assets/homeNightMobile.webp';
@@ -67,6 +68,7 @@ const Landing = () => {
     >
       <Floater
         icon={<BsGithub />}
+        name={'GitHub'}
         link={'https://github.com/tahseenio/'}
         left={'20%'}
         top={'25%'}
@@ -76,13 +78,14 @@ const Landing = () => {
       />
       <Floater
         icon={<FaLinkedin />}
+        name={'LinkedIn'}
         link={'https://www.linkedin.com/in/tahseen1/'}
         left={'-20%'}
         delay={2.2}
         top={'30%'}
         animationDelay={'2.5s'}
       />
-      <Floater
+      <FloaterPDF
         icon={<BsFileEarmarkPdf />}
         left={'10%'}
         top={'-20%'}

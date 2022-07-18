@@ -94,16 +94,19 @@ const Nav = () => {
               ) : null}
             </li>
           ))}
-          <Switch
-            size='md'
-            color={'dark'}
-            checked={isDark}
-            style={{ marginLeft: '10px' }}
-            onLabel='🌙'
-            offLabel='☀️'
-            classNames={{ input: 'switchInput' }}
-            onChange={() => setIsDark((state) => !state)}
-          />
+          <li>
+            <Switch
+              aria-label='darkmode-switch'
+              size='md'
+              color={'dark'}
+              checked={isDark}
+              style={{ marginLeft: '10px' }}
+              onLabel='🌙'
+              offLabel='☀️'
+              classNames={{ input: 'switchInput' }}
+              onChange={() => setIsDark((state) => !state)}
+            />
+          </li>
           <Burger
             ref={modalButton}
             color={isDark ? 'white' : 'black'}
