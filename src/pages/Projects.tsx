@@ -4,15 +4,15 @@ import Project from '../components/Project';
 import { usePortfolioContext } from '../context/PortfolioContext';
 import { container, item } from '../variants';
 
-import Notes from '../assets/notes_mockup.png';
-import Discord from '../assets/discord_mockup.png';
-import Library from '../assets/library_mockup.png';
-import Mosque from '../assets/Mosque_mockup.png';
-import TMDB from '../assets/TMDB_mockup.png';
-import Treact from '../assets/treact_mockup.png';
-import LoginSignup from '../assets/login_signup_mockup.png';
-import FoodCart from '../assets/food_cart_mockup.png';
-import VRChat from '../assets/vrchat_mockup.png';
+import Notes from '../assets/notes_mockup.webp';
+import Discord from '../assets/discord_mockup.webp';
+import Library from '../assets/library_mockup.webp';
+import Mosque from '../assets/Mosque_mockup.webp';
+import TMDB from '../assets/TMDB_mockup.webp';
+import Treact from '../assets/treact_mockup.webp';
+import LoginSignup from '../assets/login_signup_mockup.webp';
+import FoodCart from '../assets/food_cart_mockup.webp';
+import VRChat from '../assets/vrchat_mockup.webp';
 
 const Projects = () => {
   const { setSelectedTab, ProjectsRef } = usePortfolioContext();
