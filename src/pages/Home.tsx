@@ -1,8 +1,10 @@
+import { lazy } from 'react';
+
 import About from './About';
 import Contact from './Contact';
 import Landing from './Landing';
 import Projects from './Projects';
-import Resume from './Resume';
+const Resume = lazy(() => import('./Resume'));
 
 const Home = () => {
   return (
