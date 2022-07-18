@@ -1,20 +1,21 @@
 import { motion } from 'framer-motion';
 
 import Language from './ui/Language';
-import TypeScriptImg from '../assets/languages/typescript.jpg';
-import ReactImg from '../assets/languages/react.jpg';
-import JestImg from '../assets/languages/jest.png';
-import GitImg from '../assets/languages/git.png';
-import CypressImg from '../assets/languages/cypress.png';
-import NextjsImg from '../assets/languages/nextjs.png';
-import FirebaseImg from '../assets/languages/firebase.png';
+import TypeScriptImg from '../assets/languages/typescript.webp';
+import ReactImg from '../assets/languages/react.webp';
+import JestImg from '../assets/languages/jest.webp';
+import GitImg from '../assets/languages/git.webp';
+import CypressImg from '../assets/languages/cypress.webp';
+import NextjsImg from '../assets/languages/nextjs.webp';
+import FirebaseImg from '../assets/languages/firebase.webp';
 import FramerImg from '../assets/languages/framer.svg';
-import ExpressImg from '../assets/languages/express.png';
-import NodeImg from '../assets/languages/nodejs.png';
-import JSImg from '../assets/languages/JS.png';
-import HTMLImg from '../assets/languages/HTML.png';
-import CSSImg from '../assets/languages/CSS.png';
-import SassImg from '../assets/languages/Sass.png';
+import ExpressImg from '../assets/languages/express.webp';
+import NodeImg from '../assets/languages/nodejs.webp';
+import JSImg from '../assets/languages/JS.webp';
+import HTMLImg from '../assets/languages/HTML.webp';
+import CSSImg from '../assets/languages/CSS.webp';
+import SassImg from '../assets/languages/Sass.webp';
+import FigmaImg from '../assets/languages/figma.webp';
 
 interface languageProps {
   title: string;
@@ -111,7 +112,7 @@ const LanguageContainer = () => {
     },
     {
       title: 'Figma',
-      src: 'https://cdn-icons-png.flaticon.com/512/5968/5968705.png',
+      src: FigmaImg,
       textColor: 'white',
       bgColor: 'black',
     },
