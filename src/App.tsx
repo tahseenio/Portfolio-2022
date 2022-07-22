@@ -14,30 +14,27 @@ import HomeNightMobile from './assets/homeNightMobile.webp';
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 300);
-    // const imagesPreload = [HomeBackground, HomeNight, HomeNightMobile];
-    // const fetchImages = () => {
-    //   // console.log('image fetch started');
-    //   Promise.all(
-    //     imagesPreload.map((url) => {
-    //       const newImage = new Image();
-    //       newImage.src = url;
-    //       return new Promise((res) => {
-    //         newImage.onload = () => {
-    //           newImage.decode().then(() => res(url));
-    //         };
-    //       });
-    //     })
-    //   ).then((item) => {
-    //     setTimeout(() => {
-    //       setLoading(false);
-    //       // console.log('DONE', item);
-    //     }, 500);
-    //   });
-    // };
-    // fetchImages();
+    const imagesPreload = [HomeBackground, HomeNight, HomeNightMobile];
+    const fetchImages = () => {
+      // console.log('image fetch started');
+      Promise.all(
+        imagesPreload.map((url) => {
+          const newImage = new Image();
+          newImage.src = url;
+          return new Promise((res) => {
+            newImage.onload = () => {
+              newImage.decode().then(() => res(url));
+            };
+          });
+        })
+      ).then((item) => {
+        setTimeout(() => {
+          setLoading(false);
+          // console.log('DONE', item);
+        }, 300);
+      });
+    };
+    fetchImages();
   }, []);
 
   return (
