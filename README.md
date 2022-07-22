@@ -4,6 +4,8 @@
 
 ### My most recent ePortfolio site featuring my tech stack, projects and contact details.
 
+![image](https://user-images.githubusercontent.com/55749172/179519966-91218ba9-0aa5-41a2-ad57-fc1573beb7b6.png)
+
 ## Tech and Packages Used
 
 <p align="center">
