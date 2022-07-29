@@ -1,5 +1,3 @@
-// BUG: background of resume is visible when it shouldnt be
-
 import { Viewer, Worker } from '@react-pdf-viewer/core';
 import { motion } from 'framer-motion';
 import '@react-pdf-viewer/core/lib/styles/index.css';

@@ -573,7 +573,7 @@ Resume
 }
 
 .rpv-core__inner-page {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 /* 
