@@ -13,6 +13,7 @@ import Treact from '../assets/treact_mockup.webp';
 import LoginSignup from '../assets/login_signup_mockup.webp';
 import FoodCart from '../assets/food_cart_mockup.webp';
 import VRChat from '../assets/vrchat_mockup.webp';
+import TypeForm from '../assets/typeform_mockup.png';
 
 const Projects = () => {
   const { setSelectedTab, ProjectsRef } = usePortfolioContext();
@@ -56,6 +57,18 @@ const Projects = () => {
       languages: ['React', 'TypeScript', 'Firebase', 'Framer Motion'],
       config: {
         bgColor: '#1D2A32',
+        txtColor: 'white',
+      },
+    },
+    {
+      image: TypeForm,
+      name: 'TypeForm',
+      description: `A modern aesthetic multi-step form which makes filling forms fun for the user. Utilises react-hook-form, yup for input validation, Context API and uses Framer Motion to create user friendly animations.`,
+      liveLink: 'https://typeform-clone-rouge.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/typeform-clone',
+      languages: ['React', 'TypeScript', 'Framer Motion'],
+      config: {
+        bgColor: '#623986',
         txtColor: 'white',
       },
     },
