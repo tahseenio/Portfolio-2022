@@ -1,9 +1,4 @@
-import {
-  motion,
-  useSpring,
-  useTransform,
-  useViewportScroll,
-} from 'framer-motion';
+import { motion, useSpring, useTransform, useScroll } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 import { usePortfolioContext } from '../context/PortfolioContext';
@@ -11,7 +6,7 @@ import LanguageContainer from '../components/LanguageContainer';
 import { container, item } from '../variants';
 
 const About = () => {
-  const { scrollYProgress } = useViewportScroll();
+  const { scrollYProgress } = useScroll();
   const yRange = useTransform(scrollYProgress, [0, 1], [0, -1600]);
   const yRangeSpring = useSpring(yRange, { stiffness: 400, damping: 90 });
   const [XInt, setXInt] = useState(0);
