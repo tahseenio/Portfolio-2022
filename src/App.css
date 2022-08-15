@@ -460,11 +460,17 @@ Projects
 }
 
 .project-buttons--wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
 .projectsBtn {
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   color: white;
   text-decoration: none;
@@ -472,16 +478,27 @@ Projects
   font-size: 1.3rem;
   padding: 8px 16px;
   border-radius: 8px;
-  min-width: 129.22px;
+  /* min-width: 129.22px; */
   text-align: center;
 }
 
 .projectsBtn--black {
+  /* grid-column: 2 / 3; */
   background-color: rgb(51, 51, 51);
-  min-width: 163.63px;
+  /* min-width: 163.63px; */
 }
 
-.project__title {
+.bg--gray {
+  background-color: rgb(14, 57, 72);
+}
+
+.projectsBtn--gray {
+  grid-row: 1;
+  grid-column: 1 / 3;
+  background-color: rgb(14, 57, 72);
+  /* min-width: 163.63px; */
+}
+projectsBtn--black .project__title {
   font-size: 48px;
   font-weight: 500;
 }

@@ -93,6 +93,20 @@ const Project = ({
           </p>
         </div>
         <div className='project-buttons--wrapper'>
+          <motion.button
+            className={`${
+              liveLink
+                ? 'projectsBtn projectsBtn--gray'
+                : 'projectsBtn bg--gray'
+            }`}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() =>
+              alert('More Info section is currently being implemented...')
+            }
+          >
+            More Info
+          </motion.button>
           {liveLink !== '' ? (
             <motion.a
               className='projectsBtn'
@@ -105,7 +119,6 @@ const Project = ({
               Live View
             </motion.a>
           ) : null}
-
           <motion.a
             className='projectsBtn projectsBtn--black'
             href={sourceLink}
