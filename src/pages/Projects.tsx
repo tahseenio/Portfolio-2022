@@ -14,6 +14,7 @@ import LoginSignup from '../assets/login_signup_mockup.webp';
 import FoodCart from '../assets/food_cart_mockup.webp';
 import VRChat from '../assets/vrchat_mockup.webp';
 import TypeForm from '../assets/typeform_mockup.png';
+import MoreInfoOpen from '../components/MoreInfoOpen';
 
 const Projects = () => {
   const { setSelectedTab, ProjectsRef } = usePortfolioContext();
@@ -149,6 +150,7 @@ const Projects = () => {
   return (
     <section className='container' ref={ProjectsRef}>
       <div className='row'>
+        <MoreInfoOpen />
         <motion.h1
           className='projects__title'
           variants={container}

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { usePortfolioContext } from '../context/PortfolioContext';
 
 interface Props {
   image: string;
@@ -69,6 +70,18 @@ const Project = ({
 
   const smallScreen = window.innerWidth;
 
+  const moreInfoLink = sourceLink.split('/')[sourceLink.split('/').length - 1];
+
+  const { setLink, setMoreInfoIsOpen, setUserName } = usePortfolioContext();
+
+  const handleMoreInfoClick = () => {
+    if (moreInfoLink === 'Madina-Masjid-website') {
+      setUserName('Faizzy7867');
+    } else setUserName('tahseenio');
+    setLink(moreInfoLink);
+    setMoreInfoIsOpen(true);
+  };
+
   return (
     <motion.div
       className='project'
@@ -101,9 +114,7 @@ const Project = ({
             }`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            onClick={() =>
-              alert('More Info section is currently being implemented...')
-            }
+            onClick={handleMoreInfoClick}
           >
             More Info
           </motion.button>

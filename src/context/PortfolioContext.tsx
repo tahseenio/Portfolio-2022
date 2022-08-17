@@ -10,6 +10,16 @@ export interface PortfolioContextProps {
   ProjectsRef: React.MutableRefObject<HTMLElement | null>;
   ResumeRef: React.MutableRefObject<HTMLElement | null>;
   ContactRef: React.MutableRefObject<HTMLElement | null>;
+  link: string;
+  setLink: React.Dispatch<React.SetStateAction<string>>;
+  text: string;
+  setText: React.Dispatch<React.SetStateAction<string>>;
+  loading: boolean;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+  moreInfoIsOpen: boolean;
+  setMoreInfoIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  userName: string;
+  setUserName: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export const PortfolioContext = createContext<null | PortfolioContextProps>(
@@ -35,9 +45,18 @@ export const PortfolioContextProvider = ({ children }: ProviderProps) => {
   const ResumeRef = useRef<HTMLElement | null>(null);
   const ContactRef = useRef<HTMLElement | null>(null);
 
+  const [link, setLink] = useState('');
+  const [moreInfoIsOpen, setMoreInfoIsOpen] = useState<boolean>(false);
+  const [text, setText] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(true);
+
+  const [userName, setUserName] = useState('');
+
   return (
     <PortfolioContext.Provider
       value={{
+        userName,
+        setUserName,
         setIsDark,
         selectedTab,
         setSelectedTab,
@@ -47,6 +66,14 @@ export const PortfolioContextProvider = ({ children }: ProviderProps) => {
         ProjectsRef,
         ResumeRef,
         ContactRef,
+        link,
+        setLink,
+        text,
+        setText,
+        loading,
+        setLoading,
+        moreInfoIsOpen,
+        setMoreInfoIsOpen,
       }}
     >
       {children}

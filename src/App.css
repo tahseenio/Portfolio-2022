@@ -510,7 +510,62 @@ projectsBtn--black .project__title {
   margin: 24px 0;
 }
 
-/* 
+.project__more-info--wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(68, 68, 68, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project__more-info {
+  position: relative;
+  border-radius: 20px;
+  background-color: white;
+  width: 100%;
+  max-width: 1300px;
+  height: 90vh;
+  margin: 0 64px;
+  padding: 64px 32px 32px 32px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* overflow: hidden; */
+}
+
+.project__more-info > div {
+  /* width: 100%; */
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* overflow-x: hidden;
+  overflow-y: scroll; */
+}
+
+.project__more-info ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.project__more-info > div > p:first-of-type > img {
+  width: 100%;
+}
+
+.closeBtn--more-info {
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+/*
 
 Resume
 
