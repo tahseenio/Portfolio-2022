@@ -1,9 +1,4 @@
-// BUG: ERROR 404 if branch is not from main
 // TODO: add better loading state
-// TODO: fix layout css when rendering from mdx to jsx
-// TODO: fix fetched based on if from master or main
-//  - Wakefile is master
-// typeform is master
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { IoMdClose } from 'react-icons/io';
@@ -29,11 +24,12 @@ const MoreInfoOpen = () => {
   };
 
   useEffect(() => {
-    console.log('username is now:', userName);
-  }, [link, userName]);
+    console.log(loading);
+  }, [loading]);
 
   useEffect(() => {
-    const testFetch = async () => {
+    console.log('useffect running');
+    const fetchData = async () => {
       if (link === '') return;
       try {
         const promise = await fetch(
@@ -46,15 +42,14 @@ const MoreInfoOpen = () => {
         console.log(err);
       }
       setTimeout(() => {
+        console.log('this ran');
         setLoading(false);
-      }, 300);
+      }, 500);
     };
-    testFetch();
-  }, [link, setLoading, setText, userName]);
+    fetchData();
+  }, [link, loading, userName, setLoading, setText]);
 
   const handleClose = () => {
-    setLoading(true);
-    setText('');
     setMoreInfoIsOpen(false);
   };
 
@@ -64,21 +59,23 @@ const MoreInfoOpen = () => {
         <motion.div
           initial='animate'
           exit={{ opacity: 0 }}
-          className='project__more-info--wrapper'
+          className='project__more-info--bg'
           onClick={handleClose}
         >
           <motion.div
             variants={moreInfoVariants}
             initial='initial'
             animate='animate'
+            className='project__more-info--wrapper'
             exit={{ opacity: 0 }}
-            className='project__more-info'
             onClick={(e) => {
               e.stopPropagation();
             }}
           >
             <IoMdClose className='closeBtn--more-info' onClick={handleClose} />
-            {loading ? <>Loading...</> : <Markdown>{text}</Markdown>}
+            <div className='project__more-info'>
+              {loading ? <span>Loading...</span> : <Markdown>{text}</Markdown>}
+            </div>
           </motion.div>
         </motion.div>
       ) : null}

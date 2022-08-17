@@ -72,7 +72,8 @@ const Project = ({
 
   const moreInfoLink = sourceLink.split('/')[sourceLink.split('/').length - 1];
 
-  const { setLink, setMoreInfoIsOpen, setUserName } = usePortfolioContext();
+  const { setLink, setMoreInfoIsOpen, setUserName, setLoading } =
+    usePortfolioContext();
 
   const handleMoreInfoClick = () => {
     if (moreInfoLink === 'Madina-Masjid-website') {
@@ -80,6 +81,7 @@ const Project = ({
     } else setUserName('tahseenio');
     setLink(moreInfoLink);
     setMoreInfoIsOpen(true);
+    setLoading(true);
   };
 
   return (
