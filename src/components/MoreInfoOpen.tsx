@@ -19,8 +19,8 @@ const MoreInfoOpen = () => {
   } = usePortfolioContext();
 
   const moreInfoVariants = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
+    initial: { opacity: 0, scale: 0.7 },
+    animate: { opacity: 1, scale: 1 },
   };
 
   useEffect(() => {
@@ -61,7 +61,7 @@ const MoreInfoOpen = () => {
             initial='initial'
             animate='animate'
             className='project__more-info--wrapper'
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, scale: 0.7, transition: { duration: 0.1 } }}
             onClick={(e) => {
               e.stopPropagation();
             }}
