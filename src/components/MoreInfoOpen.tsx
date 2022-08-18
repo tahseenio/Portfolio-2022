@@ -24,11 +24,6 @@ const MoreInfoOpen = () => {
   };
 
   useEffect(() => {
-    console.log(loading);
-  }, [loading]);
-
-  useEffect(() => {
-    console.log('useffect running');
     const fetchData = async () => {
       if (link === '') return;
       try {
@@ -42,7 +37,6 @@ const MoreInfoOpen = () => {
         console.log(err);
       }
       setTimeout(() => {
-        console.log('this ran');
         setLoading(false);
       }, 500);
     };
