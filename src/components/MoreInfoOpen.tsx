@@ -1,4 +1,8 @@
 // TODO: add better loading state
+//  ADD min width to it as it messes up for phones
+// SAFARI DROPDOWN AND POPUP changes max height which hides visibility of upper and lwoer section of the button
+//  X BUTTON is cutting off on small screens
+// set higher z index as the language popups are covering it
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { IoMdClose } from 'react-icons/io';
