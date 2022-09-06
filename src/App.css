@@ -425,7 +425,7 @@ Projects
   justify-content: flex-start;
   gap: 8px;
   align-items: center;
-  z-index: 1000;
+  z-index: 1;
   position: absolute;
   bottom: 4px;
   left: 0;
