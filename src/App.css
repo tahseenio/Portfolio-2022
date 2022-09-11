@@ -397,6 +397,7 @@ Projects
   width: 100%;
   display: flex;
   min-height: 619px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .project:hover .project__img {
