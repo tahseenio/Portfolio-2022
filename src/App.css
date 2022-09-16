@@ -562,7 +562,7 @@ projectsBtn--black .project__title {
 .project__more-info--wrapper {
   position: relative;
   border-radius: 20px;
-  min-width: 85%;
+  width: 100%;
   max-width: 1300px;
   height: 90vh;
   margin: 0 64px;
@@ -1178,5 +1178,8 @@ MEDIA QUERIES
   }
   .shimmer {
     animation: placeholderShimmer 3s forwards infinite linear;
+  }
+  .project__more-info--wrapper {
+    min-width: 85%;
   }
 }
