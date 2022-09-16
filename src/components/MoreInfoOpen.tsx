@@ -9,6 +9,7 @@ import { IoMdClose } from 'react-icons/io';
 import { useEffect } from 'react';
 import Markdown from 'markdown-to-jsx';
 import { usePortfolioContext } from '../context/PortfolioContext';
+import SkeletonLoader from './ui/SkeletonLoader';
 
 const MoreInfoOpen = () => {
   const {
@@ -42,7 +43,7 @@ const MoreInfoOpen = () => {
       }
       setTimeout(() => {
         setLoading(false);
-      }, 500);
+      }, 700);
     };
     fetchData();
   }, [link, loading, userName, setLoading, setText]);
@@ -72,7 +73,7 @@ const MoreInfoOpen = () => {
           >
             <IoMdClose className='closeBtn--more-info' onClick={handleClose} />
             <div className='project__more-info'>
-              {loading ? <span>Loading...</span> : <Markdown>{text}</Markdown>}
+              {loading ? <SkeletonLoader /> : <Markdown>{text}</Markdown>}
             </div>
           </motion.div>
         </motion.div>

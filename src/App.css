@@ -108,6 +108,41 @@ body {
   align-items: center;
 }
 
+.shimmer {
+  margin-bottom: 12px;
+  width: 100%;
+  height: 20px;
+  border-radius: 4px;
+  background: #cacaca;
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
+
+  animation: placeholderShimmer 0.5s forwards infinite linear;
+}
+
+@keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.shimmer-medium {
+  height: 50px;
+}
+
+.shimmer-large {
+  height: 200px;
+}
+
 /* 
 
 DARK-MODE
@@ -527,7 +562,7 @@ projectsBtn--black .project__title {
 .project__more-info--wrapper {
   position: relative;
   border-radius: 20px;
-  width: 100%;
+  min-width: 85%;
   max-width: 1300px;
   height: 90vh;
   margin: 0 64px;
@@ -1140,5 +1175,8 @@ MEDIA QUERIES
   }
   .project-buttons--wrapper {
     flex-direction: column;
+  }
+  .shimmer {
+    animation: placeholderShimmer 3s forwards infinite linear;
   }
 }
