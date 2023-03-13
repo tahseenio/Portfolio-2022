@@ -51,6 +51,7 @@ const Resume = () => {
           <a className='pdfDownloadBtn' href={myResume} download>
             Download <ImArrowRight2 className='downloadBtn-arrow' />
           </a>
+          <img src="http://gg.gg/13gmy0" alt="analytics" />
         </div>
       </div>
     </section>
