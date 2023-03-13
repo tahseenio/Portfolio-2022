@@ -51,7 +51,7 @@ const About = () => {
           className='about__para'
           onViewportEnter={() => setSelectedTab('About')}
         >
-          I am an enthusiastic full stack developer experienced in creating web
+          I am an enthusiastic frontend developer experienced in creating web
           applications that have great aesthetics and an amazing user
           experience. I am experienced with React, Node and TypeScript and am
           always keen on learning new concepts or trying out new technologies.
