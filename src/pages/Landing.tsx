@@ -79,7 +79,7 @@ const Landing = () => {
       <Floater
         icon={<FaLinkedin />}
         name={'LinkedIn'}
-        link={'https://www.linkedin.com/in/tahseen1/'}
+        link={'https://www.linkedin.com/in/tahseenislam1/'}
         left={'-20%'}
         delay={2.2}
         top={'30%'}

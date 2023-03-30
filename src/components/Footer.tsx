@@ -17,7 +17,7 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { title: 'LinkedIn', link: 'https://www.linkedin.com/in/tahseen1/' },
+    { title: 'LinkedIn', link: 'https://www.linkedin.com/in/tahseenislam1/' },
     { title: 'Github', link: 'https://github.com/tahseenio/' },
   ];
 
