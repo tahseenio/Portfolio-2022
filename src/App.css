@@ -57,7 +57,7 @@ body {
 }
 
 .row {
-  max-width: 1800px;
+  max-width: 1500px;
   width: 100%;
   margin: 0 auto;
 }
@@ -332,9 +332,9 @@ Home
 .projects__title,
 .resume__title {
   padding-top: 200px;
-  margin-bottom: 200px;
+  margin-bottom: 30px;
   font-weight: 500;
-  font-size: 100px;
+  font-size: 80px;
   color: #111;
   overflow: hidden;
 }
@@ -359,15 +359,15 @@ About
 
 .about__title {
   padding-top: 200px;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   font-weight: 500;
-  font-size: 100px;
+  font-size: 80px;
   color: #111;
   overflow: hidden;
 }
 
 .about__para {
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 2;
 }
 
@@ -680,14 +680,11 @@ Resume
   z-index: 100;
 }
 
-.resume__title {
-}
-
 .rpv-core__inner-page {
   background-color: transparent !important;
 }
 
-/* 
+/*
 
 Modal
 
@@ -731,7 +728,7 @@ Modal
   font-size: 32px;
 }
 
-/* 
+/*
 
 Contact
 
@@ -748,7 +745,7 @@ Contact
   padding-top: 100px;
   margin-bottom: 24px;
   font-weight: 500;
-  font-size: 100px;
+  font-size: 80px;
   color: #111;
   overflow: hidden;
 }
