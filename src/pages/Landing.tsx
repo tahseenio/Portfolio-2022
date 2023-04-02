@@ -7,7 +7,7 @@ import Floater from '../components/Floater';
 import FloaterPDF from '../components/FloaterPDF';
 import HomeBackground from '../assets/home.webp';
 import HomeNight from '../assets/homeNight.webp';
-import HomeNightMobile from '../assets/homeNightMobile.webp';
+//import HomeNightMobile from '../assets/homeNightMobile.webp';
 import {
   HomeBackgroundVariants,
   textVariants,

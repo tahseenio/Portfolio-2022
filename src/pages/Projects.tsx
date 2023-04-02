@@ -35,33 +35,6 @@ const Projects = () => {
       },
     },
     {
-      image: Notes,
-      name: 'Notes App',
-      description: `A simple notes app where you can create, edit, and delete notes. In this project I learned TypeScript and Context API as a global state management. Framer motion was used to create smooth animations of notes shifting and being deleted.`,
-      liveLink: 'http://notes-react-nine.vercel.app/',
-      sourceLink: 'https://github.com/tahseenio/notes-react',
-      languages: ['React', 'TypeScript', 'Framer Motion'],
-      config: {
-        bgColor: '#EBEBEB',
-        txtColor: 'black',
-      },
-    },
-    {
-      image: LoginSignup,
-      name: 'Login Signup',
-      description: `A sleek login and signup system where users are able to create a new account or log in with a previous email or using a google account. The form was created using react-hook-forms and yup was used to handle error handling and input validation. All animations were created using Framer Motion such as exit animations to different pages. Context API along with Firebase and Firestore was used for user authentication and user date storage.
-      
-      Demo email: demo@demo.com 
-      Demo password: demo1234`,
-      liveLink: 'http://login-signup-sable.vercel.app/',
-      sourceLink: 'https://github.com/tahseenio/login-signup',
-      languages: ['React', 'TypeScript', 'Firebase', 'Framer Motion'],
-      config: {
-        bgColor: '#1D2A32',
-        txtColor: 'white',
-      },
-    },
-    {
       image: TypeForm,
       name: 'TypeForm',
       description: `A modern aesthetic multi-step form which makes filling forms fun for the user. Utilises react-hook-form, yup for input validation, Context API and uses Framer Motion to create user friendly animations.`,
@@ -74,26 +47,29 @@ const Projects = () => {
       },
     },
     {
-      image: VRChat,
-      name: 'VRChat Notes Extension',
-      description: `This extension allows users to take notes of new friends they have made in VRChat on the official VRChat website. It utilizes Chrome's Manifest v3 to inject a responsive HTML Element that re-renders if you switch to a different users profile.`,
-      liveLink: '',
-      sourceLink: 'https://github.com/tahseenio/vrchat-notes-chrome-extension',
-      languages: ['JavaScript'],
+      image: LoginSignup,
+      name: 'Login Signup',
+      description: `A sleek login and signup system where users are able to create a new account or log in with a previous email or using a google account. The form was created using react-hook-forms and yup was used to handle error handling and input validation. All animations were created using Framer Motion such as exit animations to different pages. Context API along with Firebase and Firestore was used for user authentication and user date storage.
+      
+      Demo email: demo@demo.com 
+      Demo password: demo1234`,
+      liveLink: 'http://login-signup-sable.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/login-signup',
+      languages: ['React', 'TypeScript', 'Firebase'],
       config: {
-        bgColor: '#0E1013',
+        bgColor: '#1D2A32',
         txtColor: 'white',
       },
     },
     {
-      image: Library,
-      name: 'Book Store',
-      description: `A book store where you can find popular discounted books and purchase them. Features skeleton loading for a better user experience, use of React router and useParams to create dynamic pages which show detailed descriptions of any book.`,
-      liveLink: 'https://book-store-react-eta.vercel.app/',
-      sourceLink: 'https://github.com/tahseenio/book-store-react',
-      languages: ['React', 'TypeScript'],
+      image: Notes,
+      name: 'Notes App',
+      description: `A simple notes app where you can create, edit, and delete notes. In this project I learned TypeScript and Context API as a global state management. Framer motion was used to create smooth animations of notes shifting and being deleted.`,
+      liveLink: 'http://notes-react-nine.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/notes-react',
+      languages: ['React', 'TypeScript', 'Framer Motion'],
       config: {
-        bgColor: '#D8EBF0',
+        bgColor: '#EBEBEB',
         txtColor: 'black',
       },
     },
@@ -109,6 +85,19 @@ const Projects = () => {
         txtColor: 'white',
       },
     },
+    {
+      image: Library,
+      name: 'Book Store',
+      description: `A book store where you can find popular discounted books and purchase them. Features skeleton loading for a better user experience, use of React router and useParams to create dynamic pages which show detailed descriptions of any book.`,
+      liveLink: 'https://book-store-react-eta.vercel.app/',
+      sourceLink: 'https://github.com/tahseenio/book-store-react',
+      languages: ['React', 'TypeScript'],
+      config: {
+        bgColor: '#D8EBF0',
+        txtColor: 'black',
+      },
+    },
+
     {
       image: Mosque,
       name: 'Wakefield Mosque',
@@ -142,6 +131,18 @@ const Projects = () => {
       languages: ['HTML', 'CSS'],
       config: {
         bgColor: '#691CFF',
+        txtColor: 'white',
+      },
+    },
+    {
+      image: VRChat,
+      name: 'VRChat Notes Extension',
+      description: `This extension allows users to take notes of new friends they have made in VRChat on the official VRChat website. It utilizes Chrome's Manifest v3 to inject a responsive HTML Element that re-renders if you switch to a different users profile.`,
+      liveLink: '',
+      sourceLink: 'https://github.com/tahseenio/vrchat-notes-chrome-extension',
+      languages: ['JavaScript'],
+      config: {
+        bgColor: '#0E1013',
         txtColor: 'white',
       },
     },
