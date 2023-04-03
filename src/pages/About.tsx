@@ -51,11 +51,11 @@ const About = () => {
           className='about__para'
           onViewportEnter={() => setSelectedTab('About')}
         >
-          I am an enthusiastic frontend developer experienced in creating web
-          applications that have great aesthetics and an amazing user
-          experience. I am experienced with React, Node and TypeScript and am
-          always keen on learning new concepts or trying out new technologies.
-          Whenever I am free I like to contribute to open-source projects.
+          I am a passionate full stack developer with a focus on frontend
+          development. I enjoy creating web applications that have great
+          aesthetics and provide an amazing user experience. I am experienced
+          with TypeScript, React and Node and am always keen on learning new
+          concepts or trying out new technologies.
         </motion.p>
         <motion.h1
           className='about__title--tech'

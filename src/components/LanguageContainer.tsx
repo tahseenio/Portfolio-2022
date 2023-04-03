@@ -1,21 +1,20 @@
 import { motion } from 'framer-motion';
 
 import Language from './ui/Language';
+// all images found from icons8
 import TypeScriptImg from '../assets/languages/typescript.webp';
 import ReactImg from '../assets/languages/react.webp';
 import JestImg from '../assets/languages/jest.webp';
 import GitImg from '../assets/languages/git.webp';
 import CypressImg from '../assets/languages/cypress.webp';
 import NextjsImg from '../assets/languages/nextjs.webp';
-import FirebaseImg from '../assets/languages/firebase.webp';
 import FramerImg from '../assets/languages/framer.svg';
 import ExpressImg from '../assets/languages/express.webp';
 import NodeImg from '../assets/languages/nodejs.webp';
 import JSImg from '../assets/languages/JS.webp';
 import HTMLImg from '../assets/languages/HTML.webp';
 import CSSImg from '../assets/languages/CSS.webp';
-import SassImg from '../assets/languages/Sass.webp';
-import FigmaImg from '../assets/languages/figma.webp';
+import postgres from '../assets/languages/postgres.png';
 
 interface languageProps {
   title: string;
@@ -26,12 +25,6 @@ interface languageProps {
 
 const LanguageContainer = () => {
   const languages: languageProps[] = [
-    {
-      title: 'React',
-      src: ReactImg,
-      textColor: 'white',
-      bgColor: '#61DAFB',
-    },
     {
       title: 'TypeScript',
       src: TypeScriptImg,
@@ -57,46 +50,16 @@ const LanguageContainer = () => {
       bgColor: '#2195F2',
     },
     {
-      title: 'Framer',
-      src: FramerImg,
+      title: 'React',
+      src: ReactImg,
       textColor: 'white',
-      bgColor: 'black',
-    },
-    {
-      title: 'Sass',
-      src: SassImg,
-      textColor: 'white',
-      bgColor: '#CC6699',
-    },
-    {
-      title: 'Git',
-      src: GitImg,
-      textColor: 'white',
-      bgColor: '#DE4C36',
-    },
-    {
-      title: 'Cypress',
-      src: CypressImg,
-      textColor: 'white',
-      bgColor: '#5c5c5e',
-    },
-    {
-      title: 'Jest',
-      src: JestImg,
-      textColor: 'white',
-      bgColor: '#99424F',
+      bgColor: '#61DAFB',
     },
     {
       title: 'Next.js',
       src: NextjsImg,
       textColor: 'white',
       bgColor: 'black',
-    },
-    {
-      title: 'Firebase',
-      src: FirebaseImg,
-      textColor: '',
-      bgColor: '#FFCB2C',
     },
     {
       title: 'Node.js',
@@ -111,10 +74,35 @@ const LanguageContainer = () => {
       bgColor: '#323232',
     },
     {
-      title: 'Figma',
-      src: FigmaImg,
+      title: 'Postgres',
+      src: postgres,
+      textColor: 'white',
+      bgColor: '#0275B9',
+    },
+    {
+      title: 'Git',
+      src: GitImg,
+      textColor: 'white',
+      bgColor: '#DE4C36',
+    },
+    {
+      title: 'Framer',
+      src: FramerImg,
       textColor: 'white',
       bgColor: 'black',
+    },
+
+    {
+      title: 'Cypress',
+      src: CypressImg,
+      textColor: 'white',
+      bgColor: '#5c5c5e',
+    },
+    {
+      title: 'Jest',
+      src: JestImg,
+      textColor: 'white',
+      bgColor: '#99424F',
     },
   ];
 

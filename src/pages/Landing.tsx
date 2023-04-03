@@ -147,7 +147,7 @@ const Landing = () => {
                 : undefined,
             }}
           >
-            Frontend Developer
+            Fullstack Developer
           </motion.div>
         </motion.div>
       </motion.div>
