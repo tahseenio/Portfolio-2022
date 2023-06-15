@@ -54,7 +54,7 @@ const About = () => {
           I am a passionate full stack developer with a focus on frontend
           development. I enjoy creating web applications that have great
           aesthetics and provide an amazing user experience. I am experienced
-          with TypeScript, React and Node and am always keen on learning new
+          with TypeScript, React and Node.js and am always keen on learning new
           concepts or trying out new technologies.
         </motion.p>
         <motion.h1
